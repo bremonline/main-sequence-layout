@@ -1042,7 +1042,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_nitrogen-gas-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Cobalt Ore Enriched Ore",
@@ -1985,6 +1987,33 @@
    "source_version": "EA 2026-11-24",
    "confidence": "confirmed (NEW, not in wiki)",
    "verified_source": "screenshots/2026-11-24_silica-panel.png",
+   "verified_game_version": "EA 2026-11-24"
+  },
+  {
+   "name": "Strange Matter Crystal (Deep Space Observatory)",
+   "machine": "deep-space-observatory",
+   "machine_note": "machine name from screenshot; not found in wiki machine list (check slug)",
+   "inputs": [
+    {
+     "item": "strange-matter-crystal",
+     "name": "Strange Matter Crystal",
+     "per_min": "7.5/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "unknown",
+     "name": "unknown (dark grey capsule with pink band icon)",
+     "per_min": "15/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "8 s",
+   "source": "in-game screenshot",
+   "source_version": "EA 2026-11-24",
+   "confidence": "confirmed (NEW, not in wiki); output item unnamed",
+   "verified_source": "screenshots/2026-11-24_strange-matter-crystal-panel.png",
    "verified_game_version": "EA 2026-11-24"
   }
  ]

@@ -5808,7 +5808,10 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A stable and abundant gas.",
+   "verified_source": "screenshots/2026-11-24_nitrogen-gas-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Nutrients",
@@ -8389,6 +8392,16 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified"
+  },
+  {
+   "name": "Strange Matter Crystal",
+   "slug": "strange-matter-crystal",
+   "desc_ingame": "A crystal made of strange quarks that interacts with ordinary matter in unknown ways.",
+   "source": "in-game screenshot",
+   "source_version": "EA 2026-11-24",
+   "confidence": "confirmed (NEW, not in wiki)",
+   "verified_source": "screenshots/2026-11-24_strange-matter-crystal-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   }
  ]
 }
