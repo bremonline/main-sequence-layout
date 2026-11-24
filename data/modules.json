@@ -1569,7 +1569,13 @@
     30,
     14
    ],
-   "interior_note": "inferred from 16n-2 pattern (14 @1, 30 @2); unverified"
+   "interior_note": "inferred from 16n-2 pattern (14 @1, 30 @2); unverified",
+   "openings": {
+    "short_edges": "yes (2 edges, 14 long, presumably 4|6|4)",
+    "long_edges": "none",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user (edge layout of short side assumed 4|6|4)"
+   }
   },
   {
    "name": "Station 2×2 A",
@@ -1877,6 +1883,7 @@
     ]
    ]
   },
-  "pattern": "edge = 4 + n*6 + (n-1)*10 + 4 = 16n-2; one 6-wide opening per cell per edge, 10 solid tiles between adjacent openings"
+  "pattern": "edge = 4 + n*6 + (n-1)*10 + 4 = 16n-2; one 6-wide opening per cell per edge, 10 solid tiles between adjacent openings",
+  "pattern_caveat": "NOT every edge has openings: 2x1 long edges have none. Openings are per-module-type, so store explicit per-edge opening data per station variant rather than deriving from 16n-2."
  }
 }
