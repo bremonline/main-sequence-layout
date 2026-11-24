@@ -1910,6 +1910,12 @@
   },
   "pattern": "tile-grid unit = 16 per cell; opening 6 wide centered in cell with 4 floor each side then wall",
   "pattern_caveat": "NOT every edge has openings: 2x1 long edges have none. Openings are per-module-type, so store explicit per-edge opening data per station variant rather than deriving from 16n-2.",
-  "wall_tiles": "the leading/trailing 1 in each edge sequence is wall; all other tiles are floor (the 6s are openings in the wall line)"
+  "wall_tiles": "the leading/trailing 1 in each edge sequence is wall; all other tiles are floor (the 6s are openings in the wall line)",
+  "openings_usable": "Opening tiles (the 6-wide gaps) are usable/buildable floor tiles, per user 2026-11-24. Walls are the only non-usable tiles.",
+  "tile_types": {
+   "wall": "not usable",
+   "floor": "usable",
+   "opening": "usable (part of wall line)"
+  }
  }
 }
