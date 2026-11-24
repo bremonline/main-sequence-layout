@@ -1457,7 +1457,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
+   "verified_source": "screenshots/2026-11-24_silica-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1802,7 +1802,9 @@
    "craft_time": "3 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_silica-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Silicon Wafers Other Refining",
@@ -1826,7 +1828,9 @@
    "craft_time": "3 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_silica-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Titanium Plates Ore Refining",
@@ -1949,6 +1953,32 @@
    "source_version": "EA 2026-11-24",
    "confidence": "confirmed (NEW, not in wiki)",
    "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
+  },
+  {
+   "name": "Silica Relic Technology",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "unknown-relic-item",
+     "name": "relic item (same purple-crystal icon as Titanium/Nickel/Water Ice relic input)",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "silica",
+     "name": "Silica",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "in-game screenshot",
+   "source_version": "EA 2026-11-24",
+   "confidence": "confirmed (NEW, not in wiki)",
+   "verified_source": "screenshots/2026-11-24_silica-panel.png",
    "verified_game_version": "EA 2026-11-24"
   }
  ]
