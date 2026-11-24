@@ -253,7 +253,14 @@
    "category": "Basic",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (name/category)",
+   "grid_cells": [
+    1,
+    1
+   ],
+   "dims_source": "name in designer palette (cells, not metres)",
+   "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Corner Window",
@@ -313,7 +320,14 @@
    "category": "Basic",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (name/category)",
+   "grid_cells": [
+    1,
+    1
+   ],
+   "dims_source": "name in designer palette (cells, not metres)",
+   "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Corridor 2×2",
@@ -424,7 +438,14 @@
    "category": "Vertical",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (name/category)",
+   "grid_cells": [
+    1,
+    1
+   ],
+   "dims_source": "name in designer palette (cells, not metres)",
+   "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Elevator 2×2",
@@ -1499,7 +1520,14 @@
    "category": "Basic",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (name/category)",
+   "grid_cells": [
+    1,
+    1
+   ],
+   "dims_source": "name in designer palette (cells, not metres)",
+   "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Station 2×1",
@@ -1524,7 +1552,14 @@
    "category": "Basic",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (name/category)",
+   "grid_cells": [
+    2,
+    1
+   ],
+   "dims_source": "name in designer palette (cells, not metres)",
+   "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Station 2×2 A",
@@ -1549,7 +1584,14 @@
    "category": "Basic",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (name/category)",
+   "grid_cells": [
+    2,
+    2
+   ],
+   "dims_source": "name in designer palette (cells, not metres)",
+   "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Station 2×2 B",
@@ -1768,5 +1810,9 @@
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified"
   }
+ ],
+ "designer_palette_tabs": [
+  "Standard",
+  "User"
  ]
 }
