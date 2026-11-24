@@ -1919,9 +1919,18 @@
   },
   "external_ports": {
    "description": "Docks and mining drones connect to ports at the middle of each opening",
-   "position": "center of the 6-wide opening (between tiles 3 and 4 of the 6; exact tile/offset unverified)",
+   "position": "the port sits in/at the opening; area is entirely unbuildable",
    "source": "user statement 2026-11-24",
-   "confidence": "confirmed by user; exact geometry unverified"
+   "confidence": "dimensions confirmed by user; width/depth axis assignment and whether the 12 overlaps the station wall are assumed",
+   "footprint_tiles": {
+    "width": 8,
+    "depth": 12,
+    "includes_walls": true,
+    "note": "8 = 6 opening + 2 side walls (matches opening width); 12 = depth, orientation assumed outward from station edge"
+   },
+   "buildable": false,
+   "faces": "into the station (1x1) area",
+   "applies_to": "docks and mining ports"
   }
  }
 }
