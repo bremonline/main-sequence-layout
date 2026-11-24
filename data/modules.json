@@ -1906,9 +1906,10 @@
     1
    ],
    "total": 32,
-   "note": "10 = 4+1+1+4 (two adjacent cell walls between openings)"
+   "note": "only the two outer 1s are wall; the 10 is plain floor along the edge (no internal wall between cells)"
   },
   "pattern": "tile-grid unit = 16 per cell; opening 6 wide centered in cell with 4 floor each side then wall",
-  "pattern_caveat": "NOT every edge has openings: 2x1 long edges have none. Openings are per-module-type, so store explicit per-edge opening data per station variant rather than deriving from 16n-2."
+  "pattern_caveat": "NOT every edge has openings: 2x1 long edges have none. Openings are per-module-type, so store explicit per-edge opening data per station variant rather than deriving from 16n-2.",
+  "wall_tiles": "the leading/trailing 1 in each edge sequence is wall; all other tiles are floor (the 6s are openings in the wall line)"
  }
 }
