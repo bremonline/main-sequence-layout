@@ -1566,10 +1566,10 @@
    "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
    "verified_game_version": "EA 2026-11-24",
    "interior_grid_inferred": [
-    28,
+    30,
     14
    ],
-   "interior_note": "inferred = 14 x cells; unverified (walls/overlap may differ)"
+   "interior_note": "inferred from 16n-2 pattern (14 @1, 30 @2); unverified"
   },
   {
    "name": "Station 2×2 A",
@@ -1602,11 +1602,12 @@
    "dims_source": "name in designer palette (cells, not metres)",
    "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
    "verified_game_version": "EA 2026-11-24",
-   "interior_grid_inferred": [
-    28,
-    28
+   "interior_note": "confirmed by user",
+   "interior_grid": [
+    30,
+    30
    ],
-   "interior_note": "inferred = 14 x cells; unverified (walls/overlap may differ)"
+   "interior_source": "user statement 2026-11-24"
   },
   {
    "name": "Station 2×2 B",
@@ -1829,5 +1830,19 @@
  "designer_palette_tabs": [
   "Standard",
   "User"
- ]
+ ],
+ "interior_formula": {
+  "rule": "interior tiles per axis = 16*n - 2 (n = station cells)",
+  "fits": [
+   [
+    1,
+    14
+   ],
+   [
+    2,
+    30
+   ]
+  ],
+  "status": "hypothesis, 2 data points"
+ }
 }
