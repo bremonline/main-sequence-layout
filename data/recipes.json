@@ -1457,7 +1457,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_silica-panel.png",
+   "verified_source": "screenshots/2026-11-24_graphite-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1676,7 +1676,9 @@
    "craft_time": "3 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_graphite-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Hydrogen Fuel Fuel",
