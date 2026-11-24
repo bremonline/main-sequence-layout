@@ -1174,7 +1174,8 @@
    "wiki_craft_time": "1 s",
    "verified_source": "screenshots/2026-11-24_nickel-ore-panel.png",
    "verified_game_version": "EA 2026-11-24",
-   "note": "Wiki (demo) 1 s/60 per min; EA 2 s => 30/min. Same shift as Titanium relic recipe."
+   "note": "Wiki (demo) 1 s/60 per min; EA 2 s => 30/min. Same shift as Titanium relic recipe. Input confirmed as Protomatter (protomatter panel).",
+   "protomatter_panel_confirms": "screenshots/2026-11-24_protomatter-panel.png"
   },
   {
    "name": "Superalloy Alloys",
@@ -1240,7 +1241,8 @@
    "wiki_craft_time": "1 s",
    "verified_source": "screenshots/2026-11-24_titanium-ore-item-panel.png",
    "verified_game_version": "EA 2026-11-24",
-   "note": "Wiki (demo) said 1 s / 60 per min; EA shows 2 s => 30/min. Input icon assumed protomatter."
+   "note": "Wiki (demo) said 1 s / 60 per min; EA shows 2 s => 30/min. Input icon assumed protomatter. Input confirmed as Protomatter (protomatter panel).",
+   "protomatter_panel_confirms": "screenshots/2026-11-24_protomatter-panel.png"
   },
   {
    "name": "Warp Fuel Fuel",
@@ -1874,14 +1876,18 @@
     {
      "item": "protomatter",
      "name": "Protomatter",
-     "per_min": "120/min",
+     "per_min": "60/min",
      "count": "1"
     }
    ],
-   "craft_time": "0.5 s",
+   "craft_time": "1 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (corrected)",
+   "wiki_craft_time": "0.5 s",
+   "note": "Wiki 0.5 s/120 per min; EA 1 s => 60/min. No inputs.",
+   "verified_source": "screenshots/2026-11-24_protomatter-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Relic Shard Relic Technology",
@@ -1942,8 +1948,8 @@
    "machine": "enrichment-chamber",
    "inputs": [
     {
-     "item": "protomatter?",
-     "name": "unknown relic item (purple crystal icon; same icon as Titanium/Nickel relic input)",
+     "item": "protomatter",
+     "name": "Protomatter",
      "per_min": "30/min",
      "count": "1"
     }
@@ -1961,15 +1967,17 @@
    "source_version": "EA 2026-11-24",
    "confidence": "confirmed (NEW, not in wiki)",
    "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
-   "verified_game_version": "EA 2026-11-24"
+   "verified_game_version": "EA 2026-11-24",
+   "note": "Input confirmed as Protomatter (protomatter panel).",
+   "protomatter_panel_confirms": "screenshots/2026-11-24_protomatter-panel.png"
   },
   {
    "name": "Silica Relic Technology",
    "machine": "enrichment-chamber",
    "inputs": [
     {
-     "item": "unknown-relic-item",
-     "name": "relic item (same purple-crystal icon as Titanium/Nickel/Water Ice relic input)",
+     "item": "protomatter",
+     "name": "Protomatter",
      "per_min": "30/min",
      "count": "1"
     }
@@ -1987,7 +1995,9 @@
    "source_version": "EA 2026-11-24",
    "confidence": "confirmed (NEW, not in wiki)",
    "verified_source": "screenshots/2026-11-24_silica-panel.png",
-   "verified_game_version": "EA 2026-11-24"
+   "verified_game_version": "EA 2026-11-24",
+   "note": "Input confirmed as Protomatter (protomatter panel).",
+   "protomatter_panel_confirms": "screenshots/2026-11-24_protomatter-panel.png"
   },
   {
    "name": "Strange Matter Crystal (Deep Space Observatory)",
