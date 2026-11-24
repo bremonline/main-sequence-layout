@@ -1366,8 +1366,8 @@
     "confidence": "confirmed by user; per-port direction unknown",
     "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
    },
-   "corner_chamfer_tiles_approx": 0.35,
-   "shape_note": "rounded/chamfered corners (no sharp edges) per user; chamfer size is a visual estimate"
+   "corner_chamfer_tiles_approx": 0.08,
+   "shape_note": "corner tiles are ports, so corners barely cut (user)"
   },
   {
    "name": "Conveyor Belt Mk. 1",
