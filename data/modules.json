@@ -1843,6 +1843,19 @@
     30
    ]
   ],
-  "status": "hypothesis, 2 data points"
+  "status": "hypothesis, 2 data points",
+  "rule_note": "14 = 4+6+4 for 1x1. For 2x2 (30), opening placement along edges still unknown (likely at module seams)."
+ },
+ "opening_spec": {
+  "width_tiles": 6,
+  "station_1x1_edge": {
+   "edge_length": 14,
+   "corner_to_opening": 4,
+   "opening": 6,
+   "opening_to_corner": 4
+  },
+  "source": "user statement 2026-11-24",
+  "confidence": "confirmed by user",
+  "note": "openings centered on each edge (assumed all 4 edges; unverified)"
  }
 }
