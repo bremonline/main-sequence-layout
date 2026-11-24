@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "rooms": [
+    { "id": 1, "size": "1x1", "x": 48, "y": 32, "rotation": 0 },
+    { "id": 2, "size": "dock", "x": 48, "y": 16, "rotation": 2 },
+    { "id": 3, "size": "control-center", "x": 48, "y": 48, "rotation": 0 }
+  ],
+  "placements": [],
+  "belts": []
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Mk1 belt",
+  "capacity_per_min": 60,
+  "source": "user statement 2026-11-24",
+  "source_version": "EA",
+  "confidence": "unverified",
+  "note": "Provisional capacity: player thinks Mk1 is 60/min. Higher tiers are faster; their capacities are unknown."
+}

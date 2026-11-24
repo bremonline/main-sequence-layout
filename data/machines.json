@@ -1,7 +1,27 @@
 {
  "game_version": "EA (unverified; source is demo)",
- "count": 61,
+ "count": 62,
  "machines": [
+  {
+   "name": "Research",
+   "slug": "research",
+   "category": "Research",
+   "power_mw": null,
+   "source": "user statement",
+   "source_version": "EA (2026-11-24)",
+   "confidence": "confirmed (NEW)",
+   "footprint_tiles": [3, 3],
+   "footprint_source": "user statement 2026-11-24",
+   "footprint_confidence": "confirmed by user",
+   "port_layout": {
+    "cells": [[1, 2]],
+    "description": "Single port centered on the side opposite the orientation triangle (south at zero rotation)",
+    "input_vs_output": "UNKNOWN",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user; port direction unknown",
+    "placement": "perimeter tile inside the footprint"
+   }
+  },
   {
    "name": "Advanced Assembler",
    "props": {
@@ -1144,7 +1164,25 @@
    "power_mw": null,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "footprint_tiles": [2, 1],
+   "footprint_source": "user statement 2026-11-24",
+   "footprint_confidence": "confirmed by user",
+   "port_layout": {
+    "cells": [[0, 0], [1, 0]],
+    "ports": [
+     { "cell": [0, 0], "side": "north", "role": "input" },
+     { "cell": [1, 0], "side": "north", "role": "input" },
+     { "cell": [0, 0], "side": "south", "role": "output" },
+     { "cell": [1, 0], "side": "south", "role": "output" }
+    ],
+    "description": "Two belt inputs and two belt outputs on opposite 2-tile sides",
+    "input_vs_output": "North side inputs and south side outputs at zero rotation; rotation turns the port roles",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user",
+    "placement": "ports are perimeter tiles inside the footprint"
+   },
+   "compact_label": "B"
   },
   {
    "name": "Belt Balancer Mk. 2",
@@ -3186,7 +3224,32 @@
    "power_mw": null,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "footprint_tiles": [1, 1],
+   "footprint_source": "user statement 2026-11-24",
+   "footprint_confidence": "confirmed by user",
+   "port_layout": {
+    "cells": [[0, 0]],
+    "ports": [
+     { "cell": [0, 0], "side": "north", "role": "input" },
+     { "cell": [0, 0], "side": "east", "role": "output" },
+     { "cell": [0, 0], "side": "south", "role": "output" },
+     { "cell": [0, 0], "side": "west", "role": "output" }
+    ],
+    "description": "One belt input and three belt outputs",
+    "input_vs_output": "North side input and other sides outputs at zero rotation; rotation turns the port roles",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user",
+    "placement": "ports are perimeter tiles inside the footprint"
+   },
+   "compact_label": "S",
+   "belt_flow": {
+    "distribution": "equal_connected_outputs",
+    "description": "Divide incoming item rates evenly among connected output belts; unused output ports do not receive a share",
+    "source": "user statement 2026-11-24",
+    "source_version": "EA",
+    "confidence": "confirmed by user"
+   }
   },
   {
    "name": "Splitter Mk. 2",
