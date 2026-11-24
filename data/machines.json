@@ -1023,7 +1023,19 @@
     5
    ],
    "footprint_source": "user statement 2026-11-24",
-   "footprint_confidence": "confirmed by user; ports/rotation unknown"
+   "footprint_confidence": "confirmed by user; ports/rotation unknown",
+   "port_layout": {
+    "positions_1indexed_along_each_side": [
+     2,
+     4
+    ],
+    "sides": "all four (assumed from wording; unverified)",
+    "description": "2 per side at positions 2 and 4 (8 ports)",
+    "note": "tiles one in from each corner on each side (positions 2 and 4 of 5)",
+    "input_vs_output": "UNKNOWN (which ports are in vs out, and whether rotation changes it)",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user; per-port direction unknown"
+   }
   },
   {
    "name": "Astronomic Science Lab",
@@ -1337,7 +1349,19 @@
     2
    ],
    "footprint_source": "user statement 2026-11-24 (\"small storage box\")",
-   "footprint_confidence": "confirmed by user; assumed = wiki \"Container\" (16 slots), not Large Container"
+   "footprint_confidence": "confirmed by user; assumed = wiki \"Container\" (16 slots), not Large Container",
+   "port_layout": {
+    "positions_1indexed_along_each_side": [
+     1,
+     2
+    ],
+    "sides": "all four (assumed from wording; unverified)",
+    "description": "all sides, all tiles (8 ports)",
+    "note": "ports on every tile of every side; every port is both entry/exit (all entries)",
+    "input_vs_output": "all ports are entries (in and out) per user",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user; per-port direction unknown"
+   }
   },
   {
    "name": "Conveyor Belt Mk. 1",
@@ -2519,7 +2543,19 @@
     6
    ],
    "footprint_source": "user statement 2026-11-24",
-   "footprint_confidence": "confirmed by user; ports/rotation unknown"
+   "footprint_confidence": "confirmed by user; ports/rotation unknown",
+   "port_layout": {
+    "positions_1indexed_along_each_side": [
+     3,
+     4
+    ],
+    "sides": "all four (assumed from wording; unverified)",
+    "description": "2 per side, middle (8 ports)",
+    "note": "middle two tiles of each side (positions 3 and 4 of 6)",
+    "input_vs_output": "UNKNOWN (which ports are in vs out, and whether rotation changes it)",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user; per-port direction unknown"
+   }
   },
   {
    "name": "Refinery",
@@ -2790,7 +2826,18 @@
     3
    ],
    "footprint_source": "user statement 2026-11-24",
-   "footprint_confidence": "confirmed by user; ports/rotation unknown"
+   "footprint_confidence": "confirmed by user; ports/rotation unknown",
+   "port_layout": {
+    "positions_1indexed_along_each_side": [
+     2
+    ],
+    "sides": "all four (assumed from wording; unverified)",
+    "description": "middle tile each side (4 ports)",
+    "note": "middle tile of each side (1 per side)",
+    "input_vs_output": "UNKNOWN (which ports are in vs out, and whether rotation changes it)",
+    "source": "user statement 2026-11-24",
+    "confidence": "confirmed by user; per-port direction unknown"
+   }
   },
   {
    "name": "Relic Analyzer",
