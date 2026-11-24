@@ -1331,7 +1331,13 @@
    "power_mw": null,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "footprint_tiles": [
+    2,
+    2
+   ],
+   "footprint_source": "user statement 2026-11-24 (\"small storage box\")",
+   "footprint_confidence": "confirmed by user; assumed = wiki \"Container\" (16 slots), not Large Container"
   },
   {
    "name": "Conveyor Belt Mk. 1",
