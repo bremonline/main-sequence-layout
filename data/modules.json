@@ -1931,8 +1931,10 @@
    "faces": "into the station opening (port faces the 1x1 area)",
    "applies_to": "docks and mining ports",
    "placement": "separate buildings that ATTACH to an opening from outside; NOT placed inside the station",
-   "effect_on_station_floor": "none assumed: station interior stays fully buildable; only the opening it attaches to is occupied (unverified)",
-   "footprint_note": "8x12 is the attachment building's own footprint (incl. its walls), outside the station; area unbuildable"
+   "effect_on_station_floor": "none: ports abut the opening from outside and do not occupy opening tiles; all opening tiles stay buildable",
+   "footprint_note": "8x12 is the attachment building's own footprint (incl. its walls), outside the station; area unbuildable",
+   "occupies_opening_tiles": false,
+   "source_note": "user 2026-11-24: ports touch the tiles, not on them"
   }
  }
 }
