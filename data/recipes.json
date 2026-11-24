@@ -1063,7 +1063,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_cobalt-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1205,7 +1205,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_enriched-nickel-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1596,7 +1596,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Nickel Plates Enriched Ore",
