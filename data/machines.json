@@ -1034,7 +1034,8 @@
     "note": "tiles one in from each corner on each side (positions 2 and 4 of 5)",
     "input_vs_output": "UNKNOWN (which ports are in vs out, and whether rotation changes it)",
     "source": "user statement 2026-11-24",
-    "confidence": "confirmed by user; per-port direction unknown"
+    "confidence": "confirmed by user; per-port direction unknown",
+    "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
    }
   },
   {
@@ -1360,7 +1361,8 @@
     "note": "ports on every tile of every side; every port is both entry/exit (all entries)",
     "input_vs_output": "all ports are entries (in and out) per user",
     "source": "user statement 2026-11-24",
-    "confidence": "confirmed by user; per-port direction unknown"
+    "confidence": "confirmed by user; per-port direction unknown",
+    "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
    }
   },
   {
@@ -2554,7 +2556,8 @@
     "note": "middle two tiles of each side (positions 3 and 4 of 6)",
     "input_vs_output": "UNKNOWN (which ports are in vs out, and whether rotation changes it)",
     "source": "user statement 2026-11-24",
-    "confidence": "confirmed by user; per-port direction unknown"
+    "confidence": "confirmed by user; per-port direction unknown",
+    "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
    }
   },
   {
@@ -2836,7 +2839,8 @@
     "note": "middle tile of each side (1 per side)",
     "input_vs_output": "UNKNOWN (which ports are in vs out, and whether rotation changes it)",
     "source": "user statement 2026-11-24",
-    "confidence": "confirmed by user; per-port direction unknown"
+    "confidence": "confirmed by user; per-port direction unknown",
+    "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
    }
   },
   {
