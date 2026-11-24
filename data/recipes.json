@@ -1,1 +1,1877 @@
-{"game_version":"EA 0.1.x (Nov 2026)","recipes":[]}
+{
+ "game_version": "EA (unverified; source is demo)",
+ "count": 63,
+ "recipes": [
+  {
+   "name": "Advanced Circuits Advanced Assembler 1",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "detector-array",
+     "name": "Detector Array",
+     "per_min": "15/min",
+     "count": "3"
+    },
+    {
+     "item": "basic-circuits",
+     "name": "Basic Circuits",
+     "per_min": "15/min",
+     "count": "3"
+    },
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "per_min": "5/min",
+     "count": "1"
+    },
+    {
+     "item": "coolant",
+     "name": "Coolant",
+     "per_min": "30/min",
+     "count": "6"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "advanced-circuits",
+     "name": "Advanced Circuits",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "12 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Advanced Plate Advanced Assembler 1",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "chromatic-alloy",
+     "name": "Chromatic Alloy",
+     "per_min": "30/min",
+     "count": "6"
+    },
+    {
+     "item": "chitin-composite",
+     "name": "Chitin Composite",
+     "per_min": "30/min",
+     "count": "6"
+    },
+    {
+     "item": "reinforced-plate",
+     "name": "Reinforced Plate",
+     "per_min": "10/min",
+     "count": "2"
+    },
+    {
+     "item": "multisensor",
+     "name": "Multisensor",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "advanced-plate",
+     "name": "Advanced Plate",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "12 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Chitin Composite Advanced Assembler 1",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "biolattice",
+     "name": "Biolattice",
+     "per_min": "30/min",
+     "count": "6"
+    },
+    {
+     "item": "graphene",
+     "name": "Graphene",
+     "per_min": "15/min",
+     "count": "3"
+    },
+    {
+     "item": "reinforced-glass",
+     "name": "Reinforced Glass",
+     "per_min": "15/min",
+     "count": "3"
+    },
+    {
+     "item": "enzyme",
+     "name": "Enzyme",
+     "per_min": "60/min",
+     "count": "12"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "chitin-composite",
+     "name": "Chitin Composite",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "12 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Empty Simulation Matrix Advanced Assembler 1",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "advanced-circuits",
+     "name": "Advanced Circuits",
+     "per_min": "20/min",
+     "count": "2"
+    },
+    {
+     "item": "lonsdaleite",
+     "name": "Lonsdaleite",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "empty-simulation-matrix",
+     "name": "Empty Simulation Matrix",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Multisensor Advanced Assembler 1",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "chromatic-alloy",
+     "name": "Chromatic Alloy",
+     "per_min": "30/min",
+     "count": "3"
+    },
+    {
+     "item": "lonsdaleite",
+     "name": "Lonsdaleite",
+     "per_min": "30/min",
+     "count": "3"
+    },
+    {
+     "item": "encoded-simulation-matrix",
+     "name": "Encoded Simulation Matrix",
+     "per_min": "10/min",
+     "count": "1"
+    },
+    {
+     "item": "superconductor-coil",
+     "name": "Superconductor Coil",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "multisensor",
+     "name": "Multisensor",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Servo Plate Intermediate",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "reinforced-plate",
+     "name": "Reinforced Plate",
+     "per_min": "20/min",
+     "count": "2"
+    },
+    {
+     "item": "maglev-coupling",
+     "name": "Maglev Coupling",
+     "per_min": "20/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "servo-plate",
+     "name": "Servo Plate",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Superalloy Frame Advanced Assembler 1",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "per_min": "15/min",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "superalloy-frame",
+     "name": "Superalloy Frame",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "12 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Backpack Mk. 1 Equipment",
+   "machine": "armoury",
+   "inputs": [
+    {
+     "item": "hull-plate",
+     "name": "Hull Plate",
+     "per_min": "300/min",
+     "count": "10"
+    },
+    {
+     "item": "lightweight-frames",
+     "name": "Lightweight Frames",
+     "per_min": "300/min",
+     "count": "10"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "backpack-mk-1",
+     "name": "Backpack Mk. 1",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Backpack Mk. 2 Equipment",
+   "machine": "armoury",
+   "inputs": [
+    {
+     "item": "reinforced-plate",
+     "name": "Reinforced Plate",
+     "per_min": "300/min",
+     "count": "10"
+    },
+    {
+     "item": "graphene",
+     "name": "Graphene",
+     "per_min": "600/min",
+     "count": "20"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "backpack-mk-2",
+     "name": "Backpack Mk. 2",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Backpack Mk. 3 Equipment",
+   "machine": "armoury",
+   "inputs": [
+    {
+     "item": "superalloy-frame",
+     "name": "Superalloy Frame",
+     "per_min": "300/min",
+     "count": "10"
+    },
+    {
+     "item": "biolattice",
+     "name": "Biolattice",
+     "per_min": "300/min",
+     "count": "10"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "backpack-mk-3",
+     "name": "Backpack Mk. 3",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exoskeleton Mk. 1 Equipment",
+   "machine": "armoury",
+   "inputs": [
+    {
+     "item": "servomotor",
+     "name": "Servomotor",
+     "per_min": "900/min",
+     "count": "30"
+    },
+    {
+     "item": "capacitor",
+     "name": "Capacitor",
+     "per_min": "600/min",
+     "count": "20"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "exoskeleton-mk-1",
+     "name": "Exoskeleton Mk. 1",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exoskeleton Mk. 2 Equipment",
+   "machine": "armoury",
+   "inputs": [
+    {
+     "item": "maglev-coupling",
+     "name": "Maglev Coupling",
+     "per_min": "600/min",
+     "count": "20"
+    },
+    {
+     "item": "coolant",
+     "name": "Coolant",
+     "per_min": "600/min",
+     "count": "20"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "exoskeleton-mk-2",
+     "name": "Exoskeleton Mk. 2",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exoskeleton Mk. 3 Equipment",
+   "machine": "armoury",
+   "inputs": [
+    {
+     "item": "chitin-composite",
+     "name": "Chitin Composite",
+     "per_min": "300/min",
+     "count": "10"
+    },
+    {
+     "item": "chromatic-alloy",
+     "name": "Chromatic Alloy",
+     "per_min": "300/min",
+     "count": "10"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "exoskeleton-mk-3",
+     "name": "Exoskeleton Mk. 3",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exosuit Equipment",
+   "machine": "armoury",
+   "inputs": [
+    {
+     "item": "advanced-plate",
+     "name": "Advanced Plate",
+     "per_min": "900/min",
+     "count": "30"
+    },
+    {
+     "item": "backpack-mk-3",
+     "name": "Backpack Mk. 3",
+     "per_min": "60/min",
+     "count": "2"
+    },
+    {
+     "item": "exoskeleton-mk-3",
+     "name": "Exoskeleton Mk. 3",
+     "per_min": "60/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "exosuit",
+     "name": "Exosuit",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Circuits Nickel Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "silicon-wafers",
+     "name": "Silicon Wafers",
+     "per_min": "20/min",
+     "count": "2"
+    },
+    {
+     "item": "magnetic-coils",
+     "name": "Magnetic Coils",
+     "per_min": "20/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "basic-circuits",
+     "name": "Basic Circuits",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Motor Titanium Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "titanium-plates",
+     "name": "Titanium Plates",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "basic-motor",
+     "name": "Basic Motor",
+     "per_min": "60/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Capacitor Nickel Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "nickel-plates",
+     "name": "Nickel Plates",
+     "per_min": "30/min",
+     "count": "2"
+    },
+    {
+     "item": "titanium-plates",
+     "name": "Titanium Plates",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "capacitor",
+     "name": "Capacitor",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Containment Coil Intermediate",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "magnetic-coils",
+     "name": "Magnetic Coils",
+     "per_min": "30/min",
+     "count": "3"
+    },
+    {
+     "item": "capacitor",
+     "name": "Capacitor",
+     "per_min": "10/min",
+     "count": "1"
+    },
+    {
+     "item": "basic-circuits",
+     "name": "Basic Circuits",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "containment-coil",
+     "name": "Containment Coil",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Detector Array Intermediate",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "graphene",
+     "name": "Graphene",
+     "per_min": "20/min",
+     "count": "2"
+    },
+    {
+     "item": "cobalt-plates",
+     "name": "Cobalt Plates",
+     "per_min": "20/min",
+     "count": "2"
+    },
+    {
+     "item": "basic-circuits",
+     "name": "Basic Circuits",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "detector-array",
+     "name": "Detector Array",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Hull Plate Titanium Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "titanium-plates",
+     "name": "Titanium Plates",
+     "per_min": "30/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "hull-plate",
+     "name": "Hull Plate",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Lightweight Frames Titanium Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "titanium-plates",
+     "name": "Titanium Plates",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "lightweight-frames",
+     "name": "Lightweight Frames",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Magnetic Coils Nickel Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "nickel-plates",
+     "name": "Nickel Plates",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "magnetic-coils",
+     "name": "Magnetic Coils",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Maglev Coupling Intermediate",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "servomotor",
+     "name": "Servomotor",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "maglev-coupling",
+     "name": "Maglev Coupling",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Missile Consumables",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "hull-plate",
+     "name": "Hull Plate",
+     "per_min": "10/min",
+     "count": "1"
+    },
+    {
+     "item": "containment-coil",
+     "name": "Containment Coil",
+     "per_min": "10/min",
+     "count": "1"
+    },
+    {
+     "item": "coolant",
+     "name": "Coolant",
+     "per_min": "40/min",
+     "count": "4"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "missile",
+     "name": "Missile",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Reinforced Plate Intermediate",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "hull-plate",
+     "name": "Hull Plate",
+     "per_min": "60/min",
+     "count": "6"
+    },
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "per_min": "30/min",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "reinforced-plate",
+     "name": "Reinforced Plate",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Relic Capacitor Relic Technology",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "capacitor",
+     "name": "Capacitor",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "relic-shard",
+     "name": "Relic Shard",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "relic-capacitor",
+     "name": "Relic Capacitor",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Repair Kit Consumables",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "lightweight-frames",
+     "name": "Lightweight Frames",
+     "per_min": "40/min",
+     "count": "1"
+    },
+    {
+     "item": "nickel-plates",
+     "name": "Nickel Plates",
+     "per_min": "40/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "repair-kit",
+     "name": "Repair Kit",
+     "per_min": "40/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "1.5 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Electrical Repair Kit Consumables",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "magnetic-coils",
+     "name": "Magnetic Coils",
+     "per_min": "400/min",
+     "count": "10"
+    },
+    {
+     "item": "capacitor",
+     "name": "Capacitor",
+     "per_min": "400/min",
+     "count": "10"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "electrical-repair-kit",
+     "name": "Electrical Repair Kit",
+     "per_min": "40/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "1.5 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Hull Repair Kit Consumables",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "hull-plate",
+     "name": "Hull Plate",
+     "per_min": "200/min",
+     "count": "5"
+    },
+    {
+     "item": "lightweight-frames",
+     "name": "Lightweight Frames",
+     "per_min": "200/min",
+     "count": "5"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "hull-repair-kit",
+     "name": "Hull Repair Kit",
+     "per_min": "40/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "1.5 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Servomotor Titanium Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "lightweight-frames",
+     "name": "Lightweight Frames",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "basic-motor",
+     "name": "Basic Motor",
+     "per_min": "60/min",
+     "count": "4"
+    },
+    {
+     "item": "capacitor",
+     "name": "Capacitor",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "servomotor",
+     "name": "Servomotor",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Superconductor Coil Intermediate",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "maglev-coupling",
+     "name": "Maglev Coupling",
+     "per_min": "15/min",
+     "count": "3"
+    },
+    {
+     "item": "containment-coil",
+     "name": "Containment Coil",
+     "per_min": "15/min",
+     "count": "3"
+    },
+    {
+     "item": "coolant",
+     "name": "Coolant",
+     "per_min": "60/min",
+     "count": "12"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "superconductor-coil",
+     "name": "Superconductor Coil",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "12 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Chromatic Alloy Alloys",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "iridium-plates",
+     "name": "Iridium Plates",
+     "per_min": "60/min",
+     "count": "6"
+    },
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "per_min": "30/min",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "chromatic-alloy",
+     "name": "Chromatic Alloy",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Coolant Other Refining",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "nitrogen-gas",
+     "name": "Nitrogen Gas",
+     "per_min": "60/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "coolant",
+     "name": "Coolant",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Enriched Cobalt Ore Enriched Ore",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "cobalt-ore",
+     "name": "Cobalt Ore",
+     "per_min": "60/min",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "enriched-cobalt-ore",
+     "name": "Enriched Cobalt Ore",
+     "per_min": "40/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Deuterium Fuel Fuel",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "hydrogen-fuel",
+     "name": "Hydrogen Fuel",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "deuterium-fuel",
+     "name": "Deuterium Fuel",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Enriched Nickel Ore Enriched Ore",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "nickel-ore",
+     "name": "Nickel Ore",
+     "per_min": "60/min",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "enriched-nickel-ore",
+     "name": "Enriched Nickel Ore",
+     "per_min": "40/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Enriched Titanium Ore Enriched Ore",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "titanium-ore",
+     "name": "Titanium Ore",
+     "per_min": "60/min",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "enriched-titanium-ore",
+     "name": "Enriched Titanium Ore",
+     "per_min": "40/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Nickel Ore Relic Technology",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "protomatter",
+     "name": "Protomatter",
+     "per_min": "60/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "nickel-ore",
+     "name": "Nickel Ore",
+     "per_min": "60/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "1 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Superalloy Alloys",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "enriched-titanium-ore",
+     "name": "Enriched Titanium Ore",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "enriched-nickel-ore",
+     "name": "Enriched Nickel Ore",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "enriched-cobalt-ore",
+     "name": "Enriched Cobalt Ore",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Titanium Ore Relic Technology",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "protomatter",
+     "name": "Protomatter",
+     "per_min": "60/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "titanium-ore",
+     "name": "Titanium Ore",
+     "per_min": "60/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "1 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Warp Fuel Fuel",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "deuterium-fuel",
+     "name": "Deuterium Fuel",
+     "per_min": "10/min",
+     "count": "2"
+    },
+    {
+     "item": "containment-coil",
+     "name": "Containment Coil",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "warp-fuel",
+     "name": "Warp Fuel",
+     "per_min": "5/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "12 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Alpha Protein Biorecipes 1",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "xenoeukarya",
+     "name": "Xenoeukarya",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "enzyme",
+     "name": "Enzyme",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "nutrients",
+     "name": "Nutrients",
+     "per_min": "30/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "alpha-protein",
+     "name": "Alpha Protein",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "biomass",
+     "name": "Biomass",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Beta Protein Biorecipes 1",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "xenoarchaea",
+     "name": "Xenoarchaea",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "enzyme",
+     "name": "Enzyme",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "nutrients",
+     "name": "Nutrients",
+     "per_min": "30/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "beta-protein",
+     "name": "Beta Protein",
+     "per_min": "15/min",
+     "count": "1"
+    },
+    {
+     "item": "biomass",
+     "name": "Biomass",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Biolattice Biorecipes 1",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "alpha-protein",
+     "name": "Alpha Protein",
+     "per_min": "30/min",
+     "count": "2"
+    },
+    {
+     "item": "beta-protein",
+     "name": "Beta Protein",
+     "per_min": "30/min",
+     "count": "2"
+    },
+    {
+     "item": "nutrients",
+     "name": "Nutrients",
+     "per_min": "60/min",
+     "count": "4"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "biolattice",
+     "name": "Biolattice",
+     "per_min": "15/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Enzyme Biorecipes 1",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "xenobacteria",
+     "name": "Xenobacteria",
+     "per_min": "30/min",
+     "count": "1"
+    },
+    {
+     "item": "nutrients",
+     "name": "Nutrients",
+     "per_min": "60/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "enzyme",
+     "name": "Enzyme",
+     "per_min": "30/min",
+     "count": "1"
+    },
+    {
+     "item": "biomass",
+     "name": "Biomass",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Nutrients Biorecipes 1",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "graphite",
+     "name": "Graphite",
+     "per_min": "60/min",
+     "count": "1"
+    },
+    {
+     "item": "silica",
+     "name": "Silica",
+     "per_min": "60/min",
+     "count": "1"
+    },
+    {
+     "item": "water-ice",
+     "name": "Water Ice",
+     "per_min": "60/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "nutrients",
+     "name": "Nutrients",
+     "per_min": "120/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "1 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Xenoarchaea Bio recycling",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "xenoarchaea",
+     "name": "Xenoarchaea",
+     "per_min": "30/min",
+     "count": "1"
+    },
+    {
+     "item": "biomass",
+     "name": "Biomass",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "xenoarchaea",
+     "name": "Xenoarchaea",
+     "per_min": "60/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Xenobacteria Bio recycling",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "xenobacteria",
+     "name": "Xenobacteria",
+     "per_min": "30/min",
+     "count": "1"
+    },
+    {
+     "item": "biomass",
+     "name": "Biomass",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "xenobacteria",
+     "name": "Xenobacteria",
+     "per_min": "60/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Xenoeukarya Bio recycling",
+   "machine": "growth-chamber",
+   "inputs": [
+    {
+     "item": "xenoeukarya",
+     "name": "Xenoeukarya",
+     "per_min": "30/min",
+     "count": "1"
+    },
+    {
+     "item": "biomass",
+     "name": "Biomass",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "xenoeukarya",
+     "name": "Xenoeukarya",
+     "per_min": "60/min",
+     "count": "2"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Cobalt Plates Ore Refining",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "cobalt-ore",
+     "name": "Cobalt Ore",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "cobalt-plates",
+     "name": "Cobalt Plates",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Cobalt Plates Enriched Ore",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "enriched-cobalt-ore",
+     "name": "Enriched Cobalt Ore",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "cobalt-plates",
+     "name": "Cobalt Plates",
+     "per_min": "30/min",
+     "count": "3"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Nickel Plates Enriched Ore",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "enriched-nickel-ore",
+     "name": "Enriched Nickel Ore",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "nickel-plates",
+     "name": "Nickel Plates",
+     "per_min": "30/min",
+     "count": "3"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Titanium Plates Enriched Ore",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "enriched-titanium-ore",
+     "name": "Enriched Titanium Ore",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "titanium-plates",
+     "name": "Titanium Plates",
+     "per_min": "30/min",
+     "count": "3"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Graphene Other Refining",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "graphite",
+     "name": "Graphite",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "graphene",
+     "name": "Graphene",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Hydrogen Fuel Fuel",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "water-ice",
+     "name": "Water Ice",
+     "per_min": "20/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "hydrogen-fuel",
+     "name": "Hydrogen Fuel",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Iridium Plates Ore Refining",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "iridium-ore",
+     "name": "Iridium Ore",
+     "per_min": "40/min",
+     "count": "2"
+    },
+    {
+     "item": "titanium-ore",
+     "name": "Titanium Ore",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "iridium-plates",
+     "name": "Iridium Plates",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Nickel Plates Ore Refining",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "nickel-ore",
+     "name": "Nickel Ore",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "nickel-plates",
+     "name": "Nickel Plates",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Reinforced Glass Other Refining",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "silica",
+     "name": "Silica",
+     "per_min": "40/min",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "reinforced-glass",
+     "name": "Reinforced Glass",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Silicon Wafers Other Refining",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "silica",
+     "name": "Silica",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "silicon-wafers",
+     "name": "Silicon Wafers",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Titanium Plates Ore Refining",
+   "machine": "refinery",
+   "inputs": [
+    {
+     "item": "titanium-ore",
+     "name": "Titanium Ore",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "titanium-plates",
+     "name": "Titanium Plates",
+     "per_min": "20/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Protomatter Relic Technology",
+   "machine": "relic-synthesizer",
+   "inputs": [],
+   "outputs": [
+    {
+     "item": "protomatter",
+     "name": "Protomatter",
+     "per_min": "120/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "0.5 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Relic Shard Relic Technology",
+   "machine": "relic-synthesizer",
+   "inputs": [
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "relic-shard",
+     "name": "Relic Shard",
+     "per_min": "10/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Encoded Simulation Matrix Advanced Assembler 1",
+   "machine": "supercomputer",
+   "inputs": [
+    {
+     "item": "empty-simulation-matrix",
+     "name": "Empty Simulation Matrix",
+     "per_min": "2/min",
+     "count": "1"
+    },
+    {
+     "item": "stellar-survey-data",
+     "name": "Stellar Survey Data",
+     "per_min": "2/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "encoded-simulation-matrix",
+     "name": "Encoded Simulation Matrix",
+     "per_min": "2/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "30 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  }
+ ]
+}

@@ -1,1 +1,3620 @@
-{"game_version":"EA 0.1.x (Nov 2026)","machines":[]}
+{
+ "game_version": "EA (unverified; source is demo)",
+ "count": 61,
+ "machines": [
+  {
+   "name": "Advanced Assembler",
+   "props": {
+    "Category": "Production",
+    "Power": "18 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Maglev Coupling",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Advanced Circuits Advanced Assembler 1",
+      "ingredients": [
+       {
+        "item": "detector-array",
+        "name": "Detector Array",
+        "per_min": "15/min",
+        "count": "3"
+       },
+       {
+        "item": "basic-circuits",
+        "name": "Basic Circuits",
+        "per_min": "15/min",
+        "count": "3"
+       },
+       {
+        "item": "superalloy",
+        "name": "Superalloy",
+        "per_min": "5/min",
+        "count": "1"
+       },
+       {
+        "item": "coolant",
+        "name": "Coolant",
+        "per_min": "30/min",
+        "count": "6"
+       }
+      ],
+      "products": [
+       {
+        "item": "advanced-circuits",
+        "name": "Advanced Circuits",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "12 s"
+     },
+     {
+      "recipe": "Advanced Plate Advanced Assembler 1",
+      "ingredients": [
+       {
+        "item": "chromatic-alloy",
+        "name": "Chromatic Alloy",
+        "per_min": "30/min",
+        "count": "6"
+       },
+       {
+        "item": "chitin-composite",
+        "name": "Chitin Composite",
+        "per_min": "30/min",
+        "count": "6"
+       },
+       {
+        "item": "reinforced-plate",
+        "name": "Reinforced Plate",
+        "per_min": "10/min",
+        "count": "2"
+       },
+       {
+        "item": "multisensor",
+        "name": "Multisensor",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "advanced-plate",
+        "name": "Advanced Plate",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "12 s"
+     },
+     {
+      "recipe": "Chitin Composite Advanced Assembler 1",
+      "ingredients": [
+       {
+        "item": "biolattice",
+        "name": "Biolattice",
+        "per_min": "30/min",
+        "count": "6"
+       },
+       {
+        "item": "graphene",
+        "name": "Graphene",
+        "per_min": "15/min",
+        "count": "3"
+       },
+       {
+        "item": "reinforced-glass",
+        "name": "Reinforced Glass",
+        "per_min": "15/min",
+        "count": "3"
+       },
+       {
+        "item": "enzyme",
+        "name": "Enzyme",
+        "per_min": "60/min",
+        "count": "12"
+       }
+      ],
+      "products": [
+       {
+        "item": "chitin-composite",
+        "name": "Chitin Composite",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "12 s"
+     },
+     {
+      "recipe": "Empty Simulation Matrix Advanced Assembler 1",
+      "ingredients": [
+       {
+        "item": "advanced-circuits",
+        "name": "Advanced Circuits",
+        "per_min": "20/min",
+        "count": "2"
+       },
+       {
+        "item": "lonsdaleite",
+        "name": "Lonsdaleite",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "empty-simulation-matrix",
+        "name": "Empty Simulation Matrix",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Multisensor Advanced Assembler 1",
+      "ingredients": [
+       {
+        "item": "chromatic-alloy",
+        "name": "Chromatic Alloy",
+        "per_min": "30/min",
+        "count": "3"
+       },
+       {
+        "item": "lonsdaleite",
+        "name": "Lonsdaleite",
+        "per_min": "30/min",
+        "count": "3"
+       },
+       {
+        "item": "encoded-simulation-matrix",
+        "name": "Encoded Simulation Matrix",
+        "per_min": "10/min",
+        "count": "1"
+       },
+       {
+        "item": "superconductor-coil",
+        "name": "Superconductor Coil",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "multisensor",
+        "name": "Multisensor",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Servo Plate Intermediate",
+      "ingredients": [
+       {
+        "item": "reinforced-plate",
+        "name": "Reinforced Plate",
+        "per_min": "20/min",
+        "count": "2"
+       },
+       {
+        "item": "maglev-coupling",
+        "name": "Maglev Coupling",
+        "per_min": "20/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "servo-plate",
+        "name": "Servo Plate",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Superalloy Frame Advanced Assembler 1",
+      "ingredients": [
+       {
+        "item": "superalloy",
+        "name": "Superalloy",
+        "per_min": "15/min",
+        "count": "3"
+       }
+      ],
+      "products": [
+       {
+        "item": "superalloy-frame",
+        "name": "Superalloy Frame",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "12 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Advanced Assembler",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ]
+   },
+   "slug": "advanced-assembler",
+   "category": "Production",
+   "power_mw": 18.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Armchair",
+   "props": {
+    "Category": "Decorations",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Decorations II",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ]
+   },
+   "slug": "armchair",
+   "category": "Decorations",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Armoury",
+   "props": {
+    "Category": "Production",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Backpack Mk. 1 Equipment",
+      "ingredients": [
+       {
+        "item": "hull-plate",
+        "name": "Hull Plate",
+        "per_min": "300/min",
+        "count": "10"
+       },
+       {
+        "item": "lightweight-frames",
+        "name": "Lightweight Frames",
+        "per_min": "300/min",
+        "count": "10"
+       }
+      ],
+      "products": [
+       {
+        "item": "backpack-mk-1",
+        "name": "Backpack Mk. 1",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Backpack Mk. 2 Equipment",
+      "ingredients": [
+       {
+        "item": "reinforced-plate",
+        "name": "Reinforced Plate",
+        "per_min": "300/min",
+        "count": "10"
+       },
+       {
+        "item": "graphene",
+        "name": "Graphene",
+        "per_min": "600/min",
+        "count": "20"
+       }
+      ],
+      "products": [
+       {
+        "item": "backpack-mk-2",
+        "name": "Backpack Mk. 2",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Backpack Mk. 3 Equipment",
+      "ingredients": [
+       {
+        "item": "superalloy-frame",
+        "name": "Superalloy Frame",
+        "per_min": "300/min",
+        "count": "10"
+       },
+       {
+        "item": "biolattice",
+        "name": "Biolattice",
+        "per_min": "300/min",
+        "count": "10"
+       }
+      ],
+      "products": [
+       {
+        "item": "backpack-mk-3",
+        "name": "Backpack Mk. 3",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Exoskeleton Mk. 1 Equipment",
+      "ingredients": [
+       {
+        "item": "servomotor",
+        "name": "Servomotor",
+        "per_min": "900/min",
+        "count": "30"
+       },
+       {
+        "item": "capacitor",
+        "name": "Capacitor",
+        "per_min": "600/min",
+        "count": "20"
+       }
+      ],
+      "products": [
+       {
+        "item": "exoskeleton-mk-1",
+        "name": "Exoskeleton Mk. 1",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Exoskeleton Mk. 2 Equipment",
+      "ingredients": [
+       {
+        "item": "maglev-coupling",
+        "name": "Maglev Coupling",
+        "per_min": "600/min",
+        "count": "20"
+       },
+       {
+        "item": "coolant",
+        "name": "Coolant",
+        "per_min": "600/min",
+        "count": "20"
+       }
+      ],
+      "products": [
+       {
+        "item": "exoskeleton-mk-2",
+        "name": "Exoskeleton Mk. 2",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Exoskeleton Mk. 3 Equipment",
+      "ingredients": [
+       {
+        "item": "chitin-composite",
+        "name": "Chitin Composite",
+        "per_min": "300/min",
+        "count": "10"
+       },
+       {
+        "item": "chromatic-alloy",
+        "name": "Chromatic Alloy",
+        "per_min": "300/min",
+        "count": "10"
+       }
+      ],
+      "products": [
+       {
+        "item": "exoskeleton-mk-3",
+        "name": "Exoskeleton Mk. 3",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Exosuit Equipment",
+      "ingredients": [
+       {
+        "item": "advanced-plate",
+        "name": "Advanced Plate",
+        "per_min": "900/min",
+        "count": "30"
+       },
+       {
+        "item": "backpack-mk-3",
+        "name": "Backpack Mk. 3",
+        "per_min": "60/min",
+        "count": "2"
+       },
+       {
+        "item": "exoskeleton-mk-3",
+        "name": "Exoskeleton Mk. 3",
+        "per_min": "60/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "exosuit",
+        "name": "Exosuit",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Armoury",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ]
+   },
+   "slug": "armoury",
+   "category": "Production",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Assembler",
+   "props": {
+    "Category": "Production",
+    "Power": "6 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Basic Motor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Basic Circuits Nickel Crafting",
+      "ingredients": [
+       {
+        "item": "silicon-wafers",
+        "name": "Silicon Wafers",
+        "per_min": "20/min",
+        "count": "2"
+       },
+       {
+        "item": "magnetic-coils",
+        "name": "Magnetic Coils",
+        "per_min": "20/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "basic-circuits",
+        "name": "Basic Circuits",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Basic Motor Titanium Crafting",
+      "ingredients": [
+       {
+        "item": "titanium-plates",
+        "name": "Titanium Plates",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "basic-motor",
+        "name": "Basic Motor",
+        "per_min": "60/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Capacitor Nickel Crafting",
+      "ingredients": [
+       {
+        "item": "nickel-plates",
+        "name": "Nickel Plates",
+        "per_min": "30/min",
+        "count": "2"
+       },
+       {
+        "item": "titanium-plates",
+        "name": "Titanium Plates",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "capacitor",
+        "name": "Capacitor",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Containment Coil Intermediate",
+      "ingredients": [
+       {
+        "item": "magnetic-coils",
+        "name": "Magnetic Coils",
+        "per_min": "30/min",
+        "count": "3"
+       },
+       {
+        "item": "capacitor",
+        "name": "Capacitor",
+        "per_min": "10/min",
+        "count": "1"
+       },
+       {
+        "item": "basic-circuits",
+        "name": "Basic Circuits",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "containment-coil",
+        "name": "Containment Coil",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Detector Array Intermediate",
+      "ingredients": [
+       {
+        "item": "graphene",
+        "name": "Graphene",
+        "per_min": "20/min",
+        "count": "2"
+       },
+       {
+        "item": "cobalt-plates",
+        "name": "Cobalt Plates",
+        "per_min": "20/min",
+        "count": "2"
+       },
+       {
+        "item": "basic-circuits",
+        "name": "Basic Circuits",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "detector-array",
+        "name": "Detector Array",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Hull Plate Titanium Crafting",
+      "ingredients": [
+       {
+        "item": "titanium-plates",
+        "name": "Titanium Plates",
+        "per_min": "30/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "hull-plate",
+        "name": "Hull Plate",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Lightweight Frames Titanium Crafting",
+      "ingredients": [
+       {
+        "item": "titanium-plates",
+        "name": "Titanium Plates",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "lightweight-frames",
+        "name": "Lightweight Frames",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Magnetic Coils Nickel Crafting",
+      "ingredients": [
+       {
+        "item": "nickel-plates",
+        "name": "Nickel Plates",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "magnetic-coils",
+        "name": "Magnetic Coils",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Maglev Coupling Intermediate",
+      "ingredients": [
+       {
+        "item": "servomotor",
+        "name": "Servomotor",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "superalloy",
+        "name": "Superalloy",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "maglev-coupling",
+        "name": "Maglev Coupling",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Missile Consumables",
+      "ingredients": [
+       {
+        "item": "hull-plate",
+        "name": "Hull Plate",
+        "per_min": "10/min",
+        "count": "1"
+       },
+       {
+        "item": "containment-coil",
+        "name": "Containment Coil",
+        "per_min": "10/min",
+        "count": "1"
+       },
+       {
+        "item": "coolant",
+        "name": "Coolant",
+        "per_min": "40/min",
+        "count": "4"
+       }
+      ],
+      "products": [
+       {
+        "item": "missile",
+        "name": "Missile",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Reinforced Plate Intermediate",
+      "ingredients": [
+       {
+        "item": "hull-plate",
+        "name": "Hull Plate",
+        "per_min": "60/min",
+        "count": "6"
+       },
+       {
+        "item": "superalloy",
+        "name": "Superalloy",
+        "per_min": "30/min",
+        "count": "3"
+       }
+      ],
+      "products": [
+       {
+        "item": "reinforced-plate",
+        "name": "Reinforced Plate",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Relic Capacitor Relic Technology",
+      "ingredients": [
+       {
+        "item": "capacitor",
+        "name": "Capacitor",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "relic-shard",
+        "name": "Relic Shard",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "relic-capacitor",
+        "name": "Relic Capacitor",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Repair Kit Consumables",
+      "ingredients": [
+       {
+        "item": "lightweight-frames",
+        "name": "Lightweight Frames",
+        "per_min": "40/min",
+        "count": "1"
+       },
+       {
+        "item": "nickel-plates",
+        "name": "Nickel Plates",
+        "per_min": "40/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "repair-kit",
+        "name": "Repair Kit",
+        "per_min": "40/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "1.5 s"
+     },
+     {
+      "recipe": "Electrical Repair Kit Consumables",
+      "ingredients": [
+       {
+        "item": "magnetic-coils",
+        "name": "Magnetic Coils",
+        "per_min": "400/min",
+        "count": "10"
+       },
+       {
+        "item": "capacitor",
+        "name": "Capacitor",
+        "per_min": "400/min",
+        "count": "10"
+       }
+      ],
+      "products": [
+       {
+        "item": "electrical-repair-kit",
+        "name": "Electrical Repair Kit",
+        "per_min": "40/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "1.5 s"
+     },
+     {
+      "recipe": "Hull Repair Kit Consumables",
+      "ingredients": [
+       {
+        "item": "hull-plate",
+        "name": "Hull Plate",
+        "per_min": "200/min",
+        "count": "5"
+       },
+       {
+        "item": "lightweight-frames",
+        "name": "Lightweight Frames",
+        "per_min": "200/min",
+        "count": "5"
+       }
+      ],
+      "products": [
+       {
+        "item": "hull-repair-kit",
+        "name": "Hull Repair Kit",
+        "per_min": "40/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "1.5 s"
+     },
+     {
+      "recipe": "Servomotor Titanium Crafting",
+      "ingredients": [
+       {
+        "item": "lightweight-frames",
+        "name": "Lightweight Frames",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "basic-motor",
+        "name": "Basic Motor",
+        "per_min": "60/min",
+        "count": "4"
+       },
+       {
+        "item": "capacitor",
+        "name": "Capacitor",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "servomotor",
+        "name": "Servomotor",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Superconductor Coil Intermediate",
+      "ingredients": [
+       {
+        "item": "maglev-coupling",
+        "name": "Maglev Coupling",
+        "per_min": "15/min",
+        "count": "3"
+       },
+       {
+        "item": "containment-coil",
+        "name": "Containment Coil",
+        "per_min": "15/min",
+        "count": "3"
+       },
+       {
+        "item": "coolant",
+        "name": "Coolant",
+        "per_min": "60/min",
+        "count": "12"
+       }
+      ],
+      "products": [
+       {
+        "item": "superconductor-coil",
+        "name": "Superconductor Coil",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "12 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Basic Production",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ]
+   },
+   "slug": "assembler",
+   "category": "Production",
+   "power_mw": 6.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Astronomic Science Lab",
+   "props": {
+    "Category": "Research",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Iridium Plates",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Encoded Simulation Matrix",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Astronomic Science",
+      "tier": "Tier 4",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science"
+     }
+    ]
+   },
+   "slug": "astronomic-science-lab",
+   "category": "Research",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Core",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "basic-core",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Belt Balancer Mk. 1",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Basic Motor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics I",
+      "tier": "Tier 1",
+      "science cost": "5× Material Science"
+     }
+    ]
+   },
+   "slug": "belt-balancer-mk-1",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Belt Balancer Mk. 2",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ]
+   },
+   "slug": "belt-balancer-mk-2",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Belt Balancer Mk. 3",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Maglev Coupling",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics III",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     }
+    ]
+   },
+   "slug": "belt-balancer-mk-3",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Biosample Collector",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "biosample-collector",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Coffee Table",
+   "props": {
+    "Category": "Decorations",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Decorations II",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ]
+   },
+   "slug": "coffee-table",
+   "category": "Decorations",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Computation Science Lab",
+   "props": {
+    "Category": "Research",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ]
+   },
+   "slug": "computation-science-lab",
+   "category": "Research",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Container",
+   "props": {
+    "Category": "Logistics",
+    "Stores Items": "16 Slots",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Basic Production",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ]
+   },
+   "slug": "container",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Conveyor Belt Mk. 1",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Basic Motor",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics I",
+      "tier": "Tier 1",
+      "science cost": "5× Material Science"
+     }
+    ]
+   },
+   "slug": "conveyor-belt-mk-1",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Conveyor Belt Mk. 2",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "120 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ]
+   },
+   "slug": "conveyor-belt-mk-2",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Conveyor Belt Mk. 3",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "120 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Maglev Coupling",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics III",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     }
+    ]
+   },
+   "slug": "conveyor-belt-mk-3",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Doorway Wall",
+   "props": {
+    "Category": "Decorations",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Titanium Plates",
+      "category": "Crafting Items",
+      "amount required": "12×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Decorations I",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ]
+   },
+   "slug": "doorway-wall",
+   "category": "Decorations",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Electromagnetic Science Lab",
+   "props": {
+    "Category": "Research",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Detector Array",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Electromagnetic Science",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ]
+   },
+   "slug": "electromagnetic-science-lab",
+   "category": "Research",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Elevator",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "elevator",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Enrichment Chamber",
+   "props": {
+    "Category": "Production",
+    "Power": "18 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Containment Coil",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Chromatic Alloy Alloys",
+      "ingredients": [
+       {
+        "item": "iridium-plates",
+        "name": "Iridium Plates",
+        "per_min": "60/min",
+        "count": "6"
+       },
+       {
+        "item": "superalloy",
+        "name": "Superalloy",
+        "per_min": "30/min",
+        "count": "3"
+       }
+      ],
+      "products": [
+       {
+        "item": "chromatic-alloy",
+        "name": "Chromatic Alloy",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Coolant Other Refining",
+      "ingredients": [
+       {
+        "item": "nitrogen-gas",
+        "name": "Nitrogen Gas",
+        "per_min": "60/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "coolant",
+        "name": "Coolant",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Enriched Cobalt Ore Enriched Ore",
+      "ingredients": [
+       {
+        "item": "cobalt-ore",
+        "name": "Cobalt Ore",
+        "per_min": "60/min",
+        "count": "3"
+       }
+      ],
+      "products": [
+       {
+        "item": "enriched-cobalt-ore",
+        "name": "Enriched Cobalt Ore",
+        "per_min": "40/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Deuterium Fuel Fuel",
+      "ingredients": [
+       {
+        "item": "hydrogen-fuel",
+        "name": "Hydrogen Fuel",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "deuterium-fuel",
+        "name": "Deuterium Fuel",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Enriched Nickel Ore Enriched Ore",
+      "ingredients": [
+       {
+        "item": "nickel-ore",
+        "name": "Nickel Ore",
+        "per_min": "60/min",
+        "count": "3"
+       }
+      ],
+      "products": [
+       {
+        "item": "enriched-nickel-ore",
+        "name": "Enriched Nickel Ore",
+        "per_min": "40/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Enriched Titanium Ore Enriched Ore",
+      "ingredients": [
+       {
+        "item": "titanium-ore",
+        "name": "Titanium Ore",
+        "per_min": "60/min",
+        "count": "3"
+       }
+      ],
+      "products": [
+       {
+        "item": "enriched-titanium-ore",
+        "name": "Enriched Titanium Ore",
+        "per_min": "40/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Nickel Ore Relic Technology",
+      "ingredients": [
+       {
+        "item": "protomatter",
+        "name": "Protomatter",
+        "per_min": "60/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "nickel-ore",
+        "name": "Nickel Ore",
+        "per_min": "60/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "1 s"
+     },
+     {
+      "recipe": "Superalloy Alloys",
+      "ingredients": [
+       {
+        "item": "enriched-titanium-ore",
+        "name": "Enriched Titanium Ore",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "enriched-nickel-ore",
+        "name": "Enriched Nickel Ore",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "enriched-cobalt-ore",
+        "name": "Enriched Cobalt Ore",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "superalloy",
+        "name": "Superalloy",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Titanium Ore Relic Technology",
+      "ingredients": [
+       {
+        "item": "protomatter",
+        "name": "Protomatter",
+        "per_min": "60/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "titanium-ore",
+        "name": "Titanium Ore",
+        "per_min": "60/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "1 s"
+     },
+     {
+      "recipe": "Warp Fuel Fuel",
+      "ingredients": [
+       {
+        "item": "deuterium-fuel",
+        "name": "Deuterium Fuel",
+        "per_min": "10/min",
+        "count": "2"
+       },
+       {
+        "item": "containment-coil",
+        "name": "Containment Coil",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "warp-fuel",
+        "name": "Warp Fuel",
+        "per_min": "5/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "12 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Enrichment Chamber",
+      "tier": "Tier 2",
+      "science cost": "150× Material Science 150× Computation Science"
+     }
+    ]
+   },
+   "slug": "enrichment-chamber",
+   "category": "Production",
+   "power_mw": 18.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Factory Tier 1",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "factory-tier-1",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Fighter",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Ship Hangar",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ]
+   },
+   "slug": "fighter",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Gas Extractor",
+   "props": {
+    "Category": "Miners",
+    "Must be built on a Gas Vent": "Yes",
+    "Extracts Gas": "60 Items / Min",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Containment Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Gas Extraction",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ]
+   },
+   "slug": "gas-extractor",
+   "category": "Miners",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Growth Chamber",
+   "props": {
+    "Category": "Production",
+    "Power": "6 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Iridium Plates",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Advanced Circuits",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Alpha Protein Biorecipes 1",
+      "ingredients": [
+       {
+        "item": "xenoeukarya",
+        "name": "Xenoeukarya",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "enzyme",
+        "name": "Enzyme",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "nutrients",
+        "name": "Nutrients",
+        "per_min": "30/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "alpha-protein",
+        "name": "Alpha Protein",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "biomass",
+        "name": "Biomass",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Beta Protein Biorecipes 1",
+      "ingredients": [
+       {
+        "item": "xenoarchaea",
+        "name": "Xenoarchaea",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "enzyme",
+        "name": "Enzyme",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "nutrients",
+        "name": "Nutrients",
+        "per_min": "30/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "beta-protein",
+        "name": "Beta Protein",
+        "per_min": "15/min",
+        "count": "1"
+       },
+       {
+        "item": "biomass",
+        "name": "Biomass",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Biolattice Biorecipes 1",
+      "ingredients": [
+       {
+        "item": "alpha-protein",
+        "name": "Alpha Protein",
+        "per_min": "30/min",
+        "count": "2"
+       },
+       {
+        "item": "beta-protein",
+        "name": "Beta Protein",
+        "per_min": "30/min",
+        "count": "2"
+       },
+       {
+        "item": "nutrients",
+        "name": "Nutrients",
+        "per_min": "60/min",
+        "count": "4"
+       }
+      ],
+      "products": [
+       {
+        "item": "biolattice",
+        "name": "Biolattice",
+        "per_min": "15/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "4 s"
+     },
+     {
+      "recipe": "Enzyme Biorecipes 1",
+      "ingredients": [
+       {
+        "item": "xenobacteria",
+        "name": "Xenobacteria",
+        "per_min": "30/min",
+        "count": "1"
+       },
+       {
+        "item": "nutrients",
+        "name": "Nutrients",
+        "per_min": "60/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "enzyme",
+        "name": "Enzyme",
+        "per_min": "30/min",
+        "count": "1"
+       },
+       {
+        "item": "biomass",
+        "name": "Biomass",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Nutrients Biorecipes 1",
+      "ingredients": [
+       {
+        "item": "graphite",
+        "name": "Graphite",
+        "per_min": "60/min",
+        "count": "1"
+       },
+       {
+        "item": "silica",
+        "name": "Silica",
+        "per_min": "60/min",
+        "count": "1"
+       },
+       {
+        "item": "water-ice",
+        "name": "Water Ice",
+        "per_min": "60/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "nutrients",
+        "name": "Nutrients",
+        "per_min": "120/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "1 s"
+     },
+     {
+      "recipe": "Xenoarchaea Bio recycling",
+      "ingredients": [
+       {
+        "item": "xenoarchaea",
+        "name": "Xenoarchaea",
+        "per_min": "30/min",
+        "count": "1"
+       },
+       {
+        "item": "biomass",
+        "name": "Biomass",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "xenoarchaea",
+        "name": "Xenoarchaea",
+        "per_min": "60/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Xenobacteria Bio recycling",
+      "ingredients": [
+       {
+        "item": "xenobacteria",
+        "name": "Xenobacteria",
+        "per_min": "30/min",
+        "count": "1"
+       },
+       {
+        "item": "biomass",
+        "name": "Biomass",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "xenobacteria",
+        "name": "Xenobacteria",
+        "per_min": "60/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "2 s"
+     },
+     {
+      "recipe": "Xenoeukarya Bio recycling",
+      "ingredients": [
+       {
+        "item": "xenoeukarya",
+        "name": "Xenoeukarya",
+        "per_min": "30/min",
+        "count": "1"
+       },
+       {
+        "item": "biomass",
+        "name": "Biomass",
+        "per_min": "30/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "xenoeukarya",
+        "name": "Xenoeukarya",
+        "per_min": "60/min",
+        "count": "2"
+       }
+      ],
+      "craft time": "2 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Growth Chamber",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ]
+   },
+   "slug": "growth-chamber",
+   "category": "Production",
+   "power_mw": 6.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Interstellar Warp Drive",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "interstellar-warp-drive",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Large Container",
+   "props": {
+    "Category": "Logistics",
+    "Stores Items": "32 Slots",
+    "Stack Size": "+500%",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Large Container",
+      "tier": "Tier 1",
+      "science cost": "100× Material Science"
+     }
+    ]
+   },
+   "slug": "large-container",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Large Transport Block",
+   "props": {
+    "Category": "Other",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "large-transport-block",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Material Science Lab",
+   "props": {
+    "Category": "Research",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Basic Production",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ]
+   },
+   "slug": "material-science-lab",
+   "category": "Research",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Miner Mk. 1",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "miner-mk-1",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Beacon",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Nickel Plates",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "mining-beacon",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Drone Bay Mk. 1",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "mining-drone-bay-mk-1",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Drone Bay Mk. 2",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "mining-drone-bay-mk-2",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Plant",
+   "props": {
+    "Category": "Plants",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Small Plants",
+      "tier": "Mission",
+      "science cost": "30× Material Science"
+     }
+    ]
+   },
+   "slug": "plant",
+   "category": "Plants",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Plasma Turret",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "plasma-turret",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Quantum Science Lab",
+   "props": {
+    "Category": "Research",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Superconductor Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Detector Array",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Quantum Science",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ]
+   },
+   "slug": "quantum-science-lab",
+   "category": "Research",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Reactor",
+   "props": {
+    "Category": "Power Generation",
+    "Generates Power": "48 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Hydrogen Power",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ]
+   },
+   "slug": "reactor",
+   "category": "Power Generation",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Refinery",
+   "props": {
+    "Category": "Production",
+    "Power": "4.5 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Cobalt Plates Ore Refining",
+      "ingredients": [
+       {
+        "item": "cobalt-ore",
+        "name": "Cobalt Ore",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "cobalt-plates",
+        "name": "Cobalt Plates",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Cobalt Plates Enriched Ore",
+      "ingredients": [
+       {
+        "item": "enriched-cobalt-ore",
+        "name": "Enriched Cobalt Ore",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "cobalt-plates",
+        "name": "Cobalt Plates",
+        "per_min": "30/min",
+        "count": "3"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Nickel Plates Enriched Ore",
+      "ingredients": [
+       {
+        "item": "enriched-nickel-ore",
+        "name": "Enriched Nickel Ore",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "nickel-plates",
+        "name": "Nickel Plates",
+        "per_min": "30/min",
+        "count": "3"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Titanium Plates Enriched Ore",
+      "ingredients": [
+       {
+        "item": "enriched-titanium-ore",
+        "name": "Enriched Titanium Ore",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "titanium-plates",
+        "name": "Titanium Plates",
+        "per_min": "30/min",
+        "count": "3"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Graphene Other Refining",
+      "ingredients": [
+       {
+        "item": "graphite",
+        "name": "Graphite",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "graphene",
+        "name": "Graphene",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Hydrogen Fuel Fuel",
+      "ingredients": [
+       {
+        "item": "water-ice",
+        "name": "Water Ice",
+        "per_min": "20/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "hydrogen-fuel",
+        "name": "Hydrogen Fuel",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     },
+     {
+      "recipe": "Iridium Plates Ore Refining",
+      "ingredients": [
+       {
+        "item": "iridium-ore",
+        "name": "Iridium Ore",
+        "per_min": "40/min",
+        "count": "2"
+       },
+       {
+        "item": "titanium-ore",
+        "name": "Titanium Ore",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "iridium-plates",
+        "name": "Iridium Plates",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Nickel Plates Ore Refining",
+      "ingredients": [
+       {
+        "item": "nickel-ore",
+        "name": "Nickel Ore",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "nickel-plates",
+        "name": "Nickel Plates",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Reinforced Glass Other Refining",
+      "ingredients": [
+       {
+        "item": "silica",
+        "name": "Silica",
+        "per_min": "40/min",
+        "count": "2"
+       }
+      ],
+      "products": [
+       {
+        "item": "reinforced-glass",
+        "name": "Reinforced Glass",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Silicon Wafers Other Refining",
+      "ingredients": [
+       {
+        "item": "silica",
+        "name": "Silica",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "silicon-wafers",
+        "name": "Silicon Wafers",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     },
+     {
+      "recipe": "Titanium Plates Ore Refining",
+      "ingredients": [
+       {
+        "item": "titanium-ore",
+        "name": "Titanium Ore",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "titanium-plates",
+        "name": "Titanium Plates",
+        "per_min": "20/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "3 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Basic Production",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ]
+   },
+   "slug": "refinery",
+   "category": "Production",
+   "power_mw": 4.5,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Relic Analyzer",
+   "props": {
+    "Category": "Research",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Relic Shard",
+      "category": "Relic Technology",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Relic Analyzer",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ]
+   },
+   "slug": "relic-analyzer",
+   "category": "Research",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Relic Synthesizer",
+   "props": {
+    "Category": "Production",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Relic Core",
+      "category": "Relic Technology",
+      "amount required": "1×"
+     },
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Superconductor Coil",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Protomatter Relic Technology",
+      "ingredients": [],
+      "products": [
+       {
+        "item": "protomatter",
+        "name": "Protomatter",
+        "per_min": "120/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "0.5 s"
+     },
+     {
+      "recipe": "Relic Shard Relic Technology",
+      "ingredients": [
+       {
+        "item": "superalloy",
+        "name": "Superalloy",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "relic-shard",
+        "name": "Relic Shard",
+        "per_min": "10/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "6 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Relic Synthesizer",
+      "tier": "Tier 3",
+      "science cost": "200× Relic Technology"
+     }
+    ]
+   },
+   "slug": "relic-synthesizer",
+   "category": "Production",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shipyard Tier 1",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "shipyard-tier-1",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shipyard Tier 2",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "16×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "30×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "shipyard-tier-2",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Short-Range Teleporter",
+   "props": {
+    "Category": "Production",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Superconductor Coil",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     },
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Short-Range Teleporter",
+      "tier": "Mission",
+      "science cost": ""
+     }
+    ]
+   },
+   "slug": "short-range-teleporter",
+   "category": "Production",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Smart Containers",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Smart Containers",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ]
+   },
+   "slug": "smart-containers",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 1",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "solar-panels-mk-1",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 2",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "solar-panels-mk-2",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 3",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "solar-panels-mk-3",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Splitter Mk. 1",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     },
+     {
+      "item": "Basic Motor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics I",
+      "tier": "Tier 1",
+      "science cost": "5× Material Science"
+     }
+    ]
+   },
+   "slug": "splitter-mk-1",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Splitter Mk. 2",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ]
+   },
+   "slug": "splitter-mk-2",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Splitter Mk. 3",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Maglev Coupling",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics III",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     }
+    ]
+   },
+   "slug": "splitter-mk-3",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Starter Station",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "starter-station",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Supercomputer",
+   "props": {
+    "Category": "Production",
+    "Power": "6 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Iridium Plates",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Advanced Circuits",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [
+     {
+      "recipe": "Encoded Simulation Matrix Advanced Assembler 1",
+      "ingredients": [
+       {
+        "item": "empty-simulation-matrix",
+        "name": "Empty Simulation Matrix",
+        "per_min": "2/min",
+        "count": "1"
+       },
+       {
+        "item": "stellar-survey-data",
+        "name": "Stellar Survey Data",
+        "per_min": "2/min",
+        "count": "1"
+       }
+      ],
+      "products": [
+       {
+        "item": "encoded-simulation-matrix",
+        "name": "Encoded Simulation Matrix",
+        "per_min": "2/min",
+        "count": "1"
+       }
+      ],
+      "craft time": "30 s"
+     }
+    ],
+    "Unlocked by": [
+     {
+      "research technology": "Supercomputer",
+      "tier": "Tier 4",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science"
+     }
+    ]
+   },
+   "slug": "supercomputer",
+   "category": "Production",
+   "power_mw": 6.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Tier 1 Core",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "60×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "30×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "tier-1-core",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Tier 1 Junction",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "tier-1-junction",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Tier 2 Core",
+   "props": {
+    "Category": "Other",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "60×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "30×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "tier-2-core",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Trade Console",
+   "props": {
+    "Category": "Other",
+    "Power": "6 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Basic Motor",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "trade-console",
+   "category": "Machine",
+   "power_mw": 6.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Underground Belt Mk. 1",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Max Length": "8",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Basic Motor",
+      "category": "Crafting Items",
+      "amount required": "8×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics I",
+      "tier": "Tier 1",
+      "science cost": "5× Material Science"
+     }
+    ]
+   },
+   "slug": "underground-belt-mk-1",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Underground Belt Mk. 2",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "60 Items / Min",
+    "Max Length": "10",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ]
+   },
+   "slug": "underground-belt-mk-2",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Underground Belt Mk. 3",
+   "props": {
+    "Category": "Logistics",
+    "Speed": "180 Items / Min",
+    "Max Length": "8",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     },
+     {
+      "item": "Maglev Coupling",
+      "category": "Crafting Items",
+      "amount required": "12×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Logistics III",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     }
+    ]
+   },
+   "slug": "underground-belt-mk-3",
+   "category": "Logistics",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Warp Drive",
+   "props": {
+    "Category": "Other",
+    "Status": "common.no"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [],
+    "Recipes made here": [],
+    "Unlocked by": []
+   },
+   "slug": "warp-drive",
+   "category": "Machine",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Workstation",
+   "props": {
+    "Category": "Production",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Basic Production",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ]
+   },
+   "slug": "workstation",
+   "category": "Production",
+   "power_mw": null,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Xenobiologic Science Lab",
+   "props": {
+    "Category": "Research",
+    "Power": "12 MW",
+    "Must be built on a station": "Yes",
+    "Status": "Yes"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Iridium Plates",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Biolattice",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     }
+    ],
+    "Recipes made here": [],
+    "Unlocked by": [
+     {
+      "research technology": "Xenobiologic Science",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ]
+   },
+   "slug": "xenobiologic-science-lab",
+   "category": "Research",
+   "power_mw": 12.0,
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  }
+ ]
+}

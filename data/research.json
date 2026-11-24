@@ -1,0 +1,4467 @@
+{
+ "game_version": "EA (unverified; source is demo)",
+ "count": 97,
+ "research": [
+  {
+   "name": "Advanced Assembler",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Quantum Science",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Advanced Circuits",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Superalloy Frame",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Advanced Assembler",
+      "type": "Machines",
+      "category": "Production"
+     }
+    ]
+   },
+   "slug": "advanced-assembler",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Advanced Circuits",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Advanced Assembler",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Astronomic Scanning",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Interstellar Warp Drive",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Advanced Circuits",
+      "type": "Recipes",
+      "category": "Advanced Assembler 1"
+     }
+    ]
+   },
+   "slug": "advanced-circuits",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Advanced Plate",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Astronomic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Xenobiologic Science",
+      "amount required": "500×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Multisensor",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Astronomic Science"
+     },
+     {
+      "technology": "Chitin Composite",
+      "tier": "Tier 5",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Xenobiologic Science"
+     },
+     {
+      "technology": "Chromatic Alloy",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Astronomic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Exosuit",
+      "tier": "Tier 6",
+      "science cost": "1000× Material Science 1000× Computation Science 1000× Electromagnetic Science 1000× Quantum Science 1000× Astronomic Science 1000× Xenobiologic Science"
+     },
+     {
+      "technology": "Warp Fuel",
+      "tier": "Mission",
+      "science cost": "400× Material Science 400× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Advanced Plate",
+      "type": "Recipes",
+      "category": "Advanced Assembler 1"
+     }
+    ]
+   },
+   "slug": "advanced-plate",
+   "category": "Tier 6",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Armoury",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Servomotor",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Backpack Mk. 2",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Exoskeleton Mk. 1",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Armoury",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Backpack Mk. 1",
+      "type": "Recipes",
+      "category": "Equipment"
+     }
+    ]
+   },
+   "slug": "armoury",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Astronomic Scanning",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Advanced Circuits",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Supercomputer",
+      "tier": "Tier 4",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Stellar Survey Data",
+      "type": "Items",
+      "category": "Crafting Items"
+     }
+    ]
+   },
+   "slug": "astronomic-scanning",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Astronomic Science",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "500×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Supercomputer",
+      "tier": "Tier 4",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Chromatic Alloy",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Astronomic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Astronomic Science Lab",
+      "type": "Machines",
+      "category": "Research"
+     }
+    ]
+   },
+   "slug": "astronomic-science",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Backpack Mk. 2",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Armoury",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Quantum Science",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Backpack Mk. 3",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Xenobiologic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Backpack Mk. 2",
+      "type": "Recipes",
+      "category": "Equipment"
+     }
+    ]
+   },
+   "slug": "backpack-mk-2",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Backpack Mk. 3",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Xenobiologic Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Backpack Mk. 2",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Biolattice",
+      "tier": "Tier 5",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Xenobiologic Science",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     },
+     {
+      "technology": "Superalloy Frame",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Exosuit",
+      "tier": "Tier 6",
+      "science cost": "1000× Material Science 1000× Computation Science 1000× Electromagnetic Science 1000× Quantum Science 1000× Astronomic Science 1000× Xenobiologic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Backpack Mk. 3",
+      "type": "Recipes",
+      "category": "Equipment"
+     }
+    ]
+   },
+   "slug": "backpack-mk-3",
+   "category": "Tier 5",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Circuits",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Silica Refining",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Basic Circuits",
+      "type": "Recipes",
+      "category": "Nickel Crafting"
+     }
+    ]
+   },
+   "slug": "basic-circuits",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Ore Synthesis",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Relic Technology",
+      "amount required": "250×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Relic Synthesizer",
+      "tier": "Tier 3",
+      "science cost": "200× Relic Technology"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Protomatter",
+      "type": "Recipes",
+      "category": "Relic Technology"
+     },
+     {
+      "name": "Titanium Ore",
+      "type": "Recipes",
+      "category": "Relic Technology"
+     },
+     {
+      "name": "Nickel Ore",
+      "type": "Recipes",
+      "category": "Relic Technology"
+     }
+    ]
+   },
+   "slug": "basic-ore-synthesis",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Biolattice",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Growth Chamber",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Backpack Mk. 3",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Xenobiologic Science"
+     },
+     {
+      "technology": "Xenobiologic Science",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Alpha Protein",
+      "type": "Recipes",
+      "category": "Biorecipes 1"
+     },
+     {
+      "name": "Beta Protein",
+      "type": "Recipes",
+      "category": "Biorecipes 1"
+     },
+     {
+      "name": "Biolattice",
+      "type": "Recipes",
+      "category": "Biorecipes 1"
+     }
+    ]
+   },
+   "slug": "biolattice",
+   "category": "Tier 5",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Biomass Recycling",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Xenobiologic Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Xenobiologic Science",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Xenobacteria",
+      "type": "Recipes",
+      "category": "Bio recycling"
+     },
+     {
+      "name": "Xenoeukarya",
+      "type": "Recipes",
+      "category": "Bio recycling"
+     },
+     {
+      "name": "Xenoarchaea",
+      "type": "Recipes",
+      "category": "Bio recycling"
+     }
+    ]
+   },
+   "slug": "biomass-recycling",
+   "category": "Tier 5",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Biosample Collection",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Interstellar Warp Drive",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Growth Chamber",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Xenobacteria",
+      "type": "Items",
+      "category": "Crafting Items"
+     },
+     {
+      "name": "Xenoarchaea",
+      "type": "Items",
+      "category": "Crafting Items"
+     },
+     {
+      "name": "Xenoeukarya",
+      "type": "Items",
+      "category": "Crafting Items"
+     }
+    ]
+   },
+   "slug": "biosample-collection",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Captain's Quarters",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "captain-s-quarters",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Chitin Composite",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Xenobiologic Science",
+      "amount required": "500×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Xenobiologic Science",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Advanced Plate",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Astronomic Science 500× Xenobiologic Science"
+     },
+     {
+      "technology": "Exoskeleton Mk. 3",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Xenobiologic Science 500× Astronomic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Chitin Composite",
+      "type": "Recipes",
+      "category": "Advanced Assembler 1"
+     }
+    ]
+   },
+   "slug": "chitin-composite",
+   "category": "Tier 5",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Chromatic Alloy",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Astronomic Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Astronomic Science",
+      "tier": "Tier 4",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Advanced Plate",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Astronomic Science 500× Xenobiologic Science"
+     },
+     {
+      "technology": "Exoskeleton Mk. 3",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Xenobiologic Science 500× Astronomic Science"
+     },
+     {
+      "technology": "Large Thruster",
+      "tier": "Tier 5",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Astronomic Science"
+     },
+     {
+      "technology": "Multisensor",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Astronomic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Chromatic Alloy",
+      "type": "Recipes",
+      "category": "Alloys"
+     }
+    ]
+   },
+   "slug": "chromatic-alloy",
+   "category": "Tier 5",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Cobalt Refining",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Slipstream Drive",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Detector Array",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Ore Enrichment",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Cobalt Plates",
+      "type": "Recipes",
+      "category": "Ore Refining"
+     },
+     {
+      "name": "Cobalt Ore",
+      "type": "Items",
+      "category": "Raw Resources"
+     }
+    ]
+   },
+   "slug": "cobalt-refining",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Computation Science",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "50×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Basic Circuits",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     },
+     {
+      "technology": "Logistics I",
+      "tier": "Tier 1",
+      "science cost": "5× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Armoury",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Containment Coil",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Enrichment Chamber",
+      "tier": "Tier 2",
+      "science cost": "150× Material Science 150× Computation Science"
+     },
+     {
+      "technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Ship Container",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Smart Containers",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Solar Panels Mk. 1",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Computation Science Lab",
+      "type": "Machines",
+      "category": "Research"
+     }
+    ]
+   },
+   "slug": "computation-science",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Large Container",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Servomotor",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Large Container",
+      "type": "Machines",
+      "category": "Logistics"
+     }
+    ]
+   },
+   "slug": "large-container",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Containment Coil",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Enrichment Chamber",
+      "tier": "Tier 2",
+      "science cost": "150× Material Science 150× Computation Science"
+     },
+     {
+      "technology": "Medium Thruster",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Containment Coil",
+      "type": "Recipes",
+      "category": "Intermediate"
+     }
+    ]
+   },
+   "slug": "containment-coil",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Coolant",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "150×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Gas Extraction",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Exoskeleton Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Missile Launcher",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Superconductor Coil",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Warp Fuel",
+      "tier": "Mission",
+      "science cost": "400× Material Science 400× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Coolant",
+      "type": "Recipes",
+      "category": "Other Refining"
+     }
+    ]
+   },
+   "slug": "coolant",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Corridor 2×2",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "corridor-2-2",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Crafting",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Lightweight Frames",
+      "type": "Recipes",
+      "category": "Titanium Crafting"
+     },
+     {
+      "name": "Hull Plate",
+      "type": "Recipes",
+      "category": "Titanium Crafting"
+     },
+     {
+      "name": "Magnetic Coils",
+      "type": "Recipes",
+      "category": "Nickel Crafting"
+     },
+     {
+      "name": "Capacitor",
+      "type": "Recipes",
+      "category": "Nickel Crafting"
+     },
+     {
+      "name": "Basic Motor",
+      "type": "Recipes",
+      "category": "Titanium Crafting"
+     },
+     {
+      "name": "Repair Kit",
+      "type": "Recipes",
+      "category": "Consumables"
+     },
+     {
+      "name": "Titanium Ore",
+      "type": "Items",
+      "category": "Raw Resources"
+     },
+     {
+      "name": "Nickel Ore",
+      "type": "Items",
+      "category": "Raw Resources"
+     },
+     {
+      "name": "Water Ice",
+      "type": "Items",
+      "category": "Raw Resources"
+     }
+    ]
+   },
+   "slug": "basic-crafting",
+   "category": "Tier 0",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Detector Array",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Cobalt Refining",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Graphite Refining",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Electromagnetic Science",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Detector Array",
+      "type": "Recipes",
+      "category": "Intermediate"
+     }
+    ]
+   },
+   "slug": "detector-array",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Electromagnetic Science",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Detector Array",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Solar Panels Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Superalloy",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Electromagnetic Science Lab",
+      "type": "Machines",
+      "category": "Research"
+     }
+    ]
+   },
+   "slug": "electromagnetic-science",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Enrichment Chamber",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "150×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Containment Coil",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Ore Enrichment",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Slipstream Drive",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Enrichment Chamber",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Deuterium Fuel",
+      "type": "Recipes",
+      "category": "Fuel"
+     }
+    ]
+   },
+   "slug": "enrichment-chamber",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exoskeleton Mk. 1",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Armoury",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Exoskeleton Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Exoskeleton Mk. 1",
+      "type": "Recipes",
+      "category": "Equipment"
+     }
+    ]
+   },
+   "slug": "exoskeleton-mk-1",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exoskeleton Mk. 2",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Exoskeleton Mk. 1",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Maglev Coupling",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Coolant",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Exoskeleton Mk. 3",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Xenobiologic Science 500× Astronomic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Exoskeleton Mk. 2",
+      "type": "Recipes",
+      "category": "Equipment"
+     }
+    ]
+   },
+   "slug": "exoskeleton-mk-2",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exoskeleton Mk. 3",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Xenobiologic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Astronomic Science",
+      "amount required": "500×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Exoskeleton Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Chitin Composite",
+      "tier": "Tier 5",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Xenobiologic Science"
+     },
+     {
+      "technology": "Chromatic Alloy",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Astronomic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Exosuit",
+      "tier": "Tier 6",
+      "science cost": "1000× Material Science 1000× Computation Science 1000× Electromagnetic Science 1000× Quantum Science 1000× Astronomic Science 1000× Xenobiologic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Exoskeleton Mk. 3",
+      "type": "Recipes",
+      "category": "Equipment"
+     }
+    ]
+   },
+   "slug": "exoskeleton-mk-3",
+   "category": "Tier 6",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Exosuit",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "1000×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "1000×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "1000×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "1000×"
+     },
+     {
+      "science matrix": "Astronomic Science",
+      "amount required": "1000×"
+     },
+     {
+      "science matrix": "Xenobiologic Science",
+      "amount required": "1000×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Exoskeleton Mk. 3",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Xenobiologic Science 500× Astronomic Science"
+     },
+     {
+      "technology": "Backpack Mk. 3",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Xenobiologic Science"
+     },
+     {
+      "technology": "Advanced Plate",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Astronomic Science 500× Xenobiologic Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Exosuit",
+      "type": "Recipes",
+      "category": "Equipment"
+     }
+    ]
+   },
+   "slug": "exosuit",
+   "category": "Tier 6",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Decorations I",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [],
+    "Leads to": [
+     {
+      "technology": "Decorations II",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Doorway Wall",
+      "type": "Machines",
+      "category": "Decorations"
+     }
+    ]
+   },
+   "slug": "decorations-i",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Decorations II",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "50×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Decorations I",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Armchair",
+      "type": "Machines",
+      "category": "Decorations"
+     },
+     {
+      "name": "Coffee Table",
+      "type": "Machines",
+      "category": "Decorations"
+     }
+    ]
+   },
+   "slug": "decorations-ii",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Gas Extraction",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "150×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Reinforced Plate",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Coolant",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Gas Extractor",
+      "type": "Machines",
+      "category": "Miners"
+     },
+     {
+      "name": "Nitrogen Gas",
+      "type": "Items",
+      "category": "Raw Resources"
+     }
+    ]
+   },
+   "slug": "gas-extraction",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Graphite Refining",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Slipstream Drive",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Detector Array",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Maglev Coupling",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Graphene",
+      "type": "Recipes",
+      "category": "Other Refining"
+     },
+     {
+      "name": "Graphite",
+      "type": "Items",
+      "category": "Raw Resources"
+     }
+    ]
+   },
+   "slug": "graphite-refining",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Growth Chamber",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Biosample Collection",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Biolattice",
+      "tier": "Tier 5",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Growth Chamber",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Nutrients",
+      "type": "Recipes",
+      "category": "Biorecipes 1"
+     },
+     {
+      "name": "Enzyme",
+      "type": "Recipes",
+      "category": "Biorecipes 1"
+     }
+    ]
+   },
+   "slug": "growth-chamber",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Industrial Dock",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "industrial-dock",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Interstellar Warp Drive",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard Core Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Superalloy Frame",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Advanced Circuits",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Biosample Collection",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Iridium Refining",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Lonsdaleite",
+      "type": "Items",
+      "category": "Raw Resources"
+     }
+    ]
+   },
+   "slug": "interstellar-warp-drive",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Iridium Refining",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Interstellar Warp Drive",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Solar Panels Mk. 3",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     },
+     {
+      "technology": "Supercomputer",
+      "tier": "Tier 4",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Iridium Plates",
+      "type": "Recipes",
+      "category": "Ore Refining"
+     },
+     {
+      "name": "Iridium Ore",
+      "type": "Items",
+      "category": "Raw Resources"
+     }
+    ]
+   },
+   "slug": "iridium-refining",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Large Thruster",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Astronomic Science",
+      "amount required": "500×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Medium Thruster",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     },
+     {
+      "technology": "Chromatic Alloy",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Astronomic Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "large-thruster",
+   "category": "Tier 5",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Logistics I",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "5×"
+     }
+    ],
+    "Prerequisites": [],
+    "Leads to": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Mining Drones",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Plasma Turret",
+      "tier": "Tier 1",
+      "science cost": "10× Material Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Conveyor Belt Mk. 1",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Underground Belt Mk. 1",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Splitter Mk. 1",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Belt Balancer Mk. 1",
+      "type": "Machines",
+      "category": "Logistics"
+     }
+    ]
+   },
+   "slug": "logistics-i",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Logistics II",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Servomotor",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Industrial Dock",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     },
+     {
+      "technology": "Logistics III",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     },
+     {
+      "technology": "Mining Drones Mk. 2",
+      "tier": "Tier 2",
+      "science cost": "150× Material Science 150× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Conveyor Belt Mk. 2",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Underground Belt Mk. 2",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Splitter Mk. 2",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Belt Balancer Mk. 2",
+      "type": "Machines",
+      "category": "Logistics"
+     }
+    ]
+   },
+   "slug": "logistics-ii",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Logistics III",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Maglev Coupling",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Conveyor Belt Mk. 3",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Underground Belt Mk. 3",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Splitter Mk. 3",
+      "type": "Machines",
+      "category": "Logistics"
+     },
+     {
+      "name": "Belt Balancer Mk. 3",
+      "type": "Machines",
+      "category": "Logistics"
+     }
+    ]
+   },
+   "slug": "logistics-iii",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Maglev Coupling",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Superalloy",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     },
+     {
+      "technology": "Graphite Refining",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Exoskeleton Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Logistics III",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     },
+     {
+      "technology": "Elevator 2×2",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     },
+     {
+      "technology": "Plasma Lance",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     },
+     {
+      "technology": "Superconductor Coil",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Maglev Coupling",
+      "type": "Recipes",
+      "category": "Intermediate"
+     }
+    ]
+   },
+   "slug": "maglev-coupling",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Medium Bridge",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "medium-bridge",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Drones",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "15×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Logistics I",
+      "tier": "Tier 1",
+      "science cost": "5× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Mining Drones Mk. 2",
+      "tier": "Tier 2",
+      "science cost": "150× Material Science 150× Computation Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "mining-drones",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Drones Mk. 2",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "150×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Mining Drones",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "mining-drones-mk-2",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Laser",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "15×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Missile Launcher",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Plasma Lance",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "mining-laser",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Missile Launcher",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Mining Laser",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Coolant",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Missile",
+      "type": "Recipes",
+      "category": "Consumables"
+     }
+    ]
+   },
+   "slug": "missile-launcher",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Elevator 2×2",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Station 2×2 C",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Maglev Coupling",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "elevator-2-2",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Multisensor",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Astronomic Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Chromatic Alloy",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Astronomic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Advanced Plate",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Astronomic Science 500× Xenobiologic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Multisensor",
+      "type": "Recipes",
+      "category": "Advanced Assembler 1"
+     }
+    ]
+   },
+   "slug": "multisensor",
+   "category": "Tier 5",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ore Enrichment",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Cobalt Refining",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Enrichment Chamber",
+      "tier": "Tier 2",
+      "science cost": "150× Material Science 150× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Superalloy",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Enriched Titanium Ore",
+      "type": "Recipes",
+      "category": "Enriched Ore"
+     },
+     {
+      "name": "Enriched Nickel Ore",
+      "type": "Recipes",
+      "category": "Enriched Ore"
+     },
+     {
+      "name": "Enriched Cobalt Ore",
+      "type": "Recipes",
+      "category": "Enriched Ore"
+     },
+     {
+      "name": "Titanium Plates",
+      "type": "Recipes",
+      "category": "Enriched Ore"
+     },
+     {
+      "name": "Nickel Plates",
+      "type": "Recipes",
+      "category": "Enriched Ore"
+     },
+     {
+      "name": "Cobalt Plates",
+      "type": "Recipes",
+      "category": "Enriched Ore"
+     }
+    ]
+   },
+   "slug": "ore-enrichment",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Plants",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Plant",
+      "type": "Machines",
+      "category": "Plants"
+     }
+    ]
+   },
+   "slug": "small-plants",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Plasma Lance",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Mining Laser",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Maglev Coupling",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "plasma-lance",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Hydrogen Power",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Reactor",
+      "type": "Machines",
+      "category": "Power Generation"
+     },
+     {
+      "name": "Reactor",
+      "type": "Machines",
+      "category": "Power Generation"
+     }
+    ]
+   },
+   "slug": "hydrogen-power",
+   "category": "Tier 0",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Production",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Workstation",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Refinery",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Assembler",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Material Science Lab",
+      "type": "Machines",
+      "category": "Research"
+     },
+     {
+      "name": "Container",
+      "type": "Machines",
+      "category": "Logistics"
+     }
+    ]
+   },
+   "slug": "basic-production",
+   "category": "Tier 0",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Quantum Science",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Superconductor Coil",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Reinforced Plate",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Advanced Assembler",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Backpack Mk. 2",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Quantum Science Lab",
+      "type": "Machines",
+      "category": "Research"
+     }
+    ]
+   },
+   "slug": "quantum-science",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Refining",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Titanium Plates",
+      "type": "Recipes",
+      "category": "Ore Refining"
+     },
+     {
+      "name": "Nickel Plates",
+      "type": "Recipes",
+      "category": "Ore Refining"
+     },
+     {
+      "name": "Hydrogen Fuel",
+      "type": "Recipes",
+      "category": "Fuel"
+     }
+    ]
+   },
+   "slug": "basic-refining",
+   "category": "Tier 0",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Reinforced Plate",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Superalloy",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Gas Extraction",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     },
+     {
+      "technology": "Quantum Science",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Station 2×2 B",
+      "tier": "Tier 3",
+      "science cost": "100× Material Science 100× Computation Science 100× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Reinforced Plate",
+      "type": "Recipes",
+      "category": "Intermediate"
+     }
+    ]
+   },
+   "slug": "reinforced-plate",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Relic Analyzer",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "15×"
+     }
+    ],
+    "Prerequisites": [],
+    "Leads to": [
+     {
+      "technology": "Relic Capacitor",
+      "tier": "Tier 1",
+      "science cost": "20× Relic Technology"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Relic Analyzer",
+      "type": "Machines",
+      "category": "Research"
+     }
+    ]
+   },
+   "slug": "relic-analyzer",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Relic Capacitor",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Relic Technology",
+      "amount required": "20×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Relic Analyzer",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Relic Synthesizer",
+      "tier": "Tier 3",
+      "science cost": "200× Relic Technology"
+     },
+     {
+      "technology": "Small Relic Thruster",
+      "tier": "Tier 1",
+      "science cost": "30× Relic Technology"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Relic Capacitor",
+      "type": "Recipes",
+      "category": "Relic Technology"
+     }
+    ]
+   },
+   "slug": "relic-capacitor",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Relic Synthesizer",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Relic Technology",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Relic Capacitor",
+      "tier": "Tier 1",
+      "science cost": "20× Relic Technology"
+     },
+     {
+      "technology": "Superconductor Coil",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Basic Ore Synthesis",
+      "tier": "Tier 3",
+      "science cost": "250× Relic Technology"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Relic Synthesizer",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Relic Shard",
+      "type": "Recipes",
+      "category": "Relic Technology"
+     }
+    ]
+   },
+   "slug": "relic-synthesizer",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Relic Thruster",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Relic Technology",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Relic Capacitor",
+      "tier": "Tier 1",
+      "science cost": "20× Relic Technology"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "small-relic-thruster",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Servomotor",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "15×"
+     }
+    ],
+    "Prerequisites": [],
+    "Leads to": [
+     {
+      "technology": "Armoury",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Large Container",
+      "tier": "Tier 1",
+      "science cost": "100× Material Science"
+     },
+     {
+      "technology": "Logistics II",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Elevator 1×1",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Servomotor",
+      "type": "Recipes",
+      "category": "Titanium Crafting"
+     }
+    ]
+   },
+   "slug": "servomotor",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Armour Wings",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "armour-wings",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Armour Slopes",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "armour-slopes",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ship Container",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "ship-container",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ship Windows I",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "50×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Silica Refining",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "ship-windows-i",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ship Frames",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "50×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "ship-frames",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ship Ladder",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "ship-ladder",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Medium Thruster",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Containment Coil",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Large Thruster",
+      "tier": "Tier 5",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Astronomic Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "medium-thruster",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Ship Modules",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "basic-ship-modules",
+   "category": "Tier 0",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Ship Weapons",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "basic-ship-weapons",
+   "category": "Tier 0",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shipyard",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "15×"
+     }
+    ],
+    "Prerequisites": [],
+    "Leads to": [
+     {
+      "technology": "Mining Laser",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Ship Container",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Ship Windows I",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Ship Frames",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Ship Ladder",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     },
+     {
+      "technology": "Medium Thruster",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     },
+     {
+      "technology": "Shipyard Core Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Slipstream Drive",
+      "tier": "Tier 2",
+      "science cost": "200× Material Science 200× Computation Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "shipyard",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shipyard Core Mk. 2",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Superalloy",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Interstellar Warp Drive",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Ship Hangar",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "shipyard-core-mk-2",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Silica Refining",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [],
+    "Leads to": [
+     {
+      "technology": "Basic Circuits",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     },
+     {
+      "technology": "Ship Windows I",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Station Decoration Blocks",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Silicon Wafers",
+      "type": "Recipes",
+      "category": "Other Refining"
+     },
+     {
+      "name": "Reinforced Glass",
+      "type": "Recipes",
+      "category": "Other Refining"
+     },
+     {
+      "name": "Silica",
+      "type": "Items",
+      "category": "Raw Resources"
+     }
+    ]
+   },
+   "slug": "silica-refining",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Bridge",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "small-bridge",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ship Hangar",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard Core Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Superalloy Frame",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Fighter",
+      "type": "Machines",
+      "category": "Other"
+     }
+    ]
+   },
+   "slug": "ship-hangar",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Smart Containers",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Smart Containers",
+      "type": "Machines",
+      "category": "Other"
+     }
+    ]
+   },
+   "slug": "smart-containers",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 1",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Computation Science",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Solar Panels Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "solar-panels-mk-1",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 2",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Solar Panels Mk. 1",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Electromagnetic Science",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Solar Panels Mk. 3",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "solar-panels-mk-2",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 3",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Solar Panels Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Iridium Refining",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "solar-panels-mk-3",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 2×2 A",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "50×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Basic Station Modules",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Station 2×2 B",
+      "tier": "Tier 3",
+      "science cost": "100× Material Science 100× Computation Science 100× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "station-2-2-a",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station Armour",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Basic Station Modules",
+      "tier": "Tier 0",
+      "science cost": ""
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "station-armour",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Elevator 1×1",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Servomotor",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Station 2×2 B",
+      "tier": "Tier 3",
+      "science cost": "100× Material Science 100× Computation Science 100× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "elevator-1-1",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Basic Station Modules",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [
+     {
+      "technology": "Station 2×2 A",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Station Armour",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "basic-station-modules",
+   "category": "Tier 0",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 2×2 B",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "100×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "100×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Station 2×2 A",
+      "tier": "Tier 1",
+      "science cost": "50× Material Science"
+     },
+     {
+      "technology": "Elevator 1×1",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     },
+     {
+      "technology": "Reinforced Plate",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Station 2×2 C",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "station-2-2-b",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station Decoration Blocks",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "30×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Silica Refining",
+      "tier": "Tier 1",
+      "science cost": "30× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "station-decoration-blocks",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 2×2 C",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Station 2×2 B",
+      "tier": "Tier 3",
+      "science cost": "100× Material Science 100× Computation Science 100× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Elevator 2×2",
+      "tier": "Tier 3",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": []
+   },
+   "slug": "station-2-2-c",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Plasma Turret",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "10×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Logistics I",
+      "tier": "Tier 1",
+      "science cost": "5× Material Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": []
+   },
+   "slug": "plasma-turret",
+   "category": "Tier 1",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Superalloy",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "150×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "150×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Ore Enrichment",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Electromagnetic Science",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Maglev Coupling",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Reinforced Plate",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Shipyard Core Mk. 2",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Superalloy",
+      "type": "Recipes",
+      "category": "Alloys"
+     }
+    ]
+   },
+   "slug": "superalloy",
+   "category": "Tier 3",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Superalloy Frame",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Advanced Assembler",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Backpack Mk. 3",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Xenobiologic Science"
+     },
+     {
+      "technology": "Interstellar Warp Drive",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Ship Hangar",
+      "tier": "Tier 4",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Superalloy Frame",
+      "type": "Recipes",
+      "category": "Advanced Assembler 1"
+     }
+    ]
+   },
+   "slug": "superalloy-frame",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Supercomputer",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "500×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "500×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Astronomic Scanning",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     },
+     {
+      "technology": "Iridium Refining",
+      "tier": "Tier 4",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Astronomic Science",
+      "tier": "Tier 4",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Supercomputer",
+      "type": "Machines",
+      "category": "Production"
+     },
+     {
+      "name": "Empty Simulation Matrix",
+      "type": "Recipes",
+      "category": "Advanced Assembler 1"
+     },
+     {
+      "name": "Encoded Simulation Matrix",
+      "type": "Recipes",
+      "category": "Advanced Assembler 1"
+     }
+    ]
+   },
+   "slug": "supercomputer",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Superconductor Coil",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Maglev Coupling",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Coolant",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Quantum Science",
+      "tier": "Tier 3",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science"
+     },
+     {
+      "technology": "Relic Synthesizer",
+      "tier": "Tier 3",
+      "science cost": "200× Relic Technology"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Superconductor Coil",
+      "type": "Recipes",
+      "category": "Intermediate"
+     }
+    ]
+   },
+   "slug": "superconductor-coil",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Short-Range Teleporter",
+   "props": {},
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Science costs": [],
+    "Prerequisites": [],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Short-Range Teleporter",
+      "type": "Machines",
+      "category": "Production"
+     }
+    ]
+   },
+   "slug": "short-range-teleporter",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Slipstream Drive",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "200×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "200×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Shipyard",
+      "tier": "Tier 1",
+      "science cost": "15× Material Science"
+     },
+     {
+      "technology": "Enrichment Chamber",
+      "tier": "Tier 2",
+      "science cost": "150× Material Science 150× Computation Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Cobalt Refining",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     },
+     {
+      "technology": "Graphite Refining",
+      "tier": "Tier 2",
+      "science cost": "100× Material Science 100× Computation Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Warp Fuel",
+      "type": "Recipes",
+      "category": "Fuel"
+     }
+    ]
+   },
+   "slug": "slipstream-drive",
+   "category": "Tier 2",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Warp Fuel",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "400×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "400×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Advanced Plate",
+      "tier": "Tier 6",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Astronomic Science 500× Xenobiologic Science"
+     },
+     {
+      "technology": "Coolant",
+      "tier": "Tier 3",
+      "science cost": "150× Material Science 150× Computation Science 150× Electromagnetic Science"
+     }
+    ],
+    "Leads to": [],
+    "Unlocks": [
+     {
+      "name": "Warp Fuel",
+      "type": "Recipes",
+      "category": "Fuel"
+     }
+    ]
+   },
+   "slug": "warp-fuel",
+   "category": "Mission",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Xenobiologic Science",
+   "props": {},
+   "desc": null,
+   "tables": {
+    "Science costs": [
+     {
+      "science matrix": "Material Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Computation Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Electromagnetic Science",
+      "amount required": "300×"
+     },
+     {
+      "science matrix": "Quantum Science",
+      "amount required": "300×"
+     }
+    ],
+    "Prerequisites": [
+     {
+      "technology": "Biolattice",
+      "tier": "Tier 5",
+      "science cost": "200× Material Science 200× Computation Science 200× Electromagnetic Science 200× Quantum Science"
+     }
+    ],
+    "Leads to": [
+     {
+      "technology": "Backpack Mk. 3",
+      "tier": "Tier 5",
+      "science cost": "300× Material Science 300× Computation Science 300× Electromagnetic Science 300× Quantum Science 300× Xenobiologic Science"
+     },
+     {
+      "technology": "Biomass Recycling",
+      "tier": "Tier 5",
+      "science cost": "100× Material Science 100× Computation Science 100× Electromagnetic Science 100× Quantum Science 100× Xenobiologic Science"
+     },
+     {
+      "technology": "Chitin Composite",
+      "tier": "Tier 5",
+      "science cost": "500× Material Science 500× Computation Science 500× Electromagnetic Science 500× Quantum Science 500× Xenobiologic Science"
+     }
+    ],
+    "Unlocks": [
+     {
+      "name": "Xenobiologic Science Lab",
+      "type": "Machines",
+      "category": "Research"
+     }
+    ]
+   },
+   "slug": "xenobiologic-science",
+   "category": "Tier 4",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  }
+ ]
+}

@@ -1,0 +1,1772 @@
+{
+ "game_version": "EA (unverified; source is demo)",
+ "count": 59,
+ "modules": [
+  {
+   "name": "Armour Slope 1×1",
+   "props": {
+    "Category": "Defence",
+    "Hull": "10",
+    "Mass": "3",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "armour-slope-1-1",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Armour Slope 2×1",
+   "props": {
+    "Category": "Defence",
+    "Hull": "5",
+    "Mass": "3",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "armour-slope-2-1",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Armour Wing 2x1",
+   "props": {
+    "Category": "Defence",
+    "Hull": "20",
+    "Mass": "6",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "armour-wing-2x1",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Astronomic Scanner",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "10",
+    "Mass": "5",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Advanced Circuits",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "astronomic-scanner",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Biosample Collector",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "10",
+    "Mass": "5",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "biosample-collector",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Cockpit",
+   "props": {
+    "Category": "Piloting",
+    "Hull": "10",
+    "Mass": "5",
+    "Tractor Beam": "Yes",
+    "Range": "250 m",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "cockpit",
+   "category": "Piloting",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Command Module",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "30",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "command-module",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Container",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "10",
+    "Mass": "8",
+    "Item Stacking": "+50%",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "container",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Corner 1×1",
+   "props": {
+    "Category": "Basic",
+    "Hull": "30",
+    "Mass": "20",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "corner-1-1",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Corner Window",
+   "props": {
+    "Category": "Basic",
+    "Hull": "10",
+    "Mass": "3",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "corner-window",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Corridor 1×1",
+   "props": {
+    "Category": "Basic",
+    "Hull": "30",
+    "Mass": "20",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "corridor-1-1",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Corridor 2×2",
+   "props": {
+    "Category": "Basic",
+    "Hull": "30",
+    "Mass": "20",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "30×"
+     },
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "50×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "corridor-2-2",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Dock",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "20",
+    "Mass": "10",
+    "Ports": "2",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "dock",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Docking Collar",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "5",
+    "Mass": "3",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "docking-collar",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Elevator 1×1",
+   "props": {
+    "Category": "Vertical",
+    "Hull": "30",
+    "Mass": "20",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "elevator-1-1",
+   "category": "Vertical",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Elevator 2×2",
+   "props": {
+    "Category": "Vertical",
+    "Hull": "240",
+    "Mass": "160",
+    "Status": "Locked in demo"
+   },
+   "desc": null,
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Maglev Coupling",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "elevator-2-2",
+   "category": "Vertical",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Frame",
+   "props": {
+    "Category": "Basic",
+    "Hull": "5",
+    "Mass": "2",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "8×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "frame",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Frame Slope",
+   "props": {
+    "Category": "Basic",
+    "Hull": "5",
+    "Mass": "1",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "frame-slope",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Industrial Dock",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "20",
+    "Mass": "10",
+    "Ports": "8",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "industrial-dock",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Interstellar Warp Drive",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "10",
+    "Mass": "10",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Superconductor Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Advanced Circuits",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Superalloy Frame",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "interstellar-warp-drive",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ladder",
+   "props": {
+    "Category": "Vertical",
+    "Hull": "20",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "ladder",
+   "category": "Vertical",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Landing Gear",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "5",
+    "Mass": "3",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "landing-gear",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Large Thruster",
+   "props": {
+    "Category": "Thrusters",
+    "Power": "48 MW",
+    "Hull": "40",
+    "Mass": "20",
+    "Consumes Power": "48 MW",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Chromatic Alloy",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Superalloy Frame",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Superconductor Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "large-thruster",
+   "category": "Thrusters",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Medium Bridge",
+   "props": {
+    "Category": "Piloting",
+    "Hull": "10",
+    "Mass": "5",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "medium-bridge",
+   "category": "Piloting",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Medium Thruster",
+   "props": {
+    "Category": "Thrusters",
+    "Power": "12 MW",
+    "Hull": "20",
+    "Mass": "10",
+    "Consumes Power": "12 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Containment Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "medium-thruster",
+   "category": "Thrusters",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Drone Bay Mk. 1",
+   "props": {
+    "Category": "Functional Blocks",
+    "Power": "6 MW",
+    "Hull": "20",
+    "Mass": "10",
+    "Drones": "2",
+    "Range": "1000 m",
+    "Consumes Power": "6 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "mining-drone-bay-mk-1",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Drone Bay Mk. 2",
+   "props": {
+    "Category": "Functional Blocks",
+    "Power": "12 MW",
+    "Hull": "20",
+    "Mass": "10",
+    "Drones": "4",
+    "Range": "1500 m",
+    "Consumes Power": "12 MW",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Servomotor",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "mining-drone-bay-mk-2",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Mining Laser",
+   "props": {
+    "Category": "Defence",
+    "Hull": "10",
+    "Mass": "5",
+    "Range": "125 m",
+    "Damage per Second": "10",
+    "Recharge": "3 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "30×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "mining-laser",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Missile Launcher",
+   "props": {
+    "Category": "Defence",
+    "Hull": "10",
+    "Mass": "5",
+    "Missile Silos": "4",
+    "Range": "1000 m",
+    "Reload Time": "6 s",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Coolant",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "missile-launcher",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Plasma Cannon",
+   "props": {
+    "Category": "Defence",
+    "Hull": "5",
+    "Mass": "3",
+    "Range": "Yes",
+    "Damage per Shot": "2",
+    "Energy per Shot": "2 MJ",
+    "Recharge": "3 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "plasma-cannon",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Plasma Lance",
+   "props": {
+    "Category": "Defence",
+    "Hull": "5",
+    "Mass": "3",
+    "Range": "1000 m",
+    "Damage per Shot": "20",
+    "Energy per Shot": "10 MJ",
+    "Recharge": "7.5 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Containment Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Maglev Coupling",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "plasma-lance",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Plasma Turret",
+   "props": {
+    "Category": "Defence",
+    "Hull": "30",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "plasma-turret",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Point Defence Laser",
+   "props": {
+    "Category": "Defence",
+    "Hull": "5",
+    "Mass": "3",
+    "Range": "250 m",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "point-defence-laser",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Scanner Module",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "30",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "scanner-module",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shield Generator Mk. 1",
+   "props": {
+    "Category": "Defence",
+    "Power": "3 MW",
+    "Hull": "5",
+    "Mass": "3",
+    "Capacity": "10",
+    "Recharge": "0.5/s",
+    "Consumes Power": "3 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "8×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "shield-generator-mk-1",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Ship Hangar",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "20",
+    "Mass": "20",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Superalloy Frame",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "ship-hangar",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shipyard Core",
+   "props": {
+    "Category": "Shipyards",
+    "Hull": "20",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "shipyard-core",
+   "category": "Shipyards",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shipyard Core Mk. 2",
+   "props": {
+    "Category": "Shipyards",
+    "Hull": "20",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Superalloy",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Containment Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "shipyard-core-mk-2",
+   "category": "Shipyards",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Shipyard Side",
+   "props": {
+    "Category": "Shipyards",
+    "Hull": "20",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "shipyard-side",
+   "category": "Shipyards",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Bridge",
+   "props": {
+    "Category": "Piloting",
+    "Hull": "10",
+    "Mass": "5",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Basic Circuits",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "small-bridge",
+   "category": "Piloting",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Habitat",
+   "props": {
+    "Category": "Basic",
+    "Hull": "10",
+    "Mass": "5",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "small-habitat",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Habitat Window",
+   "props": {
+    "Category": "Basic",
+    "Hull": "10",
+    "Mass": "3",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "small-habitat-window",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Reactor",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "10",
+    "Mass": "5",
+    "Generates Power": "24 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "small-reactor",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Relic Thruster",
+   "props": {
+    "Category": "Thrusters",
+    "Power": "9 MW",
+    "Hull": "5",
+    "Mass": "3",
+    "Consumes Power": "9 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     },
+     {
+      "item": "Relic Capacitor",
+      "category": "Relic Technology",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "small-relic-thruster",
+   "category": "Thrusters",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Small Thruster",
+   "props": {
+    "Category": "Thrusters",
+    "Power": "3 MW",
+    "Hull": "5",
+    "Mass": "3",
+    "Consumes Power": "3 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "small-thruster",
+   "category": "Thrusters",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 1",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "5",
+    "Mass": "5",
+    "Generates Power": "12 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "solar-panels-mk-1",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 2",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "5",
+    "Mass": "5",
+    "Generates Power": "48 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Detector Array",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Capacitor",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "solar-panels-mk-2",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Solar Panels Mk. 3",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "5",
+    "Mass": "5",
+    "Generates Power": "288 MW",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Iridium Plates",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Superconductor Coil",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "solar-panels-mk-3",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 1×1",
+   "props": {
+    "Category": "Basic",
+    "Hull": "30",
+    "Mass": "20",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "station-1-1",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 2×1",
+   "props": {
+    "Category": "Basic",
+    "Hull": "30",
+    "Mass": "20",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "15×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "station-2-1",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 2×2 A",
+   "props": {
+    "Category": "Basic",
+    "Hull": "120",
+    "Mass": "80",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "40×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "station-2-2-a",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 2×2 B",
+   "props": {
+    "Category": "Basic",
+    "Hull": "240",
+    "Mass": "160",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "station-2-2-b",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station 2×2 C",
+   "props": {
+    "Category": "Basic",
+    "Hull": "240",
+    "Mass": "160",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "station-2-2-c",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station Adapter",
+   "props": {
+    "Category": "Basic",
+    "Hull": "30",
+    "Mass": "20",
+    "Status": "Locked in demo"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Reinforced Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "station-adapter",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Station Armour",
+   "props": {
+    "Category": "Defence",
+    "Hull": "30",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "station-armour",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Tractor Beam",
+   "props": {
+    "Category": "Defence",
+    "Hull": "5",
+    "Mass": "3",
+    "Range": "250 m",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     },
+     {
+      "item": "Magnetic Coils",
+      "category": "Crafting Items",
+      "amount required": "5×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "tractor-beam",
+   "category": "Defence",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Warp Drive",
+   "props": {
+    "Category": "Functional Blocks",
+    "Hull": "10",
+    "Mass": "10",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "20×"
+     },
+     {
+      "item": "Containment Coil",
+      "category": "Crafting Items",
+      "amount required": "10×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "warp-drive",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Window",
+   "props": {
+    "Category": "Basic",
+    "Mass": "1",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Lightweight Frames",
+      "category": "Crafting Items",
+      "amount required": "1×"
+     },
+     {
+      "item": "Reinforced Glass",
+      "category": "Crafting Items",
+      "amount required": "2×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "window",
+   "category": "Basic",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  },
+  {
+   "name": "Workstation",
+   "props": {
+    "Category": "Functional Blocks",
+    "Power": "10.5 MW",
+    "Hull": "5",
+    "Mass": "3",
+    "Consumes Power": "10.5 MW",
+    "Status": "Available from start"
+   },
+   "desc": "No entries found matching your filters.",
+   "tables": {
+    "Build cost": [
+     {
+      "item": "Hull Plate",
+      "category": "Crafting Items",
+      "amount required": "3×"
+     }
+    ],
+    "Unlocked by": []
+   },
+   "slug": "workstation",
+   "category": "Functional Blocks",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "unverified"
+  }
+ ]
+}
