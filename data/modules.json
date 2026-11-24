@@ -1527,7 +1527,12 @@
    ],
    "dims_source": "name in designer palette (cells, not metres)",
    "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
-   "verified_game_version": "EA 2026-11-24"
+   "verified_game_version": "EA 2026-11-24",
+   "interior_grid": [
+    14,
+    14
+   ],
+   "interior_source": "user statement 2026-11-24"
   },
   {
    "name": "Station 2×1",
@@ -1559,7 +1564,12 @@
    ],
    "dims_source": "name in designer palette (cells, not metres)",
    "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
-   "verified_game_version": "EA 2026-11-24"
+   "verified_game_version": "EA 2026-11-24",
+   "interior_grid_inferred": [
+    28,
+    14
+   ],
+   "interior_note": "inferred = 14 x cells; unverified (walls/overlap may differ)"
   },
   {
    "name": "Station 2×2 A",
@@ -1591,7 +1601,12 @@
    ],
    "dims_source": "name in designer palette (cells, not metres)",
    "verified_source": "screenshots/2026-11-24_designer-standard-basic-vertical.png",
-   "verified_game_version": "EA 2026-11-24"
+   "verified_game_version": "EA 2026-11-24",
+   "interior_grid_inferred": [
+    28,
+    28
+   ],
+   "interior_note": "inferred = 14 x cells; unverified (walls/overlap may differ)"
   },
   {
    "name": "Station 2×2 B",
