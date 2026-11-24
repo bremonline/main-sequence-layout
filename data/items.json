@@ -1889,7 +1889,8 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
+   "recipes_confirmed_via_panel": true
   },
   {
    "name": "Cobalt Plates",
@@ -2884,7 +2885,8 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
+   "recipes_confirmed_via_panel": true
   },
   {
    "name": "Enriched Nickel Ore",
@@ -2984,7 +2986,8 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
+   "recipes_confirmed_via_panel": true
   },
   {
    "name": "Enriched Titanium Ore",
@@ -3084,7 +3087,8 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
+   "recipes_confirmed_via_panel": true
   },
   {
    "name": "Enzyme",
@@ -4319,7 +4323,8 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
+   "recipes_confirmed_via_panel": true
   },
   {
    "name": "Iridium Plates",
@@ -5609,7 +5614,8 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
+   "recipes_confirmed_via_panel": true
   },
   {
    "name": "Nickel Plates",
@@ -7722,7 +7728,8 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
+   "recipes_confirmed_via_panel": true
   },
   {
    "name": "Titanium Plates",
