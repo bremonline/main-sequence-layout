@@ -2784,7 +2784,13 @@
    "power_mw": 4.5,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "footprint_tiles": [
+    3,
+    3
+   ],
+   "footprint_source": "user statement 2026-11-24",
+   "footprint_confidence": "confirmed by user; ports/rotation unknown"
   },
   {
    "name": "Relic Analyzer",
