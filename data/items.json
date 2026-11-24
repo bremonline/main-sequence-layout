@@ -7939,7 +7939,8 @@
     "Category": "Raw Resources",
     "Stack size": "25",
     "Fuel value": "48 MJ",
-    "Status": "Available from start"
+    "Status": "Available from start",
+    "Fuel": "48 MJ"
    },
    "desc": "No entries found matching your filters.",
    "tables": {
@@ -8011,7 +8012,10 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A frozen source of hydrogen and oxygen.",
+   "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Xenoarchaea",

@@ -1456,7 +1456,9 @@
    "craft_time": "1 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Xenoarchaea Bio recycling",
@@ -1698,7 +1700,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Iridium Plates Ore Refining",
@@ -1920,6 +1924,32 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified"
+  },
+  {
+   "name": "Water Ice Relic Technology",
+   "machine": "enrichment-chamber",
+   "inputs": [
+    {
+     "item": "protomatter?",
+     "name": "unknown relic item (purple crystal icon; same icon as Titanium/Nickel relic input)",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "water-ice",
+     "name": "Water Ice",
+     "per_min": "30/min",
+     "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "in-game screenshot",
+   "source_version": "EA 2026-11-24",
+   "confidence": "confirmed (NEW, not in wiki)",
+   "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   }
  ]
 }
