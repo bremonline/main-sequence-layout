@@ -1036,7 +1036,9 @@
     "source": "user statement 2026-11-24",
     "confidence": "confirmed by user; per-port direction unknown",
     "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
-   }
+   },
+   "corner_chamfer_tiles_approx": 0.8,
+   "shape_note": "rounded/chamfered corners (no sharp edges) per user; chamfer size is a visual estimate"
   },
   {
    "name": "Astronomic Science Lab",
@@ -1363,7 +1365,9 @@
     "source": "user statement 2026-11-24",
     "confidence": "confirmed by user; per-port direction unknown",
     "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
-   }
+   },
+   "corner_chamfer_tiles_approx": 0.35,
+   "shape_note": "rounded/chamfered corners (no sharp edges) per user; chamfer size is a visual estimate"
   },
   {
    "name": "Conveyor Belt Mk. 1",
@@ -2558,7 +2562,9 @@
     "source": "user statement 2026-11-24",
     "confidence": "confirmed by user; per-port direction unknown",
     "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
-   }
+   },
+   "corner_chamfer_tiles_approx": 0.9,
+   "shape_note": "rounded/chamfered corners (no sharp edges) per user; chamfer size is a visual estimate"
   },
   {
    "name": "Refinery",
@@ -2841,7 +2847,9 @@
     "source": "user statement 2026-11-24",
     "confidence": "confirmed by user; per-port direction unknown",
     "placement": "ports are perimeter tiles INSIDE the footprint, not extra tiles outside (per user 2026-11-24)"
-   }
+   },
+   "corner_chamfer_tiles_approx": 0.5,
+   "shape_note": "rounded/chamfered corners (no sharp edges) per user; chamfer size is a visual estimate"
   },
   {
    "name": "Relic Analyzer",
