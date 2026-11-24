@@ -2498,7 +2498,10 @@
    "power_mw": null,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_reactor-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "description_ingame": "Consumes fuel to produce power."
   },
   {
    "name": "Refinery",
