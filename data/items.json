@@ -4980,7 +4980,10 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An incredibly hard diamond crystal formed under extreme conditions.",
+   "verified_source": "screenshots/2026-11-24_lonsdaleite-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Maglev Coupling",
