@@ -1843,8 +1843,8 @@
     30
    ]
   ],
-  "status": "hypothesis, 2 data points",
-  "rule_note": "14 = 4+6+4 for 1x1. For 2x2 (30), opening placement along edges still unknown (likely at module seams)."
+  "status": "fits 1x1 and 2x2 exactly",
+  "rule_note": "corrected: openings are per-cell, NOT at seams; seam region is 10 solid tiles (4+2+4)"
  },
  "opening_spec": {
   "width_tiles": 6,
@@ -1855,7 +1855,28 @@
    "opening_to_corner": 4
   },
   "source": "user statement 2026-11-24",
-  "confidence": "confirmed by user",
-  "note": "openings centered on each edge (assumed all 4 edges; unverified)"
+  "confidence": "2x2 confirmed by user; n>=3 extrapolated",
+  "note": "openings centered on each edge (assumed all 4 edges; unverified)",
+  "station_2x2_edge": {
+   "segments": [
+    4,
+    6,
+    10,
+    6,
+    4
+   ],
+   "total": 30,
+   "openings_at_tiles": [
+    [
+     4,
+     9
+    ],
+    [
+     20,
+     25
+    ]
+   ]
+  },
+  "pattern": "edge = 4 + n*6 + (n-1)*10 + 4 = 16n-2; one 6-wide opening per cell per edge, 10 solid tiles between adjacent openings"
  }
 }
