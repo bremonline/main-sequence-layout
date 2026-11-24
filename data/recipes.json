@@ -1110,7 +1110,9 @@
    "craft_time": "3 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_nickel-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Titanium Ore Enriched Ore",
@@ -1145,7 +1147,7 @@
     {
      "item": "protomatter",
      "name": "Protomatter",
-     "per_min": "60/min",
+     "per_min": "30/min",
      "count": "1"
     }
    ],
@@ -1153,14 +1155,18 @@
     {
      "item": "nickel-ore",
      "name": "Nickel Ore",
-     "per_min": "60/min",
+     "per_min": "30/min",
      "count": "1"
     }
    ],
-   "craft_time": "1 s",
+   "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (corrected)",
+   "wiki_craft_time": "1 s",
+   "verified_source": "screenshots/2026-11-24_nickel-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "note": "Wiki (demo) 1 s/60 per min; EA 2 s => 30/min. Same shift as Titanium relic recipe."
   },
   {
    "name": "Superalloy Alloys",
@@ -1738,7 +1744,9 @@
    "craft_time": "3 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_nickel-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Reinforced Glass Other Refining",
