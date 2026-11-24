@@ -1135,7 +1135,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_titanium-ore-item-panel.png",
+   "verified_source": "screenshots/2026-11-24_enriched-titanium-ore-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1196,7 +1196,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_enriched-titanium-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Titanium Ore Relic Technology",
@@ -1632,7 +1634,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_enriched-titanium-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Graphene Other Refining",
