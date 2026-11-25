@@ -87,7 +87,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_advanced-plate-panel.png",
+   "verified_source": "screenshots/2026-11-24_chromatic-alloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -207,7 +207,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_superconductor-coil-panel.png",
+   "verified_source": "screenshots/2026-11-24_chromatic-alloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -456,7 +456,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_chromatic-alloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exosuit Equipment",
@@ -1075,7 +1077,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_source": "screenshots/2026-11-24_chromatic-alloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
