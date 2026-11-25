@@ -29,22 +29,17 @@ function updateZoomLabel() {
   zoomLevel.textContent = `${Math.round(zoom * 100)}%`;
 }
 
-function setZoom(value, anchor = null) {
+function setZoom(value) {
   const nextZoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, value));
   if (nextZoom === zoom) return;
-  const previousZoom = zoom;
-  let worldPoint = null;
-  if (anchor) {
-    worldPoint = canvasPoint(anchor);
-  }
+  const centerX = (canvasWrap.scrollLeft + canvasWrap.clientWidth / 2) / zoom;
+  const centerY = (canvasWrap.scrollTop + canvasWrap.clientHeight / 2) / zoom;
   zoom = nextZoom;
   canvas.style.width = `${FIELD_WIDTH * TILE * zoom}px`;
   canvas.style.height = `${FIELD_HEIGHT * TILE * zoom}px`;
   updateZoomLabel();
-  if (worldPoint) {
-    canvasWrap.scrollLeft += worldPoint.x * TILE * (zoom - previousZoom);
-    canvasWrap.scrollTop += worldPoint.y * TILE * (zoom - previousZoom);
-  }
+  canvasWrap.scrollLeft = centerX * zoom - canvasWrap.clientWidth / 2;
+  canvasWrap.scrollTop = centerY * zoom - canvasWrap.clientHeight / 2;
   draw();
 }
 
@@ -58,6 +53,7 @@ let beltCapacity = null;
 let beltFlow = new Map();
 let beltLayers = null;
 let beltDraft = null;
+let undergroundStart = null;
 let cursorPoint = null;
 let nextId = 1;
 let tool = { type: "select" };
@@ -75,6 +71,13 @@ function svgNode(tag, attributes, parent = symbols, text = null) {
 }
 
 function getMachine(slug) { return machines.find(machine => machine.slug === slug); }
+
+function isContainer(machine) { return machine.slug === "container" || machine.slug === "large-container"; }
+
+function recipeForPlacement(placement) {
+  const name = placement.recipe || getMachine(placement.slug).fixed_recipe;
+  return recipes.find(recipe => recipe.machine === placement.slug && recipe.name === name);
+}
 function dimensions(room) {
   const [w, h] = roomTypes[room.size].dimensions;
   return (room.rotation || 0) % 2 ? [h, w] : [w, h];
@@ -178,7 +181,7 @@ function footprintCells(machine) {
   }
   const [w, h] = machine.footprint_tiles;
   const cells = [];
-  if (machine.slug === "container") {
+  if (isContainer(machine)) {
     for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
       if (x === 0 || y === 0 || x === w - 1 || y === h - 1) cells.push([x, y]);
     }
@@ -210,8 +213,60 @@ function machinePorts(machine, rotation = 0) {
     const [x, y] = rotatedPort(port.cell, machine, rotation);
     let [dx, dy] = directions[port.side];
     for (let i = 0; i < rotation; i++) [dx, dy] = [-dy, dx];
-    return { x, y, side: sides.get(`${dx},${dy}`), role: port.role };
+    return { x, y, side: sides.get(`${dx},${dy}`), role: port.role, key: `${port.cell.join(",")},${port.side}` };
   });
+}
+
+// Every port face of a machine; keys use unrotated coordinates so toggles survive rotation.
+function placementPorts(machine, rotation = 0) {
+  if (machine.port_layout?.ports) return machinePorts(machine, rotation);
+  const [w, h] = machine.footprint_tiles;
+  return footprintCells(machine).flatMap(([cx, cy]) => [
+    ["north", cy === 0], ["south", cy === h - 1], ["west", cx === 0], ["east", cx === w - 1]
+  ].filter(([, edge]) => edge).map(([side]) =>
+    machinePorts({ ...machine, port_layout: { ports: [{
+      cell: [cx, cy], side, role: machine.port_layout?.input_vs_output === "input" ? "input" : undefined
+    }] } }, rotation)[0]));
+}
+
+function portEnabled(owner, key) {
+  return !(owner.disabledPorts || []).includes(String(key));
+}
+
+function togglePort(owner, key) {
+  key = String(key);
+  const disabled = new Set(owner.disabledPorts || []);
+  if (disabled.has(key)) disabled.delete(key); else disabled.add(key);
+  if (disabled.size) owner.disabledPorts = [...disabled].sort(); else delete owner.disabledPorts;
+  return !disabled.has(key);
+}
+
+function dockPortTiles(room) {
+  const type = roomTypes[room.size];
+  return type.kind === "dock" ? type.ports.map(portX => {
+    const [px, py] = rotatedPort([portX, 0], { footprint_tiles: type.dimensions }, room.rotation || 0);
+    return { key: portX, x: room.x + px, y: room.y + py };
+  }) : [];
+}
+
+function portAtPoint(world) {
+  const tx = Math.floor(world.x / TILE), ty = Math.floor(world.y / TILE);
+  for (const room of rooms) for (const port of dockPortTiles(room)) {
+    if (port.x === tx && port.y === ty) return { owner: room, key: port.key };
+  }
+  const offsets = { north: [0, -1], east: [1, 0], south: [0, 1], west: [-1, 0] };
+  const reach = 6;
+  for (let i = placements.length - 1; i >= 0; i--) {
+    const p = placements[i];
+    for (const port of placementPorts(getMachine(p.slug), p.rotation)) {
+      if (p.x + port.x !== tx || p.y + port.y !== ty) continue;
+      const [dx, dy] = offsets[port.side];
+      const fx = world.x / TILE - tx, fy = world.y / TILE - ty;
+      const depth = (dx > 0 ? 1 - fx : dx < 0 ? fx : dy > 0 ? 1 - fy : fy) * TILE;
+      if (depth <= reach) return { owner: p, key: port.key };
+    }
+  }
+  return null;
 }
 
 function canPlace(machine, x, y, rotation = 0, ignore = null, roomList = rooms, placementList = placements, beltList = belts) {
@@ -251,6 +306,25 @@ function beltProblem(cells, roomList = rooms, placementList = placements, beltLi
     visited.add(key);
   }
   return null;
+}
+
+function undergroundProblem(cells, roomList = rooms, placementList = placements, beltList = belts) {
+  if (!Array.isArray(cells) || cells.length !== 2) return "Underground belts need two ends";
+  for (const cell of cells) {
+    const problem = beltProblem([cell], roomList, placementList, beltList);
+    if (problem) return problem;
+  }
+  const [first, second] = cells;
+  const distance = Math.abs(second.x - first.x) + Math.abs(second.y - first.y);
+  if (!distance || first.x !== second.x && first.y !== second.y) return "Underground ends must align horizontally or vertically";
+  if (distance > getMachine("underground-belt").max_intervening_tiles + 1) return "Underground ends allow at most 6 intervening tiles";
+  if (cells.some(cell => cell.direction !== undefined)) return "Underground direction is determined by its two ends";
+  return null;
+}
+
+function placedBeltProblem(belt, roomList = rooms, placementList = placements, beltList = belts) {
+  return belt.kind === "underground" ? undergroundProblem(belt.cells, roomList, placementList, beltList)
+    : beltProblem(belt.cells, roomList, placementList, beltList);
 }
 
 function extendBeltDraft(point) {
@@ -315,7 +389,7 @@ function finishBelt() {
     cells = cells.slice(0, -1).map((cell, index, list) =>
       index === list.length - 1 ? { ...cell, direction } : cell);
   }
-  const candidates = belts.filter(belt => belt !== source).flatMap(belt =>
+  const candidates = belts.filter(belt => belt !== source && belt.kind !== "underground").flatMap(belt =>
     [0, belt.cells.length - 1].filter((index, i, indices) => indices.indexOf(index) === i)
       .filter(index => Math.abs(belt.cells[index].x - end.x) + Math.abs(belt.cells[index].y - end.y) <= 1)
       .map(index => ({ belt, index })));
@@ -363,15 +437,11 @@ function portConnection(cell, neighbor) {
   const x = cell.x + dx, y = cell.y + dy;
   const portSide = new Map([["0,-1", "north"], ["1,0", "east"], ["0,1", "south"], ["-1,0", "west"]])
     .get(`${-dx},${-dy}`);
+  let machinePort = null;
   const placement = placements.find(p => {
-    const machine = getMachine(p.slug);
-    const port = machinePorts(machine, p.rotation).find(item =>
+    machinePort = placementPorts(getMachine(p.slug), p.rotation).find(item =>
       p.x + item.x === x && p.y + item.y === y && item.side === portSide);
-    if (machine.port_layout?.ports) return Boolean(port);
-    return footprintCells(machine).some(cell => {
-      const [px, py] = rotatedPort(cell, machine, p.rotation);
-      return p.x + px === x && p.y + py === y;
-    });
+    return machinePort && portEnabled(p, machinePort.key);
   });
   const dock = !placement && rooms.find(room => {
     const type = roomTypes[room.size];
@@ -379,10 +449,7 @@ function portConnection(cell, neighbor) {
     let inwardX = 0, inwardY = 1;
     for (let i = 0; i < (room.rotation || 0); i++) [inwardX, inwardY] = [-inwardY, inwardX];
     if (dx !== inwardX || dy !== inwardY) return false;
-    return type.ports.some(portX => {
-      const [px, py] = rotatedPort([portX, 0], { footprint_tiles: type.dimensions }, room.rotation || 0);
-      return room.x + px === x && room.y + py === y;
-    });
+    return dockPortTiles(room).some(port => port.x === x && port.y === y && portEnabled(room, port.key));
   });
   if (dock) return {
     room: dock, cell, dx, dy,
@@ -391,8 +458,7 @@ function portConnection(cell, neighbor) {
   };
   return placement ? {
     placement, cell, dx, dy,
-    role: machinePorts(getMachine(placement.slug), placement.rotation)
-      .find(port => placement.x + port.x === x && placement.y + port.y === y && port.side === portSide)?.role,
+    role: machinePort.role,
     x: (cell.x + 0.5) * TILE + dx * (TILE / 2 + 3),
     y: (cell.y + 0.5) * TILE + dy * (TILE / 2 + 3)
   } : null;
@@ -407,20 +473,15 @@ function hasAdjacentPort(cell) {
     endpointPort(cell, { x: cell.x - dx, y: cell.y - dy }));
 }
 
+// Any belt tile beside an enabled port face connects to it, including tiles running parallel past it.
 function beltConnections(cells) {
-  if (cells.length > 1) return [0, cells.length - 1].flatMap(index => {
-    const cell = cells[index], neighbor = cells[index === 0 ? 1 : index - 1];
+  return cells.flatMap((cell, index) => {
+    const route = [cells[index - 1], cells[index + 1]].filter(Boolean);
     return [[1, 0], [0, 1], [-1, 0], [0, -1]]
-      .filter(([dx, dy]) => cell.x + dx !== neighbor.x || cell.y + dy !== neighbor.y)
+      .filter(([dx, dy]) => !route.some(other => other.x === cell.x + dx && other.y === cell.y + dy))
       .map(([dx, dy]) => portConnection(cell, { x: cell.x - dx, y: cell.y - dy }))
       .filter(Boolean);
   });
-  const cell = cells[0];
-  const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][beltDirection(cells, 0)];
-  return [
-    portConnection(cell, { x: cell.x + dx, y: cell.y + dy }),
-    portConnection(cell, { x: cell.x - dx, y: cell.y - dy })
-  ].filter(Boolean);
 }
 
 function beltCellKey(cell) { return `${cell.x},${cell.y}`; }
@@ -463,32 +524,62 @@ function beltNetwork(beltList = belts) {
   });
   for (const node of nodes.values()) {
     const { cell, belt, index } = node;
-    for (const neighbor of [belt.cells[index - 1], belt.cells[index + 1]].filter(Boolean)) {
+    for (const neighbor of belt.kind === "underground" ? [] : [belt.cells[index - 1], belt.cells[index + 1]].filter(Boolean)) {
       node.neighbors.add(beltCellKey(neighbor));
     }
     const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][beltDirection(belt.cells, index)];
-    const next = nodes.get(`${cell.x + dx},${cell.y + dy}`);
+    const jump = belt.kind === "underground" && index === 0;
+    const next = nodes.get(jump ? beltCellKey(belt.cells[1]) : `${cell.x + dx},${cell.y + dy}`);
+    if (!jump && next?.belt.kind === "underground" &&
+        (next.index !== 0 || beltDirection(next.belt.cells, 0) !== beltDirection(belt.cells, index))) continue;
     if (next && (next.belt === belt || index === 0 || index === belt.cells.length - 1)) {
       node.next = next;
       next.incoming.push(node);
-      node.neighbors.add(beltCellKey(next.cell));
-      next.neighbors.add(beltCellKey(cell));
+      if (!jump) {
+        node.neighbors.add(beltCellKey(next.cell));
+        next.neighbors.add(beltCellKey(cell));
+      }
     }
   }
   for (const belt of beltList) for (const connection of beltConnections(belt.cells)) {
+    if (belt.kind === "underground") {
+      const index = belt.cells.indexOf(connection.cell);
+      const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][beltDirection(belt.cells, index)];
+      const sign = index === 0 ? -1 : 1;
+      if (connection.dx !== dx * sign || connection.dy !== dy * sign) continue;
+    }
     nodes.get(beltCellKey(connection.cell)).ports.push(connection);
   }
   const sources = new Map();
   for (const node of nodes.values()) {
     const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][beltDirection(node.belt.cells, node.index)];
-    node.sources = node.ports.filter(port => port.role !== "input" && (port.dx !== dx || port.dy !== dy));
+    if (!node.next) {
+      const sidePorts = node.ports.filter(port => port.role !== "output" && port.dx * dx + port.dy * dy === 0);
+      const hasFeed = node.incoming.length || node.ports.some(port => port.role === "output");
+      node.sink = node.ports.find(port => port.role !== "output" && port.dx === dx && port.dy === dy) ||
+        (hasFeed && sidePorts.length === 1 ? sidePorts[0] : null);
+    }
+    node.sources = node.ports.filter(port => port !== node.sink &&
+      port.role !== "input" && (port.dx !== dx || port.dy !== dy));
     for (const port of node.sources) {
       const key = port.room ? `room:${port.room.id}` : `machine:${port.placement.id}`;
       if (!sources.has(key)) sources.set(key, new Set());
       sources.get(key).add(node);
     }
   }
-  const distributors = new Map(placements.filter(p => p.slug === "container" ||
+  // Serial taps share one stream: inject production at its first port, not again downstream.
+  for (const [key, taps] of sources) {
+    const entries = new Set(taps);
+    for (const tap of taps) {
+      const visited = new Set([tap]);
+      for (let next = tap.next; next && !visited.has(next); next = next.next) {
+        entries.delete(next);
+        visited.add(next);
+      }
+    }
+    sources.set(key, entries);
+  }
+  const distributors = new Map(placements.filter(p => isContainer(getMachine(p.slug)) ||
     getMachine(p.slug).belt_flow?.distribution === "equal_connected_outputs").map(p => [p.id, {
     placement: p, incoming: [], outputs: new Set(), rates: new Map(), unknown: false, processed: false
   }]));
@@ -501,12 +592,32 @@ function beltNetwork(beltList = belts) {
       if (!node.incoming.includes(distributor)) node.incoming.push(distributor);
     }
     if (node.next) continue;
-    const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][beltDirection(node.belt.cells, node.index)];
-    const sink = node.ports.find(port => port.role !== "output" && port.dx === dx && port.dy === dy);
-    const distributor = sink?.placement && distributors.get(sink.placement.id);
+    const distributor = node.sink?.placement && distributors.get(node.sink.placement.id);
     if (distributor) {
       node.flowNext.push(distributor);
       distributor.incoming.push(node);
+    }
+  }
+  const directInputs = [];
+  for (const distributor of distributors.values()) {
+    const placement = distributor.placement;
+    for (const port of placementPorts(getMachine(placement.slug), placement.rotation)) {
+      if (port.role !== "output" || !portEnabled(placement, port.key)) continue;
+      const [dx, dy] = { north: [0, -1], east: [1, 0], south: [0, 1], west: [-1, 0] }[port.side];
+      const cell = { x: placement.x + port.x, y: placement.y + port.y };
+      const sink = portConnection(cell, { x: cell.x - dx, y: cell.y - dy });
+      if (!sink?.placement || sink.role === "output") continue;
+      let target = distributors.get(sink.placement.id);
+      if (!target) {
+        // A touching machine input is a terminal flow node, with no belt tile to render.
+        target = {
+          cell: { x: cell.x + dx, y: cell.y + dy }, sink, incoming: [], flowNext: [],
+          rates: new Map(), unknown: false, processed: false
+        };
+        directInputs.push(target);
+      }
+      distributor.outputs.add(target);
+      if (!target.incoming.includes(distributor)) target.incoming.push(distributor);
     }
   }
   for (const distributor of distributors.values()) {
@@ -515,14 +626,14 @@ function beltNetwork(beltList = belts) {
     if (!distributor.incoming.length) distributor.unknown = true;
   }
   const queue = [];
-  for (const node of [...nodes.values(), ...distributors.values()]) {
+  for (const node of [...nodes.values(), ...directInputs, ...distributors.values()]) {
     node.pending = node.incoming.length;
     if (!node.incoming.length && !node.sources?.length) node.unknown = true;
     for (const port of node.sources || []) {
       if (port.placement && distributors.has(port.placement.id)) continue;
       const key = port.room ? `room:${port.room.id}` : `machine:${port.placement.id}`;
-      const recipe = port.placement && recipes.find(recipe =>
-        recipe.machine === port.placement.slug && recipe.name === port.placement.recipe);
+      if (!sources.get(key).has(node)) continue;
+      const recipe = port.placement && recipeForPlacement(port.placement);
       if (!recipe?.outputs.length || sources.get(key).size !== 1) {
         node.unknown = true;
         continue;
@@ -543,12 +654,10 @@ function beltNetwork(beltList = belts) {
     for (const next of node.flowNext) if (--next.pending === 0) queue.push(next);
   }
   const inputDemandGroups = new Map();
-  for (const node of nodes.values()) {
+  for (const node of [...nodes.values(), ...directInputs]) {
     if (node.next) continue;
-    const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][beltDirection(node.belt.cells, node.index)];
-    const sink = node.ports.find(port => port.role !== "output" && port.dx === dx && port.dy === dy);
-    const recipe = sink?.placement && recipes.find(recipe =>
-      recipe.machine === sink.placement.slug && recipe.name === sink.placement.recipe);
+    const sink = node.sink;
+    const recipe = sink?.placement && recipeForPlacement(sink.placement);
     if (!recipe?.inputs.length || !recipe.inputs.every(input => recipeRate(input.per_min) !== null)) continue;
     if (!inputDemandGroups.has(sink.placement.id)) inputDemandGroups.set(sink.placement.id, new Map());
     const itemGroups = inputDemandGroups.get(sink.placement.id);
@@ -586,9 +695,7 @@ function beltNetwork(beltList = belts) {
       node.demand = node.next.demand;
       continue;
     }
-    const [dx, dy] = [[1, 0], [0, 1], [-1, 0], [0, -1]][beltDirection(node.belt.cells, node.index)];
-    const sink = node.ports.find(port => port.role !== "output" && port.dx === dx && port.dy === dy);
-    const distributor = sink?.placement && distributors.get(sink.placement.id);
+    const distributor = node.sink?.placement && distributors.get(node.sink.placement.id);
     if (distributor) {
       node.demand = distributor.demand;
       continue;
@@ -601,6 +708,11 @@ function beltNetwork(beltList = belts) {
       for (const [item, rate] of node.rates) {
         node.rates.set(item, Math.min(rate, node.demand.get(item) || 0));
       }
+    }
+    if (node.belt?.kind === "underground") {
+      const total = [...node.rates.values()].reduce((sum, rate) => sum + rate, 0);
+      const capacity = getMachine("underground-belt").capacity_per_min;
+      if (total > capacity) for (const [item, rate] of node.rates) node.rates.set(item, rate * capacity / total);
     }
     if (!node.cell) {
       const splitter = node.placement.slug === "splitter-mk-1";
@@ -675,6 +787,19 @@ function beltNetwork(beltList = belts) {
       node.need.set(item, Math.max(0, rate - known) / unknownFeeds);
     }
   }
+  // Demand beyond tunnel capacity cannot establish a feasible rate for an unknown source.
+  for (const node of nodes.values()) {
+    if (node.belt.kind !== "underground" || !node.unknown || !node.need ||
+        [...node.need.values()].reduce((sum, rate) => sum + rate, 0) <= getMachine("underground-belt").capacity_per_min) continue;
+    const queue = [node], visited = new Set();
+    for (let index = 0; index < queue.length; index++) {
+      const next = queue[index];
+      if (visited.has(next)) continue;
+      visited.add(next);
+      if (next.unknown) next.need = null;
+      queue.push(...next.flowNext);
+    }
+  }
   for (const node of nodes.values()) {
     // Cycles and their downstream tiles cannot be assigned a finite steady rate.
     if (!node.processed) node.unknown = true;
@@ -697,6 +822,23 @@ function beltNetwork(beltList = belts) {
 
 function drawBelt(belt, ghost = false) {
   const cells = belt.cells;
+  if (belt.kind === "underground") {
+    const [first, second] = cells;
+    svgNode("path", {
+      d: `M${(first.x + 0.5) * TILE} ${(first.y + 0.5) * TILE} L${(second.x + 0.5) * TILE} ${(second.y + 0.5) * TILE}`,
+      fill: "none", stroke: "#7690bd", "stroke-width": 1, "stroke-dasharray": "3 4",
+      "data-symbol": "underground-link", opacity: ghost ? 0.5 : 0.8
+    });
+    cells.forEach((cell, index) => {
+      drawBelt({ id: belt.id, cells: [{ ...cell, direction: beltDirection(cells, index) }] });
+      svgNode("rect", {
+        x: cell.x * TILE + 1, y: cell.y * TILE + 1, width: TILE - 2, height: TILE - 2,
+        fill: "none", stroke: selected?.type === "belt" && selected.id === belt.id ? "#c5e5ff" : "#7690bd",
+        "stroke-width": 1.5, "data-symbol": index ? "underground-outlet" : "underground-inlet"
+      });
+    });
+    return;
+  }
   const invalid = ghost && (beltDraft ? draftBeltProblem(cells) : beltProblem(cells));
   ctx.save();
   ctx.globalAlpha = ghost ? 0.7 : 1;
@@ -831,9 +973,11 @@ function drawRoomBody(room, ghost, invalid, isSelected, group) {
     ctx.strokeRect((room.x + dockLeft) * TILE + 1, (room.y + 1) * TILE + 1, dockWidth * TILE - 2, 14 * TILE - 2);
     for (const portX of type.ports) {
       const x = (room.x + portX) * TILE, y = room.y * TILE;
+      const enabled = portEnabled(room, portX);
       svgNode("rect", { x: x + 1, y: y + 1, width: 14, height: 14, fill: "#ffffff" }, group);
       svgNode("path", { d: `M${x + 8} ${y + 12} V${y + 4} M${x + 4} ${y + 8} L${x + 8} ${y + 4} L${x + 12} ${y + 8}`,
-        fill: "none", stroke: "#10141b", "stroke-width": 1.5, "data-symbol": "dock-arrow" }, group);
+        fill: "none", stroke: enabled ? "#1f8f5a" : "#c8323f", "stroke-width": 2, "data-symbol": "dock-arrow",
+        "data-port-key": portX, "data-port-enabled": enabled }, group);
     }
     const ship = svgNode("g", { transform: `translate(${(room.x + 8) * TILE} ${(room.y + 15.5) * TILE})`, "data-symbol": "ship" }, group);
     svgNode("path", { d: "M0 -10 L5 -3 L5 3 L9 8 L3 6 L0 9 L-3 6 L-9 8 L-5 3 L-5 -3 Z",
@@ -926,13 +1070,13 @@ function drawMachine(placement, ghost = false, valid = true) {
   const [w, h] = machineFootprint(machine, placement.rotation);
   const x = placement.x * TILE + 2, y = placement.y * TILE + 2;
   const width = w * TILE - 4, height = h * TILE - 4;
-  const cut = machine.slug === "container" ? 0 : Math.min(TILE * 0.7, width / 4, height / 4);
+  const cut = isContainer(machine) ? 0 : Math.min(TILE * 0.7, width / 4, height / 4);
   ctx.save();
   if (ghost) ctx.globalAlpha = 0.8;
   machinePath(x, y, width, height, cut);
   const active = selected?.type === "machine" && selected.id === placement.id;
   const colors = { assembler: "#334e68", refinery: "#315b5b", reactor: "#4b4667", container: "#465568" };
-  ctx.fillStyle = !valid ? "#a74747" : active ? "#285e96" : colors[machine.slug] || "#334e68";
+  ctx.fillStyle = !valid ? "#a74747" : active ? "#285e96" : colors[isContainer(machine) ? "container" : machine.slug] || "#334e68";
   ctx.fill();
   ctx.strokeStyle = !valid ? "#ffaaaa" : ghost || active ? "#67b8ff" : "#203246";
   ctx.lineWidth = ghost || active ? 2 : 1;
@@ -941,7 +1085,7 @@ function drawMachine(placement, ghost = false, valid = true) {
   ctx.font = "bold 11px system-ui";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  const recipe = recipes.find(recipe => recipe.machine === placement.slug && recipe.name === placement.recipe);
+  const recipe = recipeForPlacement(placement);
   const labelWidth = Math.max(machine.compact_label ? 8 : 0, width - 12);
   const name = ctx.measureText(machine.name).width <= labelWidth * zoom ? machine.name
     : machine.compact_label || (machine.slug === "container" ? "C" : machine.slug === "refinery" ? "Ref." : machine.name);
@@ -963,36 +1107,27 @@ function drawMachine(placement, ghost = false, valid = true) {
     lines.forEach((line, index) => svgNode("text", { x: 0, y: nameY + 12 + index * 11,
       fill: "#d5e5f2", "font-size": 10, "text-anchor": "middle", "dominant-baseline": "central" }, labels, line));
   }
-  const portCells = machinePorts(machine, placement.rotation);
-  const drawnPortCells = machine.port_layout?.ports ? portCells : footprintCells(machine).map(cell => {
-    const [px, py] = rotatedPort(cell, machine, placement.rotation);
-    return { x: px, y: py, role: null };
-  });
-  for (const { x: px, y: py, role, side } of drawnPortCells) {
+  const faces = { north: [0, -1], east: [1, 0], south: [0, 1], west: [-1, 0] };
+  for (const { x: px, y: py, role, side, key } of placementPorts(machine, placement.rotation)) {
     const portX = (placement.x + px + 0.5) * TILE, portY = (placement.y + py + 0.5) * TILE;
-    const edges = [];
-    if (machine.port_layout?.ports) {
-      if (side === "north") edges.push({ x: portX - 2.5, y: y + 1, width: 5, height: 2 });
-      if (side === "south") edges.push({ x: portX - 2.5, y: y + height - 3, width: 5, height: 2 });
-      if (side === "west") edges.push({ x: x + 1, y: portY - 2.5, width: 2, height: 5 });
-      if (side === "east") edges.push({ x: x + width - 3, y: portY - 2.5, width: 2, height: 5 });
+    const [dx, dy] = faces[side];
+    // Marker sits just inside the machine face: green when enabled, red when turned off.
+    const cx = side === "east" ? x + width - 3 : side === "west" ? x + 3 : portX;
+    const cy = side === "south" ? y + height - 3 : side === "north" ? y + 3 : portY;
+    const enabled = portEnabled(placement, key);
+    const attributes = { fill: enabled ? "#51c889" : "#e36b74", stroke: "#10141b", "stroke-width": 0.5,
+      "data-symbol": "machine-port", "data-port-key": key, "data-port-enabled": enabled,
+      ...(role ? { "data-port-role": role } : {}) };
+    if (role) {
+      // Triangles point out of output ports and into input ports.
+      const sign = role === "output" ? 1 : -1, tx = dx * sign, ty = dy * sign;
+      const tip = [cx + tx * 2.5, cy + ty * 2.5], base = [cx - tx * 2, cy - ty * 2];
+      svgNode("path", { ...attributes, d: `M${tip[0]} ${tip[1]} L${base[0] - ty * 3} ${base[1] - tx * 3} L${base[0] + ty * 3} ${base[1] + tx * 3} Z` }, group);
     } else {
-      if (py === 0) edges.push({ x: portX - 2.5, y: y + 1, width: 5, height: 2 });
-      if (py === h - 1) edges.push({ x: portX - 2.5, y: y + height - 3, width: 5, height: 2 });
-      if (px === 0) edges.push({ x: x + 1, y: portY - 2.5, width: 2, height: 5 });
-      if (px === w - 1) edges.push({ x: x + width - 3, y: portY - 2.5, width: 2, height: 5 });
-    }
-    for (const edge of edges) {
-      const fill = role === "input" ? "#77b9ee" : role === "output" ? "#e4b85c" : "#afbecb";
-      svgNode("rect", { ...edge, rx: 1, fill, "data-symbol": "machine-port",
-        ...(role ? { "data-port-role": role } : {}) }, group);
+      svgNode("rect", { ...attributes, x: cx - (dx ? 1.5 : 3), y: cy - (dy ? 1.5 : 3),
+        width: dx ? 3 : 6, height: dy ? 3 : 6, rx: 1 }, group);
     }
   }
-  svgNode("path", {
-    d: `M0 ${-height / 2 + 5} L-3 ${-height / 2 + 9} L3 ${-height / 2 + 9} Z`,
-    transform: `translate(${centerX} ${centerY}) rotate(${placement.rotation * 90})`,
-    fill: "#dce9f7", "data-symbol": "orientation"
-  }, group);
   ctx.restore();
 }
 
@@ -1025,7 +1160,17 @@ function draw() {
   } else if (preview?.type === "machine") {
     const p = preview.placement;
     drawMachine(p, true, canPlace(getMachine(p.slug), p.x, p.y, p.rotation));
+  } else if (preview?.type === "underground") {
+    for (const cell of preview.cells) svgNode("rect", {
+      x: cell.x * TILE + 1, y: cell.y * TILE + 1, width: TILE - 2, height: TILE - 2,
+      fill: "none", stroke: preview.problem ? "#e36b74" : "#67b8ff",
+      "stroke-width": 2, "data-symbol": "underground-preview"
+    });
   }
+  if (undergroundStart) svgNode("rect", {
+    x: undergroundStart.x * TILE + 1, y: undergroundStart.y * TILE + 1, width: TILE - 2, height: TILE - 2,
+    fill: "#7690bd55", stroke: "#67b8ff", "data-symbol": "underground-start"
+  });
 }
 
 function canvasPoint(event) {
@@ -1033,6 +1178,14 @@ function canvasPoint(event) {
   return {
     x: Math.floor((event.clientX - rect.left) * canvas.width / rect.width / TILE),
     y: Math.floor((event.clientY - rect.top) * canvas.height / rect.height / TILE)
+  };
+}
+
+function canvasWorldPoint(event) {
+  const rect = canvas.getBoundingClientRect();
+  return {
+    x: (event.clientX - rect.left) * canvas.width / rect.width,
+    y: (event.clientY - rect.top) * canvas.height / rect.height
   };
 }
 
@@ -1049,7 +1202,12 @@ function roomAt(x, y) { return rooms.find(room => roomTile(room, x, y) !== null)
 function beltAt(x, y) { return belts.find(belt => belt.cells.some(cell => cell.x === x && cell.y === y)); }
 
 function updatePreview(point) {
-  if (tool.type === "room") {
+  if (tool.type === "underground") {
+    const cells = undergroundStart ? [undergroundStart, point] : [point];
+    const problem = undergroundStart ? undergroundProblem(cells) : beltProblem(cells);
+    preview = { type: "underground", cells, problem };
+    statusEl.textContent = problem || (undergroundStart ? "Click to place underground outlet" : "Click to place underground inlet");
+  } else if (tool.type === "room") {
     const room = { size: tool.size, x: Math.floor(point.x / ROOM_STEP) * ROOM_STEP, y: Math.floor(point.y / ROOM_STEP) * ROOM_STEP, rotation: previewRotation };
     preview = { type: "room", room };
     statusEl.textContent = canAddRoom(room) ? "Click to place room" : "Rooms cannot overlap and must connect at matching openings";
@@ -1072,14 +1230,16 @@ canvas.addEventListener("pointermove", event => {
   cursorPoint = point;
   const hovered = placementAt(point.x, point.y);
   const hoveredBelt = beltAt(point.x, point.y) && beltFlow.get(beltCellKey(point));
-  const recipe = hovered && recipes.find(recipe => recipe.machine === hovered.slug && recipe.name === hovered.recipe);
+  const recipe = hovered && recipeForPlacement(hovered);
   const hoveredMachine = hovered && getMachine(hovered.slug);
   const portSummary = hoveredMachine?.port_layout?.ports
     ? `\n${hoveredMachine.port_layout.ports.filter(port => port.role === "input").length} input, ${hoveredMachine.port_layout.ports.filter(port => port.role === "output").length} outputs`
     : "";
   canvas.title = hovered ? `${hoveredMachine.name}${portSummary}${recipe
-    ? `\n${recipe.name}\n${recipe.outputs.map(item => `${item.name || item.item}: ${item.per_min || "rate unknown"}`).join("\n")}\n${recipe.confidence || "confidence unknown"}`
-    : "\nNo recipe assigned"}` : hoveredBelt ? beltHoverText(hoveredBelt) : "";
+    ? `\n${recipe.name}\n${(recipe.outputs.length ? recipe.outputs : recipe.inputs).map(item => `${recipe.outputs.length ? "" : "Consumes "}${item.name || item.item}: ${item.per_min || "rate unknown"}`).join("\n")}\n${recipe.confidence || "confidence unknown"}`
+    : "\nNo recipe assigned"}` : hoveredBelt ? (hoveredBelt.belt.kind === "underground"
+      ? `Underground Belt (${hoveredBelt.index ? "outlet" : "inlet"})\n${beltHoverText(hoveredBelt)}\nTunnel capacity: 60/min (confirmed by user)`
+      : beltHoverText(hoveredBelt)) : "";
   if (beltDraft && (beltDraft.clickMode || event.pointerId === beltDraft.pointerId)) {
     if (!beltDraft.clickMode &&
         Math.hypot(event.clientX - beltDraft.startX, event.clientY - beltDraft.startY) >= 4) beltDraft.moved = true;
@@ -1106,6 +1266,25 @@ canvas.addEventListener("pointerdown", event => {
   if (event.button !== 0 || drag) return;
   const point = canvasPoint(event);
   cursorPoint = point;
+  if (tool.type === "underground") {
+    const problem = undergroundStart ? undergroundProblem([undergroundStart, point]) : beltProblem([point]);
+    if (problem) { statusEl.textContent = problem; return; }
+    if (!undergroundStart) {
+      undergroundStart = point;
+      selected = null;
+      statusEl.textContent = "Inlet set; click an aligned outlet up to 6 intervening tiles away";
+    } else {
+      const belt = { id: nextId++, kind: "underground", cells: [undergroundStart, point] };
+      belts.push(belt);
+      undergroundStart = null;
+      selected = { type: "belt", id: belt.id };
+      statusEl.textContent = "Underground belt placed (60/min capacity)";
+    }
+    preview = null;
+    updateDetails();
+    draw();
+    return;
+  }
   if (beltDraft) {
     if (beltDraft.clickMode) {
       extendBeltDraft(point);
@@ -1113,11 +1292,20 @@ canvas.addEventListener("pointerdown", event => {
     }
     return;
   }
+  const port = tool.type !== "room" && portAtPoint(canvasWorldPoint(event));
+  if (port) {
+    const enabled = togglePort(port.owner, port.key);
+    statusEl.textContent = `Port turned ${enabled ? "on" : "off"}`;
+    preview = null;
+    draw();
+    return;
+  }
   if (tool.type === "belt") {
     let source = beltAt(point.x, point.y);
+    if (source?.kind === "underground") { statusEl.textContent = "Start a surface belt beside the underground end"; return; }
     let attachment = point;
     if (!source && !hasAdjacentPort(point)) {
-      const nearby = belts.flatMap(belt =>
+      const nearby = belts.filter(belt => belt.kind !== "underground").flatMap(belt =>
         [0, belt.cells.length - 1].filter((index, i, indices) => indices.indexOf(index) === i)
           .filter(index => endpointExtendsTo(belt.cells, index, point))
           .map(index => ({ belt, cell: belt.cells[index] })));
@@ -1221,9 +1409,10 @@ canvas.addEventListener("pointerup", event => {
 
 function cancelPointerAction() {
   const pointerId = beltDraft?.pointerId ?? drag?.pointerId;
-  const active = Boolean(beltDraft || drag);
+  const active = Boolean(beltDraft || drag || undergroundStart);
   drag = null;
   beltDraft = null;
+  undergroundStart = null;
   if (pointerId !== undefined && canvas.hasPointerCapture(pointerId)) canvas.releasePointerCapture(pointerId);
   return active;
 }
@@ -1249,7 +1438,9 @@ function updateDetails() {
   }
   if (selected.type === "belt") {
     const belt = belts.find(item => item.id === selected.id);
-    details.textContent = `Belt: ${belt.cells.length} tiles; hover a tile and press R to turn or X to remove it (provisional rules)`;
+    details.textContent = belt.kind === "underground"
+      ? `Underground Belt: inlet ${belt.cells[0].x}, ${belt.cells[0].y}; outlet ${belt.cells[1].x}, ${belt.cells[1].y}; capacity 60/min`
+      : `Belt: ${belt.cells.length} tiles; hover a tile and press R to turn or X to remove it (provisional rules)`;
     recipesEl.textContent = "Select an Assembler or Refinery to assign a recipe.";
     return;
   }
@@ -1351,7 +1542,7 @@ function setTool(value) {
   selected = null;
   previewRotation = 0;
   document.querySelectorAll(".machine-button, .room-button, #select, #belt").forEach(button => {
-    const active = value.type === "machine" ? button.dataset.slug === value.slug
+    const active = value.type === "machine" || value.type === "underground" ? button.dataset.slug === value.slug
       : value.type === "room" ? button.dataset.size === value.size : button.id === value.type;
     button.classList.toggle("active", active);
     button.setAttribute("aria-pressed", String(active));
@@ -1401,31 +1592,24 @@ async function loadData() {
   recipes = recipeJson.recipes;
   machineList.replaceChildren();
   beltMachineList.replaceChildren();
-  for (const machine of machines.filter(machine => !machine.port_layout?.ports)) {
+  for (const machine of machines) {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "machine-button";
     button.dataset.slug = machine.slug;
+    const fixedRecipe = recipes.find(recipe => recipe.machine === machine.slug && recipe.name === machine.fixed_recipe);
+    button.title = [machine.name, `${machine.footprint_tiles.join("×")} tiles`,
+      machine.port_layout?.description, machine.port_layout?.confidence,
+      ...(fixedRecipe?.inputs.map(input => `Consumes ${input.name || input.item}: ${input.per_min}`) || [])
+    ].filter(Boolean).join("\n");
     const name = document.createElement("span");
     name.textContent = machine.name;
     const footprint = document.createElement("small");
     footprint.textContent = machine.footprint_tiles.join("×");
     button.append(name, footprint);
-    button.addEventListener("click", () => toggleTool({ type: "machine", slug: machine.slug }));
-    machineList.append(button);
-  }
-  for (const machine of machines.filter(machine => machine.port_layout?.ports)) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "machine-button";
-    button.dataset.slug = machine.slug;
-    const name = document.createElement("span");
-    name.textContent = machine.name;
-    const footprint = document.createElement("small");
-    footprint.textContent = machine.footprint_tiles.join("×");
-    button.append(name, footprint);
-    button.addEventListener("click", () => toggleTool({ type: "machine", slug: machine.slug }));
-    beltMachineList.append(button);
+    if (machine.paired_endpoints) button.title = "Click the inlet, then the outlet. Straight horizontal/vertical span, up to 6 intervening tiles. Capacity 60/min. Escape cancels.";
+    button.addEventListener("click", () => toggleTool({ type: machine.paired_endpoints ? "underground" : "machine", slug: machine.slug }));
+    (machine.port_layout?.ports || machine.paired_endpoints ? beltMachineList : machineList).append(button);
   }
   for (const button of document.querySelectorAll(".room-button")) {
     button.addEventListener("click", () => toggleTool({ type: "room", size: button.dataset.size }));
@@ -1440,8 +1624,13 @@ function serialize() {
     version: 3,
     rooms: rooms.map(room => ({ ...room })),
     placements: placements.map(p => ({ ...p })),
-    belts: belts.map(belt => ({ id: belt.id, cells: belt.cells.map(cell => ({ ...cell })) }))
+    belts: belts.map(belt => ({ id: belt.id, ...(belt.kind ? { kind: belt.kind } : {}), cells: belt.cells.map(cell => ({ ...cell })) }))
   };
+}
+
+function validDisabledPorts(owner) {
+  return owner.disabledPorts === undefined ||
+    Array.isArray(owner.disabledPorts) && owner.disabledPorts.every(key => typeof key === "string");
 }
 
 function restore(state) {
@@ -1466,6 +1655,7 @@ function restore(state) {
   const checkedRooms = [];
   for (const room of restoredRooms) {
     if (room.rotation === undefined) room.rotation = 0;
+    if (!validDisabledPorts(room)) throw new Error("Invalid disabled ports");
     if (!validId(room.id) || !roomTypes[room.size] || !Number.isInteger(room.x) || !Number.isInteger(room.y) ||
         !Number.isInteger(room.rotation) || room.rotation < 0 || room.rotation > 3) throw new Error("Invalid room");
     const [w, h] = dimensions(room);
@@ -1477,11 +1667,12 @@ function restore(state) {
   const checkedPlacements = [];
   for (const p of restoredPlacements) {
     const machine = getMachine(p.slug);
-    if (!validId(p.id) || !machine || !Number.isInteger(p.x) || !Number.isInteger(p.y) ||
+    if (!validId(p.id) || !machine || machine.paired_endpoints || !Number.isInteger(p.x) || !Number.isInteger(p.y) ||
         !Number.isInteger(p.rotation) || p.rotation < 0 || p.rotation > 3 ||
         !canPlace(machine, p.x, p.y, p.rotation, null, checkedRooms, checkedPlacements, [])) {
       throw new Error("Invalid machine placement");
     }
+    if (!validDisabledPorts(p)) throw new Error("Invalid disabled ports");
     if (p.recipe !== undefined && (!canAssignRecipe(p.slug) ||
         !recipes.some(recipe => recipe.machine === p.slug && recipe.name === p.recipe))) {
       throw new Error(`Unknown or incompatible recipe for ${machine.name}`);
@@ -1491,9 +1682,10 @@ function restore(state) {
   const checkedBelts = [];
   for (const belt of restoredBelts) {
     if (!belt || !validId(belt.id) || !Array.isArray(belt.cells) || belt.cells.length < 1) throw new Error("Invalid belt");
-    const problem = beltProblem(belt.cells, checkedRooms, checkedPlacements, checkedBelts);
+    if (belt.kind !== undefined && belt.kind !== "underground") throw new Error("Invalid belt kind");
+    const problem = placedBeltProblem(belt, checkedRooms, checkedPlacements, checkedBelts);
     if (problem) throw new Error(`Invalid belt: ${problem}`);
-    checkedBelts.push({ id: belt.id, cells: belt.cells.map(cell => ({
+    checkedBelts.push({ id: belt.id, ...(belt.kind ? { kind: belt.kind } : {}), cells: belt.cells.map(cell => ({
       x: cell.x, y: cell.y, ...(cell.direction === undefined ? {} : { direction: cell.direction })
     })) });
   }
@@ -1548,11 +1740,13 @@ function fitLayout() {
 
 function rotateSelected() {
   if (drag) return;
+  if (undergroundStart) { statusEl.textContent = "Choose the outlet to set underground direction"; return; }
   if (cursorPoint) {
     const belt = beltDraft || beltAt(cursorPoint.x, cursorPoint.y) ||
       (tool.type === "belt" && preview?.type === "belt" ? preview : null);
     const index = belt ? belt.cells.findIndex(cell => cell.x === cursorPoint.x && cell.y === cursorPoint.y) : -1;
     if (index >= 0) {
+      if (belt.kind === "underground") { statusEl.textContent = "Underground direction runs from inlet to outlet"; return; }
       belt.cells[index].direction = (beltDirection(belt.cells, index) + 1) % 4;
       statusEl.textContent = "Belt tile turned clockwise";
       draw();
@@ -1574,7 +1768,7 @@ function rotateSelected() {
     const rotatedRooms = rooms.map(item => item.id === room.id ? rotated : item);
     if (canAddRoom(rotated, remaining) && allRoomsConnected(rotatedRooms) &&
         placements.every(p => canPlace(getMachine(p.slug), p.x, p.y, p.rotation, p.id, rotatedRooms)) &&
-        belts.every(belt => !beltProblem(belt.cells, rotatedRooms, placements, []))) {
+        belts.every(belt => !placedBeltProblem(belt, rotatedRooms, placements, []))) {
       room.rotation = rotated.rotation;
       statusEl.textContent = "Room rotated";
     } else statusEl.textContent = "Cannot rotate room: it would overlap, disconnect rooms, or block machines or belts";
@@ -1594,12 +1788,13 @@ document.getElementById("zoom-reset").addEventListener("click", fitLayout);
 canvasWrap.addEventListener("wheel", event => {
   if (!event.ctrlKey && !event.metaKey) return;
   event.preventDefault();
-  setZoom(zoom + (event.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP), event);
+  setZoom(zoom + (event.deltaY < 0 ? ZOOM_STEP : -ZOOM_STEP));
 }, { passive: false });
 document.getElementById("select").addEventListener("click", () => setTool({ type: "select" }));
 document.getElementById("belt").addEventListener("click", () => toggleTool({ type: "belt" }));
 document.getElementById("rotate").addEventListener("click", rotateSelected);
 window.addEventListener("keydown", event => {
+  if (document.getElementById("export-dialog").open) return;
   if ((event.key === "Delete" || event.key === "Backspace") &&
       !event.ctrlKey && !event.metaKey && !event.altKey && selected &&
       !event.target?.isContentEditable &&
@@ -1638,9 +1833,17 @@ window.addEventListener("keydown", event => {
 });
 
 function deleteBeltTile() {
-  if (drag || beltDraft) { statusEl.textContent = "Finish or cancel drawing or moving first"; return; }
+  if (drag || beltDraft || undergroundStart) { statusEl.textContent = "Finish or cancel drawing or moving first"; return; }
   const belt = cursorPoint && beltAt(cursorPoint.x, cursorPoint.y);
   if (!belt) return;
+  if (belt.kind === "underground") {
+    belts = belts.filter(item => item !== belt);
+    if (selected?.type === "belt" && selected.id === belt.id) selected = null;
+    updateDetails();
+    draw();
+    statusEl.textContent = "Underground belt pair removed";
+    return;
+  }
   const index = belt.cells.findIndex(cell => cell.x === cursorPoint.x && cell.y === cursorPoint.y);
   const parts = [
     { cells: belt.cells.slice(0, index), start: 0 },
@@ -1663,7 +1866,7 @@ function deleteBeltTile() {
 }
 
 function deleteSelected() {
-  if (drag || beltDraft) { statusEl.textContent = "Finish or cancel drawing or moving first"; return; }
+  if (drag || beltDraft || undergroundStart) { statusEl.textContent = "Finish or cancel drawing or moving first"; return; }
   if (!selected) { statusEl.textContent = "Select a room, machine, or belt first"; return; }
   if (selected.type === "machine") {
     placements = placements.filter(p => p.id !== selected.id);
@@ -1673,7 +1876,7 @@ function deleteSelected() {
     const remaining = rooms.filter(room => room.id !== selected.id);
     if (!allRoomsConnected(remaining) || placements.some(p =>
       !canPlace(getMachine(p.slug), p.x, p.y, p.rotation, p.id, remaining)) ||
-        belts.some(belt => beltProblem(belt.cells, remaining, placements, []))) {
+        belts.some(belt => placedBeltProblem(belt, remaining, placements, []))) {
       statusEl.textContent = "Cannot remove room: it supports machines or belts, or connects other rooms";
       return;
     }
@@ -1706,14 +1909,43 @@ document.getElementById("load").addEventListener("click", () => {
     statusEl.textContent = "Local layout loaded";
   } catch (error) { statusEl.textContent = `Load failed: ${error.message}`; }
 });
+const exportDialog = document.getElementById("export-dialog");
+const exportFilename = document.getElementById("export-filename");
 document.getElementById("export").addEventListener("click", () => {
+  exportFilename.value = "main-sequence-layout.json";
+  exportFilename.setCustomValidity("");
+  exportDialog.returnValue = "";
+  exportDialog.showModal();
+  exportFilename.select();
+});
+document.getElementById("export-cancel").addEventListener("click", () => exportDialog.close());
+exportDialog.addEventListener("keydown", event => {
+  if (event.key !== "Escape") return;
+  event.preventDefault();
+  event.stopPropagation();
+  exportDialog.close();
+});
+exportDialog.addEventListener("close", () => {
+  if (exportDialog.returnValue !== "export") statusEl.textContent = "Export cancelled";
+});
+exportFilename.addEventListener("input", () => exportFilename.setCustomValidity(""));
+document.getElementById("export-form").addEventListener("submit", event => {
+  event.preventDefault();
+  const name = exportFilename.value.trim();
+  if (!name) {
+    exportFilename.setCustomValidity("Enter a filename");
+    exportFilename.reportValidity();
+    return;
+  }
   const blob = new Blob([JSON.stringify(serialize(), null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "main-sequence-layout.json";
+  link.download = /\.json$/i.test(name) ? name : `${name}.json`;
   link.click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
+  statusEl.textContent = `Layout exported as ${link.download}`;
+  exportDialog.close("export");
 });
 document.getElementById("import").addEventListener("click", () => document.getElementById("import-file").click());
 document.getElementById("import-file").addEventListener("change", async event => {

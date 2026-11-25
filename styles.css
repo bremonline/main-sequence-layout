@@ -23,6 +23,10 @@ canvas { display:block; cursor:crosshair; touch-action:none; }
 #recipe-control label { display:block; font-size:12px; color:var(--muted); margin-bottom:5px; }
 #recipe-select { width:100%; min-width:0; }
 .actions { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+#export-dialog { width:min(360px, calc(100% - 32px)); padding:20px; color:var(--text); background:var(--panel); border:1px solid var(--line); border-radius:8px; }
+#export-dialog::backdrop { background:#0009; }
+#export-dialog label { display:block; margin-bottom:6px; }
+#export-filename { width:100%; padding:8px; color:var(--text); background:var(--bg); border:1px solid #49566a; border-radius:5px; font:inherit; }
 .recipe { border-top:1px solid var(--line); padding:8px 0; font-size:12px; }
 .recipe strong { display:block; margin-bottom:4px; }.recipe .muted { color:var(--muted); }.rate { color:#86d69d; }
 @media (max-width:900px) { main { grid-template-columns:180px 1fr; } .details { grid-column:1/-1; max-height:300px; } header h1 { font-size:16px; } }

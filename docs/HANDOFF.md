@@ -12,18 +12,23 @@ Goal: a static, GitHub Pages layout builder for the game Main Sequence (Early Ac
 - Edge layout of a 1x1: W | 4 floor | 6 opening | 4 floor | W. 2x2 edge: W|4|6|10|6|4|W. A 2x1 has openings only on its short sides.
 - Opening tiles are usable like floor: machines AND belts can sit on them. Only wall tiles are unbuildable.
 - Docks and mining ports are separate 8x12 buildings that attach to an opening from outside, touching (not occupying) the opening tiles; they face into the station and are unbuildable.
-- Machine footprints (tiles): Assembler 5x5, Reactor 6x6, Refinery 3x3, Container (small) 2x2, Research 3x3, Splitter Mk. 1 1x1, Belt Balancer Mk. 1 2x1. Others still null.
+- Machine footprints (tiles): Assembler 5x5, Reactor 6x6, Refinery 3x3, Container (small) 2x2, Large Container 4x4, Materials Research 3x3, Computational Research 3x3, Splitter Mk. 1 1x1, Belt Balancer Mk. 1 2x1. Others still null.
 - Splitter Mk. 1 is 1x1 with one north-side input and three outputs; Belt Balancer Mk. 1 is 2x1 with two inputs and two outputs on opposite long sides. User-confirmed geometry/roles are in `data/machines.json`; rotation turns the ports.
-- Research has a single centered port opposite the orientation triangle (south at zero rotation), confirmed by user 2026-11-24. Power and input/output role remain unknown. Explicit port cells in machine data rotate with the footprint.
-- Ports are perimeter tiles INSIDE the footprint. Container: every perimeter tile, all entries. Refinery: middle tile of each side. Assembler: positions 2 and 4 of each side. Reactor: middle two tiles of each side (3 and 4).
+- Underground Belt has two 1x1 ends aligned horizontally/vertically, with up to six intervening tiles and confirmed 60/min capacity. First click is inlet, second is outlet. Only endpoints reserve surface tiles; spans can cross under machines/belts. Data lives in `data/machines.json`; pairs save in version 3 `belts` as `kind: "underground"` and ordered `cells` (two coordinates, no direction overrides). Flow jumps between ends, with rear inlet/forward outlet connections to machines, belts and distributors. Surface routes remain separate; no endpoint merging into the underground pair. R cannot turn one end; deleting either end removes the pair. Escape/tool changes cancel an unfinished pair. Unknown supply is inferred only when downstream demand is within capacity.
+- Materials Research retains the `research` slug for saved-layout compatibility. It and Computational Research have one centered input (south at zero rotation), confirmed by user. Power remains unknown. Their `fixed_recipe` data automatically consumes Hull Plate 6/min and Basic Circuits 6/min respectively, with no recipe assignment. Fixed recipes participate in flow, hover and recipe details.
+- Ports are perimeter tiles INSIDE the footprint. Both container sizes have ports on every tile of every side (8/16 faces), sharing the same aggregation/distribution behavior. Refinery: middle tile of each side. Assembler: positions 2 and 4 of each side. Reactor: middle two tiles of each side (3 and 4).
 - Machine corners are visually chamfered, but use the full square for collision. Container corners are barely cut because corner tiles are ports.
 - UNKNOWN: input/output roles and rotation rules for other machines, belt width/crossing/corner rules, the belt hand-off tile from dock ports, other machine sizes and ports, Station variants 2x2 B/C.
 
 ## Suggested v1 scope
 1. Draw a station (1x1 / 2x1 / 2x2) with wall, floor and opening tiles from data/modules.json.
 2. Palette of machines from data/machines.json (only those with footprint_tiles), drag, rotate, collision, ports highlighted.
+   Keep the left palette compact: descriptions and instructions are hover titles,
+   while machine buttons show only names and footprints.
 3. Per-recipe readout from data/recipes.json (rates/min, power in MW), and a power total.
 4. Save/load JSON, URL-hash share link.
+   Export prompts for a filename (default `main-sequence-layout.json`), adds `.json`
+   when missing, and cancels without downloading if dismissed.
    Delete/Backspace deletes the selected object via the same action as the button,
    retaining room connectivity and active-edit safeguards. Editable fields and
    modified key combinations are excluded.
@@ -44,6 +49,9 @@ Goal: a static, GitHub Pages layout builder for the game Main Sequence (Early Ac
    Hovering a placed belt tile and pressing X removes only that tile, splitting
    the route if necessary and preserving all remaining tile directions. Active
    draws/moves and editable fields block the shortcut.
+   Any belt tile beside an enabled port connects, including belts running parallel
+   past it. Clicking a machine or dock port toggles it (green on, red off); disabled
+   ports are saved as `disabledPorts` on the placement/room and never connect.
    Visual connections appear beside aligned machine ports. These rules are NOT
    confirmed game geometry; throughput and other machines' port roles remain unknown.
 6. Assemblers and Refineries support per-placement recipe selection from
@@ -58,9 +66,10 @@ Goal: a static, GitHub Pages layout builder for the game Main Sequence (Early Ac
    Dock ports are white tiles with outward arrows. The Control Center has an
    inset hollow black circle. The starter view and Fit layout button fit and center
    the layout with padding (capped at 100%, subject to the 10% minimum zoom).
+   Buttons, keyboard shortcuts and Ctrl/Cmd-wheel zoom anchor the visible canvas
+   center rather than its upper-left corner or the pointer.
 9. Rendering uses high-contrast machine labels, compact Ref./C names, wrapped or
-   truncated product names and full hover text, subtle neutral machine port slots with
-   unknown direction, and continuous amber belts with dark direction chevrons.
+   truncated product names and full hover text, green/red (on/off) machine port markers, and continuous amber belts with dark direction chevrons.
    Layout geometry, recipes, and per-tile belt facings are unaffected.
    Labels, ports, arrows, ship and control circle are SVG over the canvas, with
    pointer events disabled so editing still reaches the canvas. Grid lines and
@@ -78,12 +87,21 @@ Goal: a static, GitHub Pages layout builder for the game Main Sequence (Early Ac
    Belts remain outside the unbuildable dock tiles, with a dark end cap at its
    white port face.
 10. Directed per-tile flow tracks assigned recipe output rates per item, adding
-    rates downstream of merges. Known machine inputs cap delivered flow per item
+    rates downstream of merges. Serial output ports from the same recipe machine
+    on one directed belt stream count production only once, at the upstream port,
+    even across joined routes. Independent output streams remain ambiguous.
+    Known machine inputs cap delivered flow per item
     to recipe demand, and accepted rates are shown along the supplying belt run.
     Splitters initially divide equally across connected outputs, then redistribute
     a branch's unused share to outputs with remaining demand; their input flow is
     capped at combined output demand. Balancers do not yet redistribute.
     Separate belts feeding the same machine item share that recipe demand.
+    Explicit distributor outputs touching another enabled machine input connect
+    directly, with terminal graph nodes for recipe inputs that have no belt tile.
+    A terminal belt with incoming flow also feeds a unique perpendicular input;
+    that port is not misclassified as a recipe output. Direct and belt inputs
+    share demand accounting. Two Hull Plate assemblers require 30 Titanium Plates/min
+    each: 60/min before their splitter and 30/min on its output belt.
     When supply is unknown (dock port, un-fed container), rates are backtracked
     from known downstream demand, summing through splitters (e.g. three 20/min
     refineries fed via two splitters: 20, 40, 60). Inferred tiles are colored
@@ -103,7 +121,7 @@ Goal: a static, GitHub Pages layout builder for the game Main Sequence (Early Ac
     Selection adds dashed highlighting rather than replacing rate colors.
     Hovering a belt tile shows total/per-item flow, target and provisional capacity.
     Unknown totals explicitly separate any known contributions.
-    Splitter and Belt Balancer ports are directional (blue input, gold output).
+    Splitter and Belt Balancer ports are directional (triangles point in for input, out for output).
     Splitters divide incoming per-item rates evenly among connected outputs,
     capped per branch at assigned input demand, then redistribute overflow to
     other outputs with remaining demand. If demand is 15/min and a belt supplies

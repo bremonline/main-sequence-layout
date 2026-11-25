@@ -22,7 +22,7 @@
 
   <main>
     <aside id="palette" class="panel">
-      <h2>Rooms</h2>
+      <h2 title="Choose a room and click the star field. Additional rooms must touch at matching openings. Scroll to explore.">Rooms</h2>
       <div id="room-list" class="palette-list">
         <button type="button" class="room-button" data-size="1x1">Station 1×1</button>
         <button type="button" class="room-button" data-size="2x1">Station 2×1 <small>(inferred)</small></button>
@@ -30,18 +30,12 @@
         <button type="button" class="room-button" data-size="dock">Dock <small>(inferred)</small></button>
         <button type="button" class="room-button" data-size="control-center">Control Center <small>(inferred)</small></button>
       </div>
-      <p class="hint">Choose a room and click the star field. Additional rooms must touch at matching openings. Scroll to explore.</p>
-      <h2>Machines</h2>
+      <h2 title="Select a machine, then click a usable tile. Drag placed machines to move them.">Machines</h2>
       <div id="machine-list" class="palette-list"></div>
-      <p class="hint">Select a machine, then click a usable tile. Drag placed machines to move them.</p>
-      <h2>Belts</h2>
-      <button id="belt" type="button" aria-pressed="false">Draw belt (provisional)</button>
-      <p class="hint">Drag, or click to start and click to end. Start on/beside an endpoint to extend; end into another belt to merge. Click the same tile twice for one tile. Hover and press R to turn a tile or X to remove it. No crossings. Escape cancels.</p>
-      <h2>Belt machines</h2>
+      <h2 title="At 200% zoom, belt arrows become rates in items/min. Grey is below target, green equal, red over capacity; amber or ? means unknown. Machine inputs are capped at recipe demand.">Belts</h2>
+      <button id="belt" type="button" aria-pressed="false" title="Drag, or click to start and click to end. Start on/beside an endpoint to extend; end into another belt to merge. Click the same tile twice for one tile. Hover and press R to turn a tile or X to remove it. No crossings. Escape cancels. Belt rules are provisional.">Draw belt</button>
+      <h2 title="Click a port to turn it on (green) or off (red); triangles point out for outputs and in for inputs. Splitters share flow evenly among connected outputs, capped at demand, and redirect overflow to outputs with remaining demand. Rotate to turn the port roles.">Belt machines</h2>
       <div id="belt-machine-list" class="palette-list"></div>
-      <p class="hint">Blue ports are inputs; gold ports are outputs. Splitter Mk. 1: 1 input / 3 outputs, shared evenly among connected outputs. Belt Balancer Mk. 1: 2 inputs / 2 outputs. Rotate to turn the port roles.</p>
-      <p class="hint">Machine input flow is capped at its recipe demand. Splitters redirect excess to outputs with remaining demand. Grey is below target, green equal, red over capacity; amber unknown.</p>
-      <p class="hint">At 200% zoom and above, each belt arrow becomes its flow rate in items/min. ? means unknown; hover for full details.</p>
       <button id="select" type="button">Select / move</button>
       <button id="rotate" type="button">Rotate selected (R)</button>
       <button id="delete" type="button">Delete selected</button>
@@ -79,6 +73,19 @@
       <input id="import-file" type="file" accept="application/json" hidden>
     </aside>
   </main>
+
+  <dialog id="export-dialog" aria-labelledby="export-title">
+    <form id="export-form">
+      <h2 id="export-title">Export layout</h2>
+      <label for="export-filename">Filename</label>
+      <input id="export-filename" type="text" value="main-sequence-layout.json" required autofocus>
+      <p class="hint">The .json extension is added automatically if needed.</p>
+      <div class="actions">
+        <button id="export-cancel" type="button">Cancel</button>
+        <button type="submit">Download JSON</button>
+      </div>
+    </form>
+  </dialog>
 
   <script src="app.js"></script>
 </body>

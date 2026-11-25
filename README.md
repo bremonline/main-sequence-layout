@@ -43,30 +43,38 @@ placed machine to move it; the preview turns red where it cannot be dropped.
 Use **Select / move** to select a room, or select a machine to rotate or delete
 it. A room cannot be deleted if it supports a machine or disconnects the layout.
 Use the **− / +** controls, **Ctrl/Cmd + mouse wheel**, or keyboard **− / +** to
-zoom the field. Clicking the selected room or machine again clears the selection.
+zoom the field around the center of the visible canvas, including wheel zoom.
+Clicking the selected room or machine again clears the selection.
 Click an active palette button again, or press **Escape**, to leave placement mode
 and clear the selection. **R** (or **Rotate selected**) rotates rooms and machines
 clockwise, including placement previews. Belt machine rotation turns its input
 and output sides with it. Room rotations are rejected if they
-overlap, disconnect rooms, or invalidate machine placements. Machine arrows show
-orientation only, not input/output direction. Room orientation is saved with the
-layout; older layouts default to zero rotation.
+overlap, disconnect rooms, or invalidate machine placements. Room orientation is
+saved with the layout; older layouts default to zero rotation.
 Machine corners are visual only: collision uses the full rectangular footprint.
-Research is 3×3 with one port centered opposite its orientation triangle. Rotating
-the machine rotates this port; power and input/output role remain unknown.
+Materials Research (the existing `research` layout slug) and Computational Research
+are both 3×3 with one centered input on the south side at zero rotation.
+Rotating a machine rotates its port; power remains unknown. Materials Research
+consumes only Hull Plates at 6/min; Computational Research consumes Basic Circuits
+at 6/min. These fixed inputs apply automatically, including to older saved research
+placements, and participate in belt demand and inferred rates.
+Large Container is 4×4 with ports at every tile on every side (16 port faces);
+it uses the same flow aggregation and output sharing as the 2×2 Container.
+The left palette shows names and footprints; hover items and section headings for
+instructions, port details, and fixed consumption rates.
 Machine names use high-contrast labels; compact footprints use **Ref.** (Refinery)
 and **C** (Container). Product names wrap or truncate rather than being squeezed.
 Hover a machine for its full name, assigned recipe, output rates and confidence,
-or select it for full recipe details. Ports are subtle neutral edge slots (direction
-unknown); belts use continuous rate-colored tracks with dark direction chevrons. Labels,
+or select it for full recipe details. Ports are green markers when on and red when
+off — click any machine or dock port to toggle it; belts use continuous rate-colored tracks with dark direction chevrons. Labels,
 ports, arrows, the ship icon and Control Center circle use a non-interactive SVG
 overlay so they remain sharp at any zoom. Canvas retains the room/machine bodies,
 faint grid and sparse background stars. These
 are visual changes only and do not rearrange layout objects or alter recipes.
 Machine text stays at a fixed screen font size during zoom, revealing full names
 and more product text as footprints grow. Machine ports sit just inside the body
-edge; container corner tiles have one marker per exposed side (eight total).
-White triangles indicate orientation only, not input/output direction.
+edge; container corner tiles have one marker per exposed side (eight faces for
+Container, sixteen for Large Container).
 Power is shown as known consumption, with missing values reported as unknown.
 
 ### Machine recipes
@@ -86,13 +94,30 @@ The **Belt machines** palette group beside the belt tool contains **Splitter
 Mk. 1** (1×1, one north-side input and three outputs) and **Belt Balancer Mk. 1**
 (2×1, two inputs and two outputs on opposite long sides). Rotate either machine
 to turn its port roles. The footprints and port counts/sides are user-confirmed;
-port markers are blue for inputs and amber for outputs. The wiki data confidence
+port triangles point in for inputs and out for outputs. The wiki data confidence
 for other machine properties remains unchanged. Splitters divide incoming item
 rates evenly among connected output belts: 60/min with two outputs gives 30/min
 on each, or 20/min with three. Unused output ports receive no share. Belt Balancer
 flow rates are not yet simulated, so its downstream rates stay unknown.
+A splitter output touching an enabled machine input connects directly without an
+intervening belt tile. A belt ending sideways at a single adjacent input also feeds
+that input. Both paths participate in recipe demand: two Hull Plate assemblers
+require 30 Titanium Plates/min each, giving 60/min before the splitter and 30/min
+on its output belt.
 
 ### Belts (provisional)
+
+**Underground Belt** is in the belt-machine palette. Click its 1×1 inlet, then its
+1×1 outlet on the same row or column, with up to six intervening tiles. Flow runs
+from the first click to the second at up to 60 items/min. Only the endpoints need
+free usable tiles; the dashed hidden span can cross beneath machines and surface
+belts. Feed the inlet from behind and connect the outlet ahead to a machine,
+surface belt, splitter, or another underground inlet. Use Escape to cancel an
+unfinished pair. Select either end and delete, or hover either end and press X,
+to remove the whole pair. Direction is fixed by placement, not R.
+Pairs persist in export, local saves and shared layouts. Unknown supply can be
+inferred from feasible downstream demand; demand above tunnel capacity remains
+unknown instead of displaying an impossible inferred rate.
 
 Choose **Draw belt**, then either drag across floor or opening tiles and release,
 or click once to start, move the pointer, and click again to finish. Click the
@@ -127,7 +152,9 @@ gets a full-width connection stopping just short of the port, with a dark end ca
 Endpoint tiles can also turn
 sideways into an adjacent port, with the belt fill and outline continuing around
 the bend without a pointed taper or broken elbow outline. Moving a machine away
-can detach a belt. Dock ports also count as connections, following dock rotation and meeting the outward port face;
+can detach a belt. Any belt tile beside an enabled port connects to it, even one
+running parallel past it; turn the port off to stop that connection. Disabled ports are
+saved per machine/room as `disabledPorts`. Dock ports also count as connections, following dock rotation and meeting the outward port face;
 the dock body and port tiles themselves remain unbuildable.
 
 Rates are tracked per tile and item using assigned recipe outputs and tile
@@ -154,6 +181,9 @@ combined connected output demand. Containers sum incoming rates per item and div
 connected output belts, with arrows determining input/output. Containers without
 inputs remain unknown; unknown inputs and container feedback loops propagate
 unknown totals. Stored inventory is not simulated.
+When one directed belt stream passes multiple output ports on the same recipe
+machine, its production is counted once at the first port, including across joined
+belt routes. Downstream merges and splitters retain the known rate.
 Unknown source rates (including docks and un-fed containers or splitters), missing recipe
 output rates, cycles and ambiguous multi-port output allocation stay **amber**,
 including downstream of unknown inputs. Data confidence remains unchanged;
@@ -171,8 +201,9 @@ Click the selected belt again to deselect it. Machines
 cannot be placed or dragged over belts. Rooms supporting belts cannot be deleted
 or rotated into invalid layouts.
 
-Save stores a layout in your browser. Export/import and the share link use JSON;
-version 3 includes belts and assigned recipes, and versions 1 and 2 still load.
+Save stores a layout in your browser. Export/import and the share link use JSON.
+Export asks for a filename and adds `.json` if needed; Cancel downloads nothing.
+Version 3 includes belts and assigned recipes, and versions 1 and 2 still load.
 Older single-station layouts are converted when opened. Room-to-room wall rows
 touch rather than overlap; exact inter-room behavior remains provisional.
 

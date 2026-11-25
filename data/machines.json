@@ -1,24 +1,61 @@
 {
  "game_version": "EA (unverified; source is demo)",
- "count": 62,
+ "count": 64,
  "machines": [
   {
-   "name": "Research",
+   "name": "Underground Belt",
+   "slug": "underground-belt",
+   "category": "Logistics",
+   "footprint_tiles": [1, 1],
+   "paired_endpoints": true,
+   "max_intervening_tiles": 6,
+   "capacity_per_min": 60,
+   "power_mw": null,
+   "source": "user statement",
+   "source_version": "EA (2026-11-25)",
+   "confidence": "confirmed (NEW)"
+  },
+  {
+   "name": "Materials Research",
    "slug": "research",
+   "compact_label": "Mat. R.",
+   "fixed_recipe": "Materials Research",
    "category": "Research",
    "power_mw": null,
    "source": "user statement",
-   "source_version": "EA (2026-11-24)",
+   "source_version": "EA (2026-11-25)",
    "confidence": "confirmed (NEW)",
    "footprint_tiles": [3, 3],
    "footprint_source": "user statement 2026-11-24",
    "footprint_confidence": "confirmed by user",
    "port_layout": {
     "cells": [[1, 2]],
-    "description": "Single port centered on the side opposite the orientation triangle (south at zero rotation)",
-    "input_vs_output": "UNKNOWN",
+    "description": "Single centered input (south at zero rotation)",
+    "input_vs_output": "input",
     "source": "user statement 2026-11-24",
-    "confidence": "confirmed by user; port direction unknown",
+    "confidence": "confirmed by user; consumption-only role confirmed 2026-11-25",
+    "placement": "perimeter tile inside the footprint"
+   }
+  },
+  {
+   "name": "Computational Research",
+   "slug": "computational-research",
+   "compact_label": "Comp. R.",
+   "fixed_recipe": "Computational Research",
+   "category": "Research",
+   "power_mw": null,
+   "source": "user statement",
+   "source_version": "EA (2026-11-25)",
+   "confidence": "confirmed (NEW)",
+   "footprint_tiles": [3, 3],
+   "footprint_source": "user statement 2026-11-25",
+   "footprint_confidence": "confirmed by user",
+   "port_layout": {
+    "cells": [[1, 2]],
+    "description": "Single centered south-side input at zero rotation",
+    "input_vs_output": "input",
+    "source": "user statement 2026-11-25",
+    "confidence": "confirmed by user",
     "placement": "perimeter tile inside the footprint"
    }
   },
@@ -2291,7 +2328,20 @@
    "power_mw": null,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "compact_label": "LC",
+   "footprint_tiles": [4, 4],
+   "footprint_source": "user statement 2026-11-25",
+   "footprint_confidence": "confirmed by user",
+   "port_layout": {
+    "positions_1indexed_along_each_side": [1, 2, 3, 4],
+    "sides": "all four",
+    "description": "All tiles on all four sides (16 port faces)",
+    "input_vs_output": "in and out",
+    "source": "user statement 2026-11-25",
+    "confidence": "confirmed by user; per-port direction unknown",
+    "placement": "perimeter tiles inside the footprint"
+   }
   },
   {
    "name": "Large Transport Block",

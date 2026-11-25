@@ -44,7 +44,7 @@ async function app(hash = "") {
     },
     window: element(),
     location: { hash },
-    TextEncoder, TextDecoder, btoa, atob,
+    TextEncoder, TextDecoder, btoa, atob, Blob,
     localStorage: {
       setItem: (key, value) => saved.set(key, value),
       getItem: key => saved.get(key) ?? null
@@ -56,9 +56,12 @@ async function app(hash = "") {
   });
   vm.runInContext(readFileSync(join(root, "app.js"), "utf8"), context);
   await new Promise(resolve => setImmediate(resolve));
-  assert.equal(vm.runInContext("machines.length", context), 7);
+  assert.equal(vm.runInContext("machines.length", context), 10);
   return {
     run: code => vm.runInContext(code, context),
+    pointerAt(name, x, y) {
+      get("layout-canvas").listeners[name]({ button: 0, pointerId: 1, clientX: x, clientY: y });
+    },
     pointer(name, x, y) {
       get("layout-canvas").listeners[name]({
         button: 0, pointerId: 1, clientX: x * 16 + 8, clientY: y * 16 + 8
@@ -69,8 +72,8 @@ async function app(hash = "") {
 
 test("belt machines are grouped beside belts with confirmed footprints and port roles", async () => {
   const { run } = await app();
-  assert.equal(run('document.getElementById("machine-list").children.length'), 5);
-  assert.equal(run('document.getElementById("belt-machine-list").children.length'), 2);
+  assert.equal(run('document.getElementById("machine-list").children.length'), 7);
+  assert.equal(run('document.getElementById("belt-machine-list").children.length'), 3);
   assert.equal(run('machineFootprint(getMachine("splitter-mk-1")).join("x")'), "1x1");
   assert.equal(run('machineFootprint(getMachine("belt-balancer-mk-1")).join("x")'), "2x1");
   assert.equal(run('machinePorts(getMachine("splitter-mk-1")).filter(p=>p.role==="input").length'), 1);
@@ -80,7 +83,70 @@ test("belt machines are grouped beside belts with confirmed footprints and port 
   assert.equal(run('machinePorts(getMachine("splitter-mk-1"),1).find(p=>p.role==="input").side'), "east");
 });
 
-test("belt machine ports connect on their role-specific sides and render role colors", async () => {
+test("export asks for a filename, adds the JSON extension, and respects cancellation", async () => {
+  const { run } = await app();
+  const layout = run("JSON.stringify(serialize())");
+  run(`globalThis.downloads=[];
+    Object.assign(document.getElementById("export-dialog"),{
+      showModal(){this.open=true;},
+      close(value){this.open=false;if(value!==undefined)this.returnValue=value;this.listeners.close();}
+    });
+    Object.assign(document.getElementById("export-filename"),{
+      select(){},
+      setCustomValidity(message){this.validationMessage=message;},
+      reportValidity(){return !this.validationMessage;}
+    });
+    globalThis.URL={
+      createObjectURL(blob){globalThis.exportedBlob=blob;return "blob:layout";},
+      revokeObjectURL(url){globalThis.revokedURL=url;}
+    };
+    globalThis.setTimeout=callback=>callback();
+    document.createElement=()=>({click(){downloads.push({name:this.download,href:this.href});}});`);
+  for (const [filename, expected] of [
+    ["My factory", "My factory.json"],
+    ["  Titanium setup.json  ", "Titanium setup.json"],
+    ["Station.JSON", "Station.JSON"]
+  ]) {
+    run('document.getElementById("export").listeners.click()');
+    assert.equal(run('document.getElementById("export-dialog").open'), true);
+    assert.equal(run('document.getElementById("export-filename").value'), "main-sequence-layout.json");
+    run(`document.getElementById("export-filename").value=${JSON.stringify(filename)};
+      document.getElementById("export-form").listeners.submit({preventDefault(){}})`);
+    assert.equal(run('document.getElementById("export-dialog").open'), false);
+    assert.equal(run("downloads.at(-1).name"), expected);
+    assert.equal(run("downloads.at(-1).href"), "blob:layout");
+    assert.equal(run("exportedBlob.type"), "application/json");
+    assert.equal(JSON.stringify(JSON.parse(await run("exportedBlob.text()"))), layout);
+    assert.equal(run("revokedURL"), "blob:layout");
+  }
+  run(`document.getElementById("export").listeners.click();
+    selected={type:"room",id:1};
+    window.listeners.keydown({key:"Escape",target:{tagName:"INPUT"}})`);
+  assert.equal(run("selected.id"), 1);
+  run('document.getElementById("export-cancel").listeners.click()');
+  assert.equal(run("downloads.length"), 3);
+  assert.equal(run('document.getElementById("export-dialog").open'), false);
+  assert.match(run('document.getElementById("status").textContent'), /cancelled/i);
+  run(`document.getElementById("export").listeners.click();
+    document.getElementById("export-dialog").listeners.keydown({
+      key:"Escape",preventDefault(){},stopPropagation(){}
+    })`);
+  assert.equal(run('document.getElementById("export-dialog").open'), false);
+  assert.equal(run("selected.id"), 1);
+  assert.equal(run("downloads.length"), 3);
+  for (const filename of ["", "   "]) {
+    run(`document.getElementById("export").listeners.click();
+      document.getElementById("export-filename").value=${JSON.stringify(filename)};
+      document.getElementById("export-form").listeners.submit({preventDefault(){}})`);
+    assert.equal(run("downloads.length"), 3);
+    assert.equal(run('document.getElementById("export-dialog").open'), true);
+    assert.match(run('document.getElementById("export-filename").validationMessage'), /filename/i);
+    run('document.getElementById("export-filename").listeners.input()');
+    assert.equal(run('document.getElementById("export-filename").validationMessage'), "");
+  }
+});
+
+test("belt machine ports connect on their role-specific sides and render role triangles", async () => {
   const { run } = await app();
   run(`restore({version:3,rooms:[{id:1,size:"1x1",x:48,y:32}],
     placements:[{id:2,slug:"splitter-mk-1",x:52,y:40,rotation:0},
@@ -94,7 +160,9 @@ test("belt machine ports connect on their role-specific sides and render role co
   assert.equal(run('flattenSVG(symbols).filter(n=>n.attributes["data-port-role"]==="output").length'), 5);
   assert.equal(run(`new Set(flattenSVG(symbols).find(n=>n.attributes["data-machine-id"]==="2").children
     .filter(n=>n.attributes["data-port-role"]==="output")
-    .map(n=>n.attributes.x+","+n.attributes.y)).size`), 3);
+    .map(n=>n.attributes.d)).size`), 3);
+  assert.equal(run('flattenSVG(symbols).filter(n=>n.attributes["data-symbol"]==="machine-port").every(n=>n.attributes.fill==="#51c889")'), true);
+  assert.equal(run('flattenSVG(symbols).some(n=>n.attributes["data-symbol"]==="orientation")'), false);
 });
 
 test("parallel balancer belts stay separate when drawn to or from adjacent ports", async () => {
@@ -163,6 +231,121 @@ test("port-connected endpoints resist incidental joins but allow explicit extens
   assert.equal(run("belts[0].cells.length"), 7);
 });
 
+test("underground belts place in two clicks across six intervening tiles, save, and cancel safely", async () => {
+  const { run, pointer } = await app();
+  run(`restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+    placements:[{id:2,slug:"container",x:39,y:39,rotation:0}],
+    belts:[{id:3,cells:[{x:42,y:38},{x:42,y:39},{x:42,y:40}]}]});
+    setTool({type:"underground",slug:"underground-belt"})`);
+  pointer("pointerdown",37,40);
+  pointer("pointerup",37,40);
+  assert.equal(run("belts.length"),1);
+  assert.equal(run("undergroundStart.x"),37);
+  assert.equal(run("serialize().belts.length"),1);
+  for (const [x,y] of [[45,40],[44,41],[37,40],[42,40]]) {
+    pointer("pointerdown",x,y);
+    assert.equal(run("belts.length"),1);
+    assert.notEqual(run("undergroundStart"),null);
+  }
+  pointer("pointerdown",44,40);
+  assert.equal(run("belts.length"),2);
+  assert.equal(run("belts[1].kind"),"underground");
+  assert.equal(run("undergroundStart"),null);
+  run("globalThis.savedUnderground=JSON.stringify(serialize());restore(JSON.parse(savedUnderground))");
+  assert.equal(run("JSON.stringify(serialize())"),run("savedUnderground"));
+  run('globalThis.nodes=node=>[node,...node.children.flatMap(nodes)]');
+  assert.equal(run('nodes(symbols).filter(n=>n.attributes["data-symbol"]==="underground-link").length'),1);
+  run('selected={type:"room",id:1};deleteSelected()');
+  assert.equal(run("rooms.length"),1);
+  run('setTool({type:"underground",slug:"underground-belt"})');
+  pointer("pointerdown",36,45);
+  run('window.listeners.keydown({key:"Escape"})');
+  assert.equal(run("undergroundStart"),null);
+  assert.equal(run("belts.length"),2);
+  pointer("pointermove",44,40);
+  run('window.listeners.keydown({key:"x",target:{tagName:"BODY"},preventDefault(){}})');
+  assert.equal(run("belts.length"),1);
+});
+
+test("underground flow connects machines, surface belts, and splitters in every direction with a 60/min limit", async () => {
+  const { run } = await app();
+  run(`recipes.push({name:"Tunnel source",machine:"refinery",inputs:[],
+    outputs:[{item:"ore",per_min:"90/min"}]})`);
+  for (const [dx,dy,rotation] of [[1,0,3],[0,1,0],[-1,0,1],[0,-1,2]]) {
+    const first={x:45,y:45},second={x:45+5*dx,y:45+5*dy};
+    const source={x:first.x-4*dx-1,y:first.y-4*dy-1};
+    const splitter={x:second.x+2*dx,y:second.y+2*dy};
+    const fixture={version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+      placements:[{id:2,slug:"refinery",...source,rotation:0,recipe:"Tunnel source"},
+        {id:3,slug:"splitter-mk-1",...splitter,rotation}],
+      belts:[{id:4,cells:[{x:first.x-2*dx,y:first.y-2*dy},{x:first.x-dx,y:first.y-dy}]},
+        {id:5,kind:"underground",cells:[first,second]},
+        {id:6,cells:[{x:second.x+dx,y:second.y+dy,direction:dx>0?0:dy>0?1:dx<0?2:3}]},
+        {id:7,cells:[{x:splitter.x+dx,y:splitter.y+dy},{x:splitter.x+2*dx,y:splitter.y+2*dy}]}]};
+    run(`restore(${JSON.stringify(fixture)})`);
+    for (const cell of [first,second,fixture.belts[2].cells[0],fixture.belts[3].cells[1]]) {
+      assert.equal(run(`beltFlow.get("${cell.x},${cell.y}").total`),60);
+      assert.equal(run(`beltFlow.get("${cell.x},${cell.y}").unknown`),false);
+    }
+  }
+  run(`restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+    placements:[{id:2,slug:"refinery",x:36,y:39,rotation:0,recipe:"Tunnel source"},
+      {id:3,slug:"splitter-mk-1",x:46,y:40,rotation:3}],
+    belts:[{id:4,kind:"underground",cells:[{x:39,y:40},{x:45,y:40}]},
+      {id:5,cells:[{x:47,y:40},{x:48,y:40}]}]})`);
+  assert.equal(run('beltFlow.get("48,40").total'),60);
+  run(`recipes.find(r=>r.name==="Tunnel source").outputs=[
+    {item:"ore",per_min:"60/min"},{item:"water",per_min:"30/min"}];draw()`);
+  assert.equal(run('beltFlow.get("48,40").rates.get("ore")'),40);
+  assert.equal(run('beltFlow.get("48,40").rates.get("water")'),20);
+  run('delete placements[0].recipe;draw()');
+  assert.equal(run('beltFlow.get("48,40").unknown'),true);
+});
+
+test("splitter output feeds linked underground pairs directly into machine demand", async () => {
+  const { run } = await app();
+  run(`restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+    placements:[{id:2,slug:"splitter-mk-1",x:39,y:40,rotation:3},
+      {id:3,slug:"assembler",x:51,y:39,rotation:0,recipe:"Hull Plate Titanium Crafting"}],
+    belts:[{id:4,cells:[{x:37,y:40},{x:38,y:40}]},
+      {id:5,kind:"underground",cells:[{x:40,y:40},{x:45,y:40}]},
+      {id:6,kind:"underground",cells:[{x:46,y:40},{x:50,y:40}]}]})`);
+  for (const cell of ["38,40","40,40","45,40","46,40","50,40"]) {
+    assert.equal(run(`beltFlow.get("${cell}").total`),30);
+    assert.equal(run(`beltFlow.get("${cell}").load`),"equal");
+  }
+});
+
+test("underground restore rejects malformed pairs atomically and allows occupied hidden spans", async () => {
+  const { run } = await app();
+  run("globalThis.beforeTunnel=JSON.stringify(serialize())");
+  for (const cells of [
+    [{x:52,y:36}], [{x:52,y:36},{x:52,y:36}],
+    [{x:52,y:36},{x:60,y:36}], [{x:52,y:36},{x:55,y:39}],
+    [{x:52,y:36,direction:0},{x:55,y:36}]
+  ]) {
+    assert.throws(()=>run(`restore({version:3,rooms:[{id:1,size:"1x1",x:48,y:32}],
+      placements:[],belts:[{id:2,kind:"underground",cells:${JSON.stringify(cells)}}]})`), /Invalid belt/);
+    assert.equal(run("JSON.stringify(serialize())"),run("beforeTunnel"));
+  }
+});
+
+test("underground inputs infer feasible demand but never infer flow exceeding tunnel capacity", async () => {
+  const { run } = await app();
+  run(`restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+    placements:[{id:2,slug:"assembler",x:48,y:39,rotation:0,recipe:"Hull Plate Titanium Crafting"}],
+    belts:[{id:3,kind:"underground",cells:[{x:40,y:40},{x:47,y:40}]}]})`);
+  for (const cell of ["40,40","47,40"]) {
+    assert.equal(run(`beltFlow.get("${cell}").total`),30);
+    assert.equal(run(`beltFlow.get("${cell}").inferred`),true);
+  }
+  run('recipes.find(r=>r.name==="Hull Plate Titanium Crafting").inputs[0].per_min="90/min";draw()');
+  for (const cell of ["40,40","47,40"]) {
+    assert.equal(run(`beltFlow.get("${cell}").unknown`),true);
+    assert.ok(run(`beltFlow.get("${cell}").total`)<=60);
+  }
+});
+
 test("palette selections toggle off and Escape clears selection", async () => {
   const { run } = await app();
   for (const value of ['{type:"room",size:"dock"}', '{type:"machine",slug:"assembler"}']) {
@@ -216,6 +399,26 @@ test("starter view fits all three rooms with padding and Reset refits", async ()
   assert.equal(run("zoom"), 600 / (52 * 16));
   assert.equal(run("(64 * 16 * zoom - canvasWrap.scrollTop) <= canvasWrap.clientHeight"), true);
   assert.equal(run("(16 * 16 * zoom - canvasWrap.scrollTop) >= 0"), true);
+});
+
+test("buttons, keyboard, and wheel zoom preserve the center of the visible canvas", async () => {
+  const { run } = await app();
+  run(`setZoom(1);canvasWrap.scrollLeft=400;canvasWrap.scrollTop=300;
+    globalThis.center=()=>[(canvasWrap.scrollLeft+canvasWrap.clientWidth/2)/zoom,
+      (canvasWrap.scrollTop+canvasWrap.clientHeight/2)/zoom];`);
+  const center = run("JSON.stringify(center())");
+  for (const action of [
+    'document.getElementById("zoom-in").listeners.click()',
+    'document.getElementById("zoom-out").listeners.click()',
+    'window.listeners.keydown({key:"+",target:{tagName:"BODY"}})',
+    'canvasWrap.listeners.wheel({ctrlKey:true,deltaY:-1,clientX:0,clientY:0,preventDefault(){}})',
+    'canvasWrap.listeners.wheel({metaKey:true,deltaY:1,clientX:799,clientY:599,preventDefault(){}})'
+  ]) {
+    const zoom = run("zoom");
+    run(action);
+    assert.notEqual(run("zoom"), zoom);
+    assert.equal(run("JSON.stringify(center())"), center);
+  }
 });
 
 test("labels fit their available space without horizontal compression", async () => {
@@ -696,7 +899,51 @@ test("belt endpoints connect only beside a port and along the route direction", 
   assert.equal(run("endpointPort({x:51,y:35},{x:50,y:35})"), true);
 });
 
-test("research has one rotating port opposite its triangle and persists", async () => {
+test("belts passing parallel beside a port connect, and clicking a port toggles it", async () => {
+  const { run, pointerAt } = await app();
+  run(`recipes.push({name:"Side source",machine:"refinery",inputs:[],outputs:[{item:"ore",per_min:"20/min"}]});
+    restore({version:3,rooms:[{id:1,size:"1x1",x:48,y:32}],
+    placements:[{id:2,slug:"refinery",x:52,y:36,rotation:0,recipe:"Side source"}],
+    belts:[{id:3,cells:[{x:51,y:35},{x:51,y:36},{x:51,y:37},{x:51,y:38},{x:51,y:39}]}]});
+    globalThis.nodes=node=>[node,...node.children.flatMap(nodes)];`);
+  assert.equal(run("beltConnections(belts[0].cells).length"),1);
+  assert.equal(run("beltConnections(belts[0].cells)[0].cell.y"),37);
+  assert.equal(run('beltFlow.get("51,39").total'),20);
+  const marker = 'nodes(symbols).find(n=>n.attributes["data-symbol"]==="machine-port"&&n.attributes["data-port-key"]==="0,1,west")';
+  assert.equal(run(`${marker}.attributes.fill`),"#51c889");
+  pointerAt("pointerdown",52*16+2,37*16+8);
+  pointerAt("pointerup",52*16+2,37*16+8);
+  assert.deepEqual(JSON.parse(run("JSON.stringify(placements[0].disabledPorts)")),["0,1,west"]);
+  assert.equal(run("drag"),null);
+  assert.equal(run(`${marker}.attributes.fill`),"#e36b74");
+  assert.equal(run("beltConnections(belts[0].cells).length"),0);
+  assert.equal(run('beltFlow.get("51,39").unknown'),true);
+  run("placements[0].rotation=2;draw()");
+  assert.equal(run('portConnection({x:55,y:37},{x:56,y:37})'),null);
+  run("placements[0].rotation=0;globalThis.savedPorts=JSON.stringify(serialize());restore(JSON.parse(savedPorts))");
+  assert.deepEqual(JSON.parse(run("JSON.stringify(placements[0].disabledPorts)")),["0,1,west"]);
+  pointerAt("pointerdown",52*16+2,37*16+8);
+  assert.equal(run("placements[0].disabledPorts"),undefined);
+  assert.equal(run('beltFlow.get("51,39").total'),20);
+  pointerAt("pointerdown",53*16+8,37*16+8);
+  assert.equal(run("placements[0].disabledPorts"),undefined);
+  assert.equal(run("drag.id"),2);
+});
+
+test("dock ports toggle off by clicking and stop connecting", async () => {
+  const { run, pointerAt } = await app();
+  run(`restore({version:3,rooms:[{id:1,size:"1x1",x:48,y:32},{id:2,size:"dock",x:48,y:16,rotation:2}],
+    placements:[],belts:[{id:3,cells:[{x:55,y:32},{x:55,y:33}]}]});
+    globalThis.nodes=node=>[node,...node.children.flatMap(nodes)];`);
+  assert.equal(run("beltConnections(belts[0].cells)[0].room.id"),2);
+  const port = JSON.parse(run("JSON.stringify(dockPortTiles(rooms[1]).find(p=>p.x===55))"));
+  pointerAt("pointerdown",port.x*16+8,port.y*16+8);
+  assert.deepEqual(JSON.parse(run("JSON.stringify(rooms[1].disabledPorts)")),[String(port.key)]);
+  assert.equal(run("beltConnections(belts[0].cells).length"),0);
+  assert.equal(run(`nodes(symbols).find(n=>n.attributes["data-symbol"]==="dock-arrow"&&n.attributes["data-port-key"]==="${port.key}").attributes.stroke`),"#c8323f");
+});
+
+test("research has one rotating input port and persists", async () => {
   const { run, pointer } = await app();
   run(`restore({version:3,rooms:[{id:1,size:"1x1",x:48,y:32}],placements:[],belts:[]});
     setTool({type:"machine",slug:"research"})`);
@@ -721,6 +968,53 @@ test("research has one rotating port opposite its triangle and persists", async 
   }
   run("globalThis.savedResearch=JSON.stringify(serialize());restore(JSON.parse(savedResearch))");
   assert.equal(run("JSON.stringify(serialize())"), run("savedResearch"));
+});
+
+test("both research machines consume their fixed item at 6 per minute without assigning a recipe", async () => {
+  const { run, pointer } = await app();
+  for (const [slug, item, name] of [
+    ["research", "hull-plate", "Materials Research"],
+    ["computational-research", "basic-circuits", "Computational Research"]
+  ]) {
+    run(`restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+      placements:[{id:2,slug:"${slug}",x:44,y:40,rotation:0}],
+      belts:[{id:3,cells:[{x:45,y:46},{x:45,y:45},{x:45,y:44},{x:45,y:43}]}]})`);
+    for (const y of [43,44,45,46]) {
+      assert.equal(run(`beltFlow.get("45,${y}").rates.get("${item}")`), 6);
+      assert.equal(run(`beltFlow.get("45,${y}").load`), "equal");
+    }
+    assert.equal(run('getMachine(placements[0].slug).name'), name);
+    assert.equal(run("placements[0].recipe"), undefined);
+    assert.match(run(`document.getElementById("machine-list").children.find(b=>b.dataset.slug==="${slug}").title`), /Consumes .*6\/min/);
+    pointer("pointermove",45,41);
+    assert.match(run("canvas.title"), /Consumes .*6\/min/);
+    run("restore(serialize())");
+    assert.equal(run('beltFlow.get("45,43").total'), 6);
+    run(`recipes.push({name:"Research feed ${slug}",machine:"refinery",inputs:[],
+      outputs:[{item:"${item}",per_min:"20/min"}]});
+      placements.push({id:4,slug:"refinery",x:44,y:47,rotation:0,recipe:"Research feed ${slug}"});draw()`);
+    assert.equal(run('beltFlow.get("45,46").total'), 6);
+    assert.equal(run('beltFlow.get("45,43").unknown'), false);
+  }
+});
+
+test("large containers have 16 toggleable port faces and split incoming flow between connected outputs", async () => {
+  const { run } = await app();
+  run(`recipes.push({name:"Container feed",machine:"refinery",inputs:[],
+    outputs:[{item:"ore",per_min:"30/min"}]});
+    restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+      placements:[{id:2,slug:"refinery",x:36,y:39,rotation:0,recipe:"Container feed"},
+        {id:3,slug:"large-container",x:42,y:40,rotation:0}],
+      belts:[{id:4,cells:[{x:39,y:40},{x:40,y:40},{x:41,y:40}]},
+        {id:5,cells:[{x:46,y:40},{x:47,y:40}]},
+        {id:6,cells:[{x:43,y:44},{x:43,y:45}]}]})`);
+  assert.equal(run('machineFootprint(getMachine("large-container")).join("x")'), "4x4");
+  assert.equal(run('placementPorts(getMachine("large-container")).length'), 16);
+  assert.equal(run('beltFlow.get("47,40").total'), 15);
+  assert.equal(run('beltFlow.get("43,45").total'), 15);
+  run('togglePort(placements[1],"3,0,east");restore(serialize())');
+  assert.equal(run('portConnection({x:46,y:40},{x:47,y:40})'), null);
+  assert.equal(run('beltFlow.get("43,45").total'), 30);
 });
 
 test("belt connectors meet port faces on every edge and unknown rates stay amber", async () => {
@@ -751,7 +1045,7 @@ test("belt connectors meet port faces on every edge and unknown rates stay amber
   run("placements[1].y-=3;placements[1].x=53;belts[0].cells.pop();draw()");
   assert.equal(run('nodes(symbols).find(n=>n.attributes["data-belt-id"]==="4").attributes["data-connected"]'), "true");
   run("belts[0].cells[0].direction=1;draw()");
-  assert.equal(run('nodes(symbols).find(n=>n.attributes["data-belt-id"]==="4").attributes["data-connected"]'), "false");
+  assert.equal(run('nodes(symbols).find(n=>n.attributes["data-belt-id"]==="4").attributes["data-connected"]'), "true");
   run(`placements.pop();belts[0].cells=[
     {x:50,y:33},{x:50,y:32},{x:51,y:32},{x:52,y:32},
     {x:53,y:32},{x:53,y:33},{x:53,y:34},{x:52,y:34}];draw()`);
@@ -1035,6 +1329,86 @@ test("rate labels fit each tile without truncating large, small, fractional or z
       n.attributes["data-symbol"]==="belt-rate"&&n.attributes["data-cell"]==="40,40"))`));
     assert.equal(text.textContent,label);
     assert.ok(text.textContent.length * 6 * Number(text.attributes["font-size"]) / 10 <= 28 + 1e-8);
+  }
+});
+
+test("a splitter feeds an adjacent assembler and a sideways belt endpoint at 30 plates per minute each", async () => {
+  const { run } = await app();
+  run(`restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+    placements:[...[34,38,42].map((x,i)=>({id:i+2,slug:"refinery",x,y:34,rotation:0,
+      recipe:"Titanium Plates Ore Refining"})),
+      {id:5,slug:"splitter-mk-1",x:46,y:37,rotation:3},
+      {id:6,slug:"assembler",x:45,y:38,rotation:0,recipe:"Hull Plate Titanium Crafting",
+        disabledPorts:["3,0,north"]},
+      {id:7,slug:"assembler",x:50,y:38,rotation:0,recipe:"Hull Plate Titanium Crafting"}],
+    belts:[{id:8,cells:Array.from({length:11},(_,i)=>({x:35+i,y:37}))},
+      {id:9,cells:Array.from({length:5},(_,i)=>({x:47+i,y:37}))}]});
+    setZoom(2);globalThis.nodes=node=>[node,...node.children.flatMap(nodes)];`);
+  for (const [cell, rate] of [["35,37",20],["39,37",40],["43,37",60],["45,37",60],["47,37",30],["51,37",30]]) {
+    assert.equal(run(`beltFlow.get("${cell}").total`), rate, cell);
+    assert.equal(run(`beltFlow.get("${cell}").rates.get("titanium-plates")`), rate, cell);
+    assert.equal(run(`beltFlow.get("${cell}").unknown`), false, cell);
+  }
+  for (const [cell, rate] of [["45,37",60],["47,37",30],["51,37",30]]) {
+    assert.equal(run(`beltFlow.get("${cell}").target`), rate, cell);
+    assert.equal(run(`beltFlow.get("${cell}").load`), "equal", cell);
+    assert.equal(run(`nodes(symbols).find(n=>n.attributes["data-symbol"]==="belt-rate"&&
+      n.attributes["data-cell"]==="${cell}").textContent`), String(rate));
+  }
+  run("globalThis.assemblerLayout=serialize()");
+  for (const toggle of ['togglePort(placements[3],"0,0,south")', 'togglePort(placements[4],"1,0,north")']) {
+    run(`${toggle};draw()`);
+    assert.equal(run('beltFlow.get("45,37").total'), 30);
+    assert.equal(run('beltFlow.get("51,37").total'), 30);
+    run("restore(assemblerLayout)");
+  }
+  run('delete placements[0].recipe;draw()');
+  assert.equal(run('beltFlow.get("45,37").total'), 60);
+  assert.equal(run('beltFlow.get("51,37").total'), 30);
+  assert.equal(run('beltFlow.get("45,37").inferred'), true);
+});
+
+test("serial output ports contribute production once across belt joins and splitters", async () => {
+  const { run } = await app();
+  run(`recipes.push({name:"Serial source",machine:"assembler",inputs:[],
+    outputs:[{item:"plate",per_min:"15/min"}]});
+    restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+      placements:[{id:2,slug:"assembler",x:36,y:38,rotation:0,recipe:"Serial source"},
+        {id:3,slug:"splitter-mk-1",x:43,y:37,rotation:3}],
+      belts:[{id:4,cells:[{x:37,y:37},{x:38,y:37}]},
+        {id:5,cells:[{x:39,y:37},{x:40,y:37},{x:41,y:37},{x:42,y:37}]},
+        {id:6,cells:[{x:44,y:37},{x:45,y:37}]},
+        {id:7,cells:[{x:43,y:38},{x:43,y:39},{x:43,y:40}]}]});
+    setZoom(2);globalThis.nodes=node=>[node,...node.children.flatMap(nodes)];`);
+  for (let x = 37; x <= 42; x++) {
+    assert.equal(run(`beltFlow.get("${x},37").total`), 15, `tile ${x},37`);
+    assert.equal(run(`beltFlow.get("${x},37").unknown`), false);
+  }
+  for (const cell of ["44,37", "45,37", "43,38", "43,39", "43,40"]) {
+    assert.equal(run(`beltFlow.get("${cell}").total`), 7.5, cell);
+    assert.equal(run(`beltFlow.get("${cell}").load`), "below", cell);
+    assert.equal(run(`nodes(symbols).find(n=>n.attributes["data-symbol"]==="belt-rate"&&
+      n.attributes["data-cell"]==="${cell}").textContent`), "7.5");
+  }
+  run(`belts.push({id:8,cells:[{x:37,y:43},{x:37,y:44}]});draw()`);
+  assert.equal(run('beltFlow.get("42,37").unknown'), true);
+  assert.equal(run('beltFlow.get("37,44").unknown'), true);
+});
+
+test("merged refinery output stays known when the belt passes another port on the same refinery", async () => {
+  const { run } = await app();
+  run(`restore({version:3,rooms:[{id:1,size:"2x2",x:32,y:32}],
+    placements:[...[36,40,44].map((x,i)=>({id:i+2,slug:"refinery",x,y:38,rotation:0,
+      recipe:"Titanium Plates Ore Refining"})),
+      {id:5,slug:"splitter-mk-1",x:49,y:39,rotation:3}],
+    belts:[{id:6,cells:[...Array.from({length:11},(_,i)=>({x:37+i,y:41})),
+      {x:47,y:40},{x:47,y:39},{x:48,y:39}]},
+      {id:7,cells:[{x:50,y:39},{x:51,y:39}]},
+      {id:8,cells:[{x:49,y:40},{x:49,y:41}]}]})`);
+  for (const [cell, rate] of [["37,41",20],["40,41",20],["41,41",40],
+      ["44,41",40],["45,41",60],["47,39",60],["48,39",60],["51,39",30],["49,41",30]]) {
+    assert.equal(run(`beltFlow.get("${cell}").total`), rate, cell);
+    assert.equal(run(`beltFlow.get("${cell}").unknown`), false, cell);
   }
 });
 

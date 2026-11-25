@@ -1,7 +1,25 @@
 {
  "game_version": "EA (unverified; source is demo)",
- "count": 63,
+ "count": 68,
  "recipes": [
+  {
+   "name": "Materials Research",
+   "machine": "research",
+   "inputs": [{"item": "hull-plate", "name": "Hull Plate", "per_min": "6/min"}],
+   "outputs": [],
+   "source": "user statement",
+   "source_version": "EA (2026-11-25)",
+   "confidence": "confirmed (NEW)"
+  },
+  {
+   "name": "Computational Research",
+   "machine": "computational-research",
+   "inputs": [{"item": "basic-circuits", "name": "Basic Circuits", "per_min": "6/min"}],
+   "outputs": [],
+   "source": "user statement",
+   "source_version": "EA (2026-11-25)",
+   "confidence": "confirmed (NEW)"
+  },
   {
    "name": "Advanced Circuits Advanced Assembler 1",
    "machine": "advanced-assembler",
