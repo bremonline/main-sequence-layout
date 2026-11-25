@@ -239,7 +239,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_reinforced-plate-panel.png",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -425,7 +425,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_coolant-panel.png",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -769,7 +769,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_servomotor-panel.png",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1043,7 +1043,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_superconductor-coil-panel.png",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -2151,7 +2151,7 @@
    "note": "Not in wiki. Half the time and half the Hull Plates of the Assembler recipe; same 3 Superalloy."
   },
   {
-   "name": "Capacitor Advanced",
+   "name": "Maglev Coupling Advanced",
    "machine": "advanced-assembler",
    "inputs": [
     {
@@ -2167,8 +2167,8 @@
    ],
    "outputs": [
     {
-     "item": "capacitor",
-     "name": "Capacitor",
+     "item": "maglev-coupling",
+     "name": "Maglev Coupling",
      "count": "2"
     }
    ],
@@ -2176,10 +2176,10 @@
    "source": "screenshot",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_basic-motor-panel.png",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
    "verified_game_version": "EA 2026-11-24",
-   "id": "capacitor-advanced",
-   "note": "Not in wiki. Pink cylinder bundle = Superalloy (identified from Servomotor panel)."
+   "id": "maglev-coupling-advanced",
+   "note": "Not in wiki. Earlier recorded wrongly as Capacitor output (corrected from Maglev Coupling panel)."
   },
   {
    "name": "Stellar Survey Data Deep Space Observatory",

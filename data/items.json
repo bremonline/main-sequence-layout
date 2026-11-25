@@ -5212,7 +5212,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A frictionless mechanical driver for high speed comp... (truncated in screenshot)",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Magnetic Coils",
