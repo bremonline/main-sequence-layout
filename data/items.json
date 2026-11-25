@@ -1932,8 +1932,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A rare mineral with specialized applications.",
+   "verified_source": "screenshots/2026-11-24_cobalt-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Cobalt Plates",
@@ -2951,8 +2954,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A rare mineral with specialized applications. Enriched to have a higher... (truncated in screenshot)",
+   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Nickel Ore",
@@ -3052,8 +3058,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A conductive resource. Enriched to have a higher yield.",
+   "verified_source": "screenshots/2026-11-24_enriched-nickel-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Titanium Ore",
@@ -3153,8 +3162,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A basic but versatile resource. Enriched to have a higher yield.",
+   "verified_source": "screenshots/2026-11-24_enriched-titanium-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enzyme",
@@ -4416,8 +4428,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A rare resource with high durability.",
+   "verified_source": "screenshots/2026-11-24_iridium-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Iridium Plates",
@@ -5724,8 +5739,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A conductive resource.",
+   "verified_source": "screenshots/2026-11-24_nickel-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Nickel Plates",
@@ -7881,8 +7899,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A basic but versatile resource.",
+   "verified_source": "screenshots/2026-11-24_titanium-ore-item-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Titanium Plates",
