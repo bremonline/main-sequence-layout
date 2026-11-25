@@ -290,7 +290,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Backpack Mk. 2 Equipment",
@@ -669,7 +671,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_titanium-plates-panel.png",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -789,7 +791,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_coolant-panel.png",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -820,7 +822,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Relic Capacitor Relic Technology",
@@ -942,7 +946,9 @@
    "craft_time": "1.5 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Servomotor Titanium Crafting",
@@ -2090,6 +2096,37 @@
    "verified_game_version": "EA 2026-11-24",
    "id": "magnetic-coils-cobalt-crafting",
    "note": "Blue plate = Cobalt Plates (confirmed by panel)"
+  },
+  {
+   "name": "Reinforced Plate Advanced",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "hull-plate",
+     "name": "Hull Plate",
+     "count": "3"
+    },
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "reinforced-plate",
+     "name": "Reinforced Plate",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "screenshot",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "id": "reinforced-plate-advanced",
+   "note": "Not in wiki. Half the time and half the input of the Assembler recipe."
   }
  ]
 }
