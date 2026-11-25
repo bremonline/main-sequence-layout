@@ -2349,7 +2349,17 @@
    "power_mw": 12.0,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "research_rate": {
+    "item": "Hull Plate",
+    "input_per_cycle": 1,
+    "cycle_time_s": 10,
+    "items_per_min": 6,
+    "science_per_min": 6,
+    "note": "Panel reads \"1 PT | Hull Plate | 10 s\"; PT assumed = 1 Material Science point (matches wiki Hull Plate research value 1). Lab identity inferred from item (Hull Plate = Material Science).",
+    "verified_source": "screenshots/2026-11-24_research-items-hull-plate.png",
+    "confidence": "confirmed (reading of \"PT\" assumed)"
+   }
   },
   {
    "name": "Miner Mk. 1",
