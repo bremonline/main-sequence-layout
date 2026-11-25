@@ -25,11 +25,19 @@
    "source": "user statement",
    "source_version": "EA (2026-11-25)",
    "confidence": "confirmed (NEW)",
-   "footprint_tiles": [3, 3],
+   "footprint_tiles": [
+    3,
+    3
+   ],
    "footprint_source": "user statement 2026-11-24",
    "footprint_confidence": "confirmed by user",
    "port_layout": {
-    "cells": [[1, 2]],
+    "cells": [
+     [
+      1,
+      2
+     ]
+    ],
     "description": "Single centered input (south at zero rotation)",
     "input_vs_output": "input",
     "source": "user statement 2026-11-24",
@@ -1202,16 +1210,56 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "footprint_tiles": [2, 1],
+   "footprint_tiles": [
+    2,
+    1
+   ],
    "footprint_source": "user statement 2026-11-24",
    "footprint_confidence": "confirmed by user",
    "port_layout": {
-    "cells": [[0, 0], [1, 0]],
+    "cells": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
     "ports": [
-     { "cell": [0, 0], "side": "north", "role": "input" },
-     { "cell": [1, 0], "side": "north", "role": "input" },
-     { "cell": [0, 0], "side": "south", "role": "output" },
-     { "cell": [1, 0], "side": "south", "role": "output" }
+     {
+      "cell": [
+       0,
+       0
+      ],
+      "side": "north",
+      "role": "input"
+     },
+     {
+      "cell": [
+       1,
+       0
+      ],
+      "side": "north",
+      "role": "input"
+     },
+     {
+      "cell": [
+       0,
+       0
+      ],
+      "side": "south",
+      "role": "output"
+     },
+     {
+      "cell": [
+       1,
+       0
+      ],
+      "side": "south",
+      "role": "output"
+     }
     ],
     "description": "Two belt inputs and two belt outputs on opposite 2-tile sides",
     "input_vs_output": "North side inputs and south side outputs at zero rotation; rotation turns the port roles",
@@ -1473,9 +1521,10 @@
    "slug": "conveyor-belt-mk-1",
    "category": "Logistics",
    "power_mw": null,
-   "source": "mainsequencewiki.com",
+   "source": "user confirmed 2026-11-24 (wiki agrees)",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "user-confirmed",
+   "items_per_min": 60
   },
   {
    "name": "Conveyor Belt Mk. 2",
@@ -1506,17 +1555,19 @@
    "slug": "conveyor-belt-mk-2",
    "category": "Logistics",
    "power_mw": null,
-   "source": "mainsequencewiki.com",
+   "source": "user confirmed 2026-11-24 (wiki agrees)",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "user-confirmed",
+   "items_per_min": 120
   },
   {
    "name": "Conveyor Belt Mk. 3",
    "props": {
     "Category": "Logistics",
-    "Speed": "120 Items / Min",
+    "Speed": "180 Items / Min",
     "Must be built on a station": "Yes",
-    "Status": "Yes"
+    "Status": "Yes",
+    "wiki_Speed": "120 Items / Min"
    },
    "desc": "No entries found matching your filters.",
    "tables": {
@@ -1539,9 +1590,10 @@
    "slug": "conveyor-belt-mk-3",
    "category": "Logistics",
    "power_mw": null,
-   "source": "mainsequencewiki.com",
+   "source": "user statement 2026-11-24 (looked up); wiki underground Mk.3 also says 180",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "user-stated",
+   "items_per_min": 180
   },
   {
    "name": "Doorway Wall",
@@ -2399,7 +2451,17 @@
    "power_mw": 12.0,
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "research_rate": {
+    "item": "Hull Plate",
+    "input_per_cycle": 1,
+    "cycle_time_s": 10,
+    "items_per_min": 6,
+    "science_per_min": 6,
+    "note": "Panel reads \"1 PT | Hull Plate | 10 s\"; PT assumed = 1 Material Science point (matches wiki Hull Plate research value 1). Lab identity inferred from item (Hull Plate = Material Science).",
+    "verified_source": "screenshots/2026-11-24_research-items-hull-plate.png",
+    "confidence": "confirmed (reading of \"PT\" assumed)"
+   }
   },
   {
    "name": "Miner Mk. 1",
@@ -3275,16 +3337,52 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "footprint_tiles": [1, 1],
+   "footprint_tiles": [
+    1,
+    1
+   ],
    "footprint_source": "user statement 2026-11-24",
    "footprint_confidence": "confirmed by user",
    "port_layout": {
-    "cells": [[0, 0]],
+    "cells": [
+     [
+      0,
+      0
+     ]
+    ],
     "ports": [
-     { "cell": [0, 0], "side": "north", "role": "input" },
-     { "cell": [0, 0], "side": "east", "role": "output" },
-     { "cell": [0, 0], "side": "south", "role": "output" },
-     { "cell": [0, 0], "side": "west", "role": "output" }
+     {
+      "cell": [
+       0,
+       0
+      ],
+      "side": "north",
+      "role": "input"
+     },
+     {
+      "cell": [
+       0,
+       0
+      ],
+      "side": "east",
+      "role": "output"
+     },
+     {
+      "cell": [
+       0,
+       0
+      ],
+      "side": "south",
+      "role": "output"
+     },
+     {
+      "cell": [
+       0,
+       0
+      ],
+      "side": "west",
+      "role": "output"
+     }
     ],
     "description": "One belt input and three belt outputs",
     "input_vs_output": "North side input and other sides outputs at zero rotation; rotation turns the port roles",

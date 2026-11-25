@@ -1,6 +1,6 @@
 {
  "game_version": "EA (unverified; source is demo)",
- "count": 68,
+ "count": 72,
  "recipes": [
   {
    "name": "Materials Research",
@@ -60,7 +60,9 @@
    "craft_time": "12 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Advanced Plate Advanced Assembler 1",
@@ -102,7 +104,9 @@
    "craft_time": "12 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_chitin-composite-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Chitin Composite Advanced Assembler 1",
@@ -144,7 +148,9 @@
    "craft_time": "12 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_chitin-composite-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Empty Simulation Matrix Advanced Assembler 1",
@@ -174,8 +180,8 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (counts/time/machine; ingredient identity from wiki, icons small)",
-   "verified_source": "screenshots/2026-11-24_lonsdaleite-panel.png",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_empty-simulation-matrix-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -218,8 +224,8 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (counts/time/machine; ingredient identity from wiki, icons small)",
-   "verified_source": "screenshots/2026-11-24_lonsdaleite-panel.png",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_encoded-simulation-matrix-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -250,7 +256,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Superalloy Frame Advanced Assembler 1",
@@ -274,7 +282,9 @@
    "craft_time": "12 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Backpack Mk. 1 Equipment",
@@ -304,7 +314,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_backpack-mk1-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Backpack Mk. 2 Equipment",
@@ -334,7 +346,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_backpack-mk2-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Backpack Mk. 3 Equipment",
@@ -364,7 +378,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_backpack-mk3-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 1 Equipment",
@@ -394,7 +410,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_exoskeleton-mk1-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 2 Equipment",
@@ -424,7 +442,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_exoskeleton-mk2-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 3 Equipment",
@@ -454,7 +474,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_exoskeleton-mk3-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exosuit Equipment",
@@ -490,7 +512,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_exosuit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Basic Circuits Nickel Crafting",
@@ -520,7 +544,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_basic-circuits-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Basic Motor Titanium Crafting",
@@ -544,7 +570,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_basic-motor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Capacitor Nickel Crafting",
@@ -574,7 +602,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_capacitor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Containment Coil Intermediate",
@@ -610,7 +640,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_basic-circuits-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Detector Array Intermediate",
@@ -646,7 +678,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_detector-array-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Hull Plate Titanium Crafting",
@@ -670,7 +704,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Lightweight Frames Titanium Crafting",
@@ -694,7 +730,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_lightweight-frames-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Magnetic Coils Nickel Crafting",
@@ -718,7 +756,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_nickel-plates-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Maglev Coupling Intermediate",
@@ -748,7 +788,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Missile Consumables",
@@ -784,7 +826,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_missile-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Reinforced Plate Intermediate",
@@ -814,7 +858,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Relic Capacitor Relic Technology",
@@ -844,7 +890,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_relic-capacitor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Repair Kit Consumables",
@@ -874,7 +922,9 @@
    "craft_time": "1.5 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_repair-kit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Electrical Repair Kit Consumables",
@@ -904,7 +954,9 @@
    "craft_time": "1.5 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_electrical-repair-kit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Hull Repair Kit Consumables",
@@ -934,7 +986,9 @@
    "craft_time": "1.5 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_hull-repair-kit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Servomotor Titanium Crafting",
@@ -970,7 +1024,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_lightweight-frames-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Superconductor Coil Intermediate",
@@ -1006,7 +1062,9 @@
    "craft_time": "12 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Chromatic Alloy Alloys",
@@ -1036,7 +1094,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_chromatic-alloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Coolant Other Refining",
@@ -1061,7 +1121,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_nitrogen-gas-panel.png",
+   "verified_source": "screenshots/2026-11-24_coolant-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1112,7 +1172,9 @@
    "craft_time": "3 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_hydrogen-fuel-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Nickel Ore Enriched Ore",
@@ -1230,7 +1292,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1290,7 +1352,9 @@
    "craft_time": "12 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_containment-coil-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Alpha Protein Biorecipes 1",
@@ -1321,6 +1385,20 @@
      "name": "Alpha Protein",
      "per_min": "15/min",
      "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_alpha-protein-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "wiki_outputs": [
+    {
+     "item": "alpha-protein",
+     "name": "Alpha Protein",
+     "per_min": "15/min",
+     "count": "1"
     },
     {
      "item": "biomass",
@@ -1329,10 +1407,7 @@
      "count": "1"
     }
    ],
-   "craft_time": "4 s",
-   "source": "mainsequencewiki.com",
-   "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "note": "Gold protein = Alpha Protein (own panel). Single output; wiki Biomass co-output not in game (kept in wiki_outputs)."
   },
   {
    "name": "Beta Protein Biorecipes 1",
@@ -1363,6 +1438,20 @@
      "name": "Beta Protein",
      "per_min": "15/min",
      "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_beta-protein-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "wiki_outputs": [
+    {
+     "item": "beta-protein",
+     "name": "Beta Protein",
+     "per_min": "15/min",
+     "count": "1"
     },
     {
      "item": "biomass",
@@ -1371,10 +1460,7 @@
      "count": "1"
     }
    ],
-   "craft_time": "4 s",
-   "source": "mainsequencewiki.com",
-   "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "note": "Blue protein = Beta Protein (own panel). Enzyme icon = magenta speckled cluster (Chitin panel); xeno input icon colours not independently verified. Single output; wiki Biomass co-output not in game (kept in wiki_outputs)."
   },
   {
    "name": "Biolattice Biorecipes 1",
@@ -1410,7 +1496,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_biolattice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enzyme Biorecipes 1",
@@ -1435,6 +1523,20 @@
      "name": "Enzyme",
      "per_min": "30/min",
      "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_enzyme-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "wiki_outputs": [
+    {
+     "item": "enzyme",
+     "name": "Enzyme",
+     "per_min": "30/min",
+     "count": "1"
     },
     {
      "item": "biomass",
@@ -1443,10 +1545,7 @@
      "count": "1"
     }
    ],
-   "craft_time": "2 s",
-   "source": "mainsequencewiki.com",
-   "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "note": "Single output on both the Enzyme and Biomass panels; wiki Biomass co-output NOT in game panels (kept in wiki_outputs). Source of Biomass unknown."
   },
   {
    "name": "Nutrients Biorecipes 1",
@@ -1483,7 +1582,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_graphite-panel.png",
+   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1514,7 +1613,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_xenoarchaea-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Xenobacteria Bio recycling",
@@ -1544,7 +1645,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_xenobacteria-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Xenoeukarya Bio recycling",
@@ -1574,7 +1677,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_xenoeukarya-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Cobalt Plates Ore Refining",
@@ -1599,7 +1704,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_cobalt-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_cobalt-plates-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1625,7 +1730,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_cobalt-plates-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1677,7 +1782,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_enriched-titanium-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_titanium-plates-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1703,7 +1808,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_graphite-panel.png",
+   "verified_source": "screenshots/2026-11-24_graphene-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1729,7 +1834,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_water-ice-panel.png",
+   "verified_source": "screenshots/2026-11-24_hydrogen-fuel-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1778,7 +1883,7 @@
     }
    ],
    "wiki_craft_time": "3 s",
-   "verified_source": "screenshots/2026-11-24_iridium-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_iridium-plates-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "note": "Wiki (demo): 2 Iridium Ore + 1 Titanium Ore -> 1 plate. EA panel shows 1 Iridium Ore -> 1 plate, 3 s. Output icon assumed Iridium Plates."
   },
@@ -1831,7 +1936,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_silica-panel.png",
+   "verified_source": "screenshots/2026-11-24_reinforced-glass-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1857,7 +1962,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_silica-panel.png",
+   "verified_source": "screenshots/2026-11-24_silicon-wafers-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1883,7 +1988,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_titanium-ore-item-panel.png",
+   "verified_source": "screenshots/2026-11-24_titanium-plates-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1929,7 +2034,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_relic-shard-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Encoded Simulation Matrix Advanced Assembler 1",
@@ -1959,7 +2066,9 @@
    "craft_time": "30 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_encoded-simulation-matrix-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Water Ice Relic Technology",
@@ -2018,7 +2127,7 @@
    "protomatter_panel_confirms": "screenshots/2026-11-24_protomatter-panel.png"
   },
   {
-   "name": "Strange Matter Crystal (Deep Space Observatory)",
+   "name": "Warp Fuel Strange Matter",
    "machine": "deep-space-observatory",
    "machine_note": "machine name from screenshot; not found in wiki machine list (check slug)",
    "inputs": [
@@ -2031,18 +2140,138 @@
    ],
    "outputs": [
     {
-     "item": "unknown",
-     "name": "unknown (dark grey capsule with pink band icon)",
-     "per_min": "15/min",
+     "item": "warp-fuel",
+     "name": "Warp Fuel",
      "count": "2"
     }
    ],
    "craft_time": "8 s",
    "source": "in-game screenshot",
    "source_version": "EA 2026-11-24",
-   "confidence": "confirmed (NEW, not in wiki); output item unnamed",
-   "verified_source": "screenshots/2026-11-24_strange-matter-crystal-panel.png",
-   "verified_game_version": "EA 2026-11-24"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_warp-fuel-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "note": "Output identified as Warp Fuel (x2); earlier recorded as unnamed"
+  },
+  {
+   "name": "Magnetic Coils Cobalt Crafting",
+   "machine": "assembler",
+   "inputs": [
+    {
+     "item": "nickel-plates",
+     "name": "Nickel Plates",
+     "count": "2"
+    },
+    {
+     "item": "cobalt-plates",
+     "name": "Cobalt Plates",
+     "count": "2"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "magnetic-coils",
+     "name": "Magnetic Coils",
+     "count": "8"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "screenshot",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_cobalt-plates-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "id": "magnetic-coils-cobalt-crafting",
+   "note": "Blue plate = Cobalt Plates (confirmed by panel)"
+  },
+  {
+   "name": "Reinforced Plate Advanced",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "hull-plate",
+     "name": "Hull Plate",
+     "count": "3"
+    },
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "count": "3"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "reinforced-plate",
+     "name": "Reinforced Plate",
+     "count": "1"
+    }
+   ],
+   "craft_time": "3 s",
+   "source": "screenshot",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "id": "reinforced-plate-advanced",
+   "note": "Not in wiki. Half the time and half the Hull Plates of the Assembler recipe; same 3 Superalloy."
+  },
+  {
+   "name": "Maglev Coupling Advanced",
+   "machine": "advanced-assembler",
+   "inputs": [
+    {
+     "item": "basic-motor",
+     "name": "Basic Motor",
+     "count": "8"
+    },
+    {
+     "item": "superalloy",
+     "name": "Superalloy",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "maglev-coupling",
+     "name": "Maglev Coupling",
+     "count": "2"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "screenshot",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "id": "maglev-coupling-advanced",
+   "note": "Not in wiki. Earlier recorded wrongly as Capacitor output (corrected from Maglev Coupling panel)."
+  },
+  {
+   "name": "Stellar Survey Data Deep Space Observatory",
+   "machine": "deep-space-observatory",
+   "machine_note": "machine name from screenshot; not found in wiki machine list (check slug)",
+   "inputs": [
+    {
+     "item": "advanced-circuits",
+     "name": "Advanced Circuits",
+     "count": "1"
+    }
+   ],
+   "outputs": [
+    {
+     "item": "stellar-survey-data",
+     "name": "Stellar Survey Data",
+     "count": "1"
+    }
+   ],
+   "craft_time": "6 s",
+   "source": "in-game screenshot",
+   "source_version": "EA 2026-11-24",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_stellar-survey-data-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "note": "Not in wiki. Output confirmed as Stellar Survey Data by its own panel.",
+   "id": "stellar-survey-data-deep-space-observatory"
   }
  ]
 }

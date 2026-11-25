@@ -117,7 +117,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A more powerful computation device.",
+   "verified_source": "screenshots/2026-11-24_advanced-circuits-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Advanced Plate",
@@ -215,7 +218,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A versatile plating material.",
+   "verified_source": "screenshots/2026-11-24_advanced-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Alpha Protein",
@@ -313,7 +319,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A versatile alien compound.",
+   "verified_source": "screenshots/2026-11-24_alpha-protein-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Backpack Mk. 1",
@@ -366,7 +375,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Personal equipment allowing you to carry more items.",
+   "verified_source": "screenshots/2026-11-24_backpack-mk1-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Backpack Mk. 2",
@@ -419,7 +431,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Personal equipment allowing you to carry more items.",
+   "verified_source": "screenshots/2026-11-24_backpack-mk2-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Backpack Mk. 3",
@@ -505,7 +520,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Personal equipment allowing you to carry more items.",
+   "verified_source": "screenshots/2026-11-24_backpack-mk3-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Basic Circuits",
@@ -712,7 +730,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A primitive processing unit",
+   "verified_source": "screenshots/2026-11-24_basic-circuits-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Basic Motor",
@@ -829,7 +850,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A simple mechanical component.",
+   "verified_source": "screenshots/2026-11-24_basic-motor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Beta Protein",
@@ -927,7 +951,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An alien compound with structural properties.",
+   "verified_source": "screenshots/2026-11-24_beta-protein-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Biolattice",
@@ -1059,7 +1086,11 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An organic material used in biocomposite construction.",
+   "research_item": "1x Xenobiologic Science",
+   "verified_source": "screenshots/2026-11-24_biolattice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Biomass",
@@ -1278,7 +1309,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A residue of biological reactions that can be recycled.",
+   "verified_source": "screenshots/2026-11-24_biomass-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Capacitor",
@@ -1529,7 +1563,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A basic power component.",
+   "verified_source": "screenshots/2026-11-24_capacitor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Chitin Composite",
@@ -1659,7 +1696,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A strong composite material made from alien proteins and advanced alloys.",
+   "verified_source": "screenshots/2026-11-24_chitin-composite-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Chromatic Alloy",
@@ -1822,7 +1862,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An extremely durable alloy used in advanced construction.",
+   "verified_source": "screenshots/2026-11-24_chromatic-alloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Cobalt Ore",
@@ -1889,8 +1932,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A rare mineral with specialized applications.",
+   "verified_source": "screenshots/2026-11-24_cobalt-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Cobalt Plates",
@@ -1995,7 +2041,9 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "desc_ingame": "An specialized crafting material.",
+   "verified_source": "screenshots/2026-11-24_cobalt-plates-panel.png"
   },
   {
    "name": "Containment Coil",
@@ -2182,7 +2230,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A simple particle containment device.",
+   "verified_source": "screenshots/2026-11-24_containment-coil-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Coolant",
@@ -2365,7 +2416,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A simple heat regulator.",
+   "verified_source": "screenshots/2026-11-24_coolant-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Detector Array",
@@ -2483,7 +2537,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A specialized sensor component.",
+   "verified_source": "screenshots/2026-11-24_detector-array-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Deuterium Fuel",
@@ -2558,7 +2615,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A more processed and efficient fuel source.",
+   "verified_source": "screenshots/2026-11-24_deuterium-fuel-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Electrical Repair Kit",
@@ -2605,7 +2665,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Used to repair major electrical damage.",
+   "verified_source": "screenshots/2026-11-24_electrical-repair-kit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Empty Simulation Matrix",
@@ -2685,7 +2748,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A complex computer frame that is missing data to process.",
+   "verified_source": "screenshots/2026-11-24_empty-simulation-matrix-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Encoded Simulation Matrix",
@@ -2785,7 +2851,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A computational model generated from large amounts of data.",
+   "verified_source": "screenshots/2026-11-24_encoded-simulation-matrix-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Cobalt Ore",
@@ -2885,8 +2954,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A rare mineral with specialized applications. Enriched to have a higher... (truncated in screenshot)",
+   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Nickel Ore",
@@ -2986,8 +3058,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A conductive resource. Enriched to have a higher yield.",
+   "verified_source": "screenshots/2026-11-24_enriched-nickel-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enriched Titanium Ore",
@@ -3087,8 +3162,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A basic but versatile resource. Enriched to have a higher yield.",
+   "verified_source": "screenshots/2026-11-24_enriched-titanium-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enzyme",
@@ -3262,7 +3340,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A catalyst in alien biosynthesis reactions.",
+   "verified_source": "screenshots/2026-11-24_enzyme-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 1",
@@ -3315,7 +3396,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A mechanical suit upgrade that increase your movement speed.",
+   "verified_source": "screenshots/2026-11-24_exoskeleton-mk1-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 2",
@@ -3368,7 +3452,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A mechanical suit upgrade that increase your movement speed.",
+   "verified_source": "screenshots/2026-11-24_exoskeleton-mk2-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 3",
@@ -3454,7 +3541,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A mechanical suit upgrade that increase your movement speed.",
+   "verified_source": "screenshots/2026-11-24_exoskeleton-mk3-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exosuit",
@@ -3513,7 +3603,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "The pinnacle of personal equipment, enhancing both storage and mobility.",
+   "verified_source": "screenshots/2026-11-24_exosuit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Graphene",
@@ -3657,7 +3750,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A strong material with high conductivity.",
+   "verified_source": "screenshots/2026-11-24_graphene-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Graphite",
@@ -4153,7 +4249,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A durable plating material.",
+   "verified_source": "screenshots/2026-11-24_hull-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Hull Repair Kit",
@@ -4201,7 +4300,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Used to repair major hull damage.",
+   "verified_source": "screenshots/2026-11-24_hull-repair-kit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Hydrogen Fuel",
@@ -4270,7 +4372,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A refined fuel source.",
+   "verified_source": "screenshots/2026-11-24_hydrogen-fuel-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Iridium Ore",
@@ -4323,8 +4428,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A rare resource with high durability.",
+   "verified_source": "screenshots/2026-11-24_iridium-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Iridium Plates",
@@ -4435,7 +4543,9 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "desc_ingame": "A dense and durable construction material.",
+   "verified_source": "screenshots/2026-11-24_iridium-plates-panel.png"
   },
   {
    "name": "Lightweight Frames",
@@ -4894,7 +5004,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A basic construction component.",
+   "verified_source": "screenshots/2026-11-24_lightweight-frames-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Lonsdaleite",
@@ -5169,7 +5282,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A frictionless mechanical driver for high speed comp... (truncated in screenshot)",
+   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Magnetic Coils",
@@ -5356,7 +5472,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A basic mechanical component.",
+   "verified_source": "screenshots/2026-11-24_magnetic-coils-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Missile",
@@ -5417,7 +5536,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An auto-tracking explosive projectile.",
+   "verified_source": "screenshots/2026-11-24_missile-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Multisensor",
@@ -5521,7 +5643,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A complex sensor capable of measuring a wide range of phenomena.",
+   "verified_source": "screenshots/2026-11-24_multisensor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Nickel Ore",
@@ -5614,8 +5739,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A conductive resource.",
+   "verified_source": "screenshots/2026-11-24_nickel-ore-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Nickel Plates",
@@ -5767,7 +5895,9 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "desc_ingame": "A conductive metal plate.",
+   "verified_source": "screenshots/2026-11-24_nickel-plates-panel.png"
   },
   {
    "name": "Nitrogen Gas",
@@ -6017,7 +6147,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A mixture of resources essential to cultivating alien cells.",
+   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Protomatter",
@@ -6236,7 +6369,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An optical and structural material.",
+   "verified_source": "screenshots/2026-11-24_reinforced-glass-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Reinforced Plate",
@@ -6465,7 +6601,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A stronger hull plate.",
+   "verified_source": "screenshots/2026-11-24_reinforced-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Relic Capacitor",
@@ -6525,7 +6664,10 @@
    "category": "Relic Technology",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An augmented power regulation component.",
+   "verified_source": "screenshots/2026-11-24_relic-capacitor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Relic Core",
@@ -6552,7 +6694,11 @@
    "category": "Relic Technology",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "The salvaged core of an autonomous alien production facility.",
+   "crafting_recipes_in_game": 0,
+   "verified_source": "screenshots/2026-11-24_relic-core-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Relic Shard",
@@ -6635,7 +6781,11 @@
    "category": "Relic Technology",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Fragments of an alien ship.",
+   "research_item": "1x Relic Technology",
+   "verified_source": "screenshots/2026-11-24_relic-shard-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Repair Kit",
@@ -6689,7 +6839,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Used to repair minor damage.",
+   "verified_source": "screenshots/2026-11-24_repair-kit-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Servo Plate",
@@ -6736,7 +6889,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A mechanical plate.",
+   "verified_source": "screenshots/2026-11-24_servo-plate-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Servomotor",
@@ -6927,7 +7083,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A precise mechanical component.",
+   "verified_source": "screenshots/2026-11-24_servomotor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Silica",
@@ -7103,7 +7262,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A basic electronic component.",
+   "verified_source": "screenshots/2026-11-24_silicon-wafers-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Stellar Survey Data",
@@ -7156,7 +7318,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Data collected by scanning stellar objects such as stars and planets.",
+   "verified_source": "screenshots/2026-11-24_stellar-survey-data-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Superalloy",
@@ -7379,7 +7544,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A high strength alloy.",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Superalloy Frame",
@@ -7472,7 +7640,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A high strength construction component.",
+   "verified_source": "screenshots/2026-11-24_superalloy-frame-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Superconductor Coil",
@@ -7609,7 +7780,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An advanced particle containment device.",
+   "verified_source": "screenshots/2026-11-24_superconductor-coil-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Titanium Ore",
@@ -7728,8 +7902,11 @@
    "category": "Raw Resources",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (recipes via panel; stack/fuel props not re-checked)",
-   "recipes_confirmed_via_panel": true
+   "confidence": "confirmed",
+   "recipes_confirmed_via_panel": true,
+   "desc_ingame": "A basic but versatile resource.",
+   "verified_source": "screenshots/2026-11-24_titanium-ore-item-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Titanium Plates",
@@ -7895,7 +8072,9 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A versatile construction material.",
+   "verified_source": "screenshots/2026-11-24_titanium-plates-panel.png"
   },
   {
    "name": "Warp Fuel",
@@ -7954,7 +8133,11 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Consumed by warp drives to allow ships to travel at high speeds.",
+   "warp_range_km": 50,
+   "verified_source": "screenshots/2026-11-24_warp-fuel-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Water Ice",
@@ -8161,7 +8344,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A species of alien microbe capable of surviving extreme conditions.",
+   "verified_source": "screenshots/2026-11-24_xenoarchaea-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Xenobacteria",
@@ -8278,7 +8464,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A species of alien microbe.",
+   "verified_source": "screenshots/2026-11-24_xenobacteria-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Xenoeukarya",
@@ -8401,7 +8590,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A complex alien species capable of advanced metabolism.",
+   "verified_source": "screenshots/2026-11-24_xenoeukarya-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Strange Matter Crystal",
