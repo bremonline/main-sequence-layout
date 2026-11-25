@@ -7895,7 +7895,9 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A versatile construction material.",
+   "verified_source": "screenshots/2026-11-24_titanium-plates-panel.png"
   },
   {
    "name": "Warp Fuel",
