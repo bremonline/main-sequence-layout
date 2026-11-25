@@ -1426,7 +1426,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_enzyme-panel.png",
+   "verified_source": "screenshots/2026-11-24_beta-protein-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "wiki_outputs": [
     {
@@ -1442,7 +1442,7 @@
      "count": "1"
     }
    ],
-   "note": "Single output on both the Enzyme and Biomass panels; wiki Biomass co-output NOT in game panels (kept in wiki_outputs). Source of Biomass unknown."
+   "note": "Blue protein = Beta Protein (own panel). Pink spheres = Xenoarchaea, purple speckled = Enzyme. Single output; wiki Biomass co-output not in game (kept in wiki_outputs)."
   },
   {
    "name": "Biolattice Biorecipes 1",
@@ -1479,7 +1479,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_alpha-protein-panel.png",
+   "verified_source": "screenshots/2026-11-24_beta-protein-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
