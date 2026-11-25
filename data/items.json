@@ -6735,7 +6735,11 @@
    "category": "Relic Technology",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Fragments of an alien ship.",
+   "research_item": "1x Relic Technology",
+   "verified_source": "screenshots/2026-11-24_relic-shard-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Repair Kit",
