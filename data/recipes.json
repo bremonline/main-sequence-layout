@@ -388,7 +388,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_servomotor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 2 Equipment",
@@ -760,7 +762,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_servomotor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Missile Consumables",
@@ -991,7 +995,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_basic-motor-panel.png",
+   "verified_source": "screenshots/2026-11-24_servomotor-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -2146,8 +2150,8 @@
      "count": "8"
     },
     {
-     "item": "unknown",
-     "name": "unknown (pink cylinder bundle)",
+     "item": "superalloy",
+     "name": "Superalloy",
      "count": "1"
     }
    ],
@@ -2165,7 +2169,7 @@
    "verified_source": "screenshots/2026-11-24_basic-motor-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "id": "capacitor-advanced",
-   "note": "Not in wiki. Output icon matches Capacitor; 1 input (pink cylinder bundle) not positively identified, possibly Superalloy."
+   "note": "Not in wiki. Pink cylinder bundle = Superalloy (identified from Servomotor panel)."
   }
  ]
 }
