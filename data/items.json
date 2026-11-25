@@ -715,7 +715,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A primitive processing unit",
+   "verified_source": "screenshots/2026-11-24_basic-circuits-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Basic Motor",
