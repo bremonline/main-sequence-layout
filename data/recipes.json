@@ -43,7 +43,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_detector-array-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -265,7 +265,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_superalloy-frame-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -769,7 +769,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -839,7 +839,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_reinforced-plate-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1075,7 +1075,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_iridium-plates-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1272,7 +1272,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_enriched-cobalt-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1973,7 +1973,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Encoded Simulation Matrix Advanced Assembler 1",
@@ -2145,7 +2147,7 @@
    "source": "screenshot",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_reinforced-plate-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "id": "reinforced-plate-advanced",
    "note": "Not in wiki. Half the time and half the Hull Plates of the Assembler recipe; same 3 Superalloy."
@@ -2176,7 +2178,7 @@
    "source": "screenshot",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_maglev-coupling-panel.png",
+   "verified_source": "screenshots/2026-11-24_superalloy-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "id": "maglev-coupling-advanced",
    "note": "Not in wiki. Earlier recorded wrongly as Capacitor output (corrected from Maglev Coupling panel)."
