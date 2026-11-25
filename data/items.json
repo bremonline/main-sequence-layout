@@ -7237,7 +7237,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "Data collected by scanning stellar objects such as stars and planets.",
+   "verified_source": "screenshots/2026-11-24_stellar-survey-data-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Superalloy",
