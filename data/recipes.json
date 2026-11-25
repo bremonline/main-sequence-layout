@@ -87,7 +87,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_multisensor-panel.png",
+   "verified_source": "screenshots/2026-11-24_chitin-composite-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -131,7 +131,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_biolattice-panel.png",
+   "verified_source": "screenshots/2026-11-24_chitin-composite-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -457,7 +457,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_chromatic-alloy-panel.png",
+   "verified_source": "screenshots/2026-11-24_chitin-composite-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -1442,7 +1442,7 @@
      "count": "1"
     }
    ],
-   "note": "Blue protein = Beta Protein (own panel). Pink spheres = Xenoarchaea, purple speckled = Enzyme. Single output; wiki Biomass co-output not in game (kept in wiki_outputs)."
+   "note": "Blue protein = Beta Protein (own panel). Enzyme icon = magenta speckled cluster (Chitin panel); xeno input icon colours not independently verified. Single output; wiki Biomass co-output not in game (kept in wiki_outputs)."
   },
   {
    "name": "Biolattice Biorecipes 1",
