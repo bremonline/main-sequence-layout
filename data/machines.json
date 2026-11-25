@@ -1484,9 +1484,9 @@
    "slug": "conveyor-belt-mk-1",
    "category": "Logistics",
    "power_mw": null,
-   "source": "mainsequencewiki.com",
+   "source": "user confirmed 2026-11-24 (wiki agrees)",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified",
+   "confidence": "user-confirmed",
    "items_per_min": 60
   },
   {
@@ -1518,9 +1518,9 @@
    "slug": "conveyor-belt-mk-2",
    "category": "Logistics",
    "power_mw": null,
-   "source": "mainsequencewiki.com",
+   "source": "user confirmed 2026-11-24 (wiki agrees)",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified",
+   "confidence": "user-confirmed",
    "items_per_min": 120
   },
   {
