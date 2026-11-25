@@ -1,0 +1,106 @@
+## ?
+- Armour Slopes <- none | free
+- Armour Wings <- none | free
+- Basic Crafting <- none | free
+- Basic Production <- none | free
+- Basic Refining <- none | free
+- Basic Ship Modules <- none | free
+- Basic Ship Weapons <- none | free
+- Captain's Quarters <- none | free
+- Corridor 2×2 <- none | free
+- Hydrogen Power <- none | free
+- Medium Bridge <- none | free
+- Short-Range Teleporter <- none | free
+- Small Bridge <- none | free
+- Small Plants <- none | Mat 30
+## Mission
+- Warp Fuel <- Advanced Plate, Coolant | Mat 400, Comp 400
+## Tier 0
+- Basic Station Modules <- none | free
+## Tier 1
+- Basic Circuits <- Silica Refining | Mat 30
+- Computation Science <- Basic Circuits, Logistics I | Mat 50
+- Decorations I <- none | Mat 30
+- Decorations II <- Decorations I | Mat 50
+- Elevator 1×1 <- Servomotor | Mat 30
+- Large Container <- Servomotor | Mat 100
+- Logistics I <- none | Mat 5
+- Mining Drones <- Logistics I | Mat 15
+- Mining Laser <- Shipyard | Mat 15
+- Plasma Turret <- Logistics I | Mat 10
+- Relic Analyzer <- none | Mat 15
+- Relic Capacitor <- Relic Analyzer | Relic Technology 20
+- Servomotor <- none | Mat 15
+- Ship Frames <- Shipyard | Mat 50
+- Ship Ladder <- Shipyard | Mat 30
+- Ship Windows I <- Shipyard, Silica Refining | Mat 50
+- Shipyard <- none | Mat 15
+- Silica Refining <- none | Mat 30
+- Small Relic Thruster <- Relic Capacitor | Relic Technology 30
+- Station 2×2 A <- Basic Station Modules | Mat 50
+- Station Armour <- Basic Station Modules | Mat 30
+- Station Decoration Blocks <- Silica Refining | Mat 30
+## Tier 2
+- Armoury <- Computation Science, Servomotor | Mat 100, Comp 100
+- Cobalt Refining <- Slipstream Drive | Mat 100, Comp 100
+- Containment Coil <- Computation Science | Mat 100, Comp 100
+- Detector Array <- Cobalt Refining, Graphite Refining | Mat 100, Comp 100
+- Electromagnetic Science <- Detector Array | Mat 100, Comp 100
+- Enrichment Chamber <- Computation Science, Containment Coil | Mat 150, Comp 150
+- Exoskeleton Mk. 1 <- Armoury | Mat 100, Comp 100
+- Graphite Refining <- Slipstream Drive | Mat 100, Comp 100
+- Industrial Dock <- Logistics II | Mat 200, Comp 200
+- Logistics II <- Computation Science, Servomotor | Mat 100, Comp 100
+- Medium Thruster <- Shipyard, Containment Coil | Mat 200, Comp 200
+- Mining Drones Mk. 2 <- Logistics II, Mining Drones | Mat 150, Comp 150
+- Ore Enrichment <- Cobalt Refining, Enrichment Chamber | Mat 100, Comp 100
+- Ship Container <- Shipyard, Computation Science | Mat 100, Comp 100
+- Slipstream Drive <- Shipyard, Enrichment Chamber | Mat 200, Comp 200
+- Smart Containers <- Computation Science | Mat 100, Comp 100
+- Solar Panels Mk. 1 <- Computation Science | Mat 100, Comp 100
+## Tier 3
+- Basic Ore Synthesis <- Relic Synthesizer | Relic Technology 250
+- Coolant <- Gas Extraction | Mat 150, Comp 150, EM 150
+- Elevator 2×2 <- Station 2×2 C, Maglev Coupling | Mat 300, Comp 300, EM 300
+- Exoskeleton Mk. 2 <- Exoskeleton Mk. 1, Maglev Coupling, Coolant | Mat 200, Comp 200, EM 200
+- Gas Extraction <- Reinforced Plate | Mat 150, Comp 150, EM 150
+- Logistics III <- Logistics II, Maglev Coupling | Mat 300, Comp 300, EM 300
+- Maglev Coupling <- Superalloy, Graphite Refining | Mat 200, Comp 200, EM 200
+- Missile Launcher <- Mining Laser, Coolant | Mat 200, Comp 200, EM 200
+- Plasma Lance <- Mining Laser, Maglev Coupling | Mat 300, Comp 300, EM 300
+- Quantum Science <- Superconductor Coil, Reinforced Plate | Mat 200, Comp 200, EM 200
+- Reinforced Plate <- Superalloy | Mat 200, Comp 200, EM 200
+- Relic Synthesizer <- Relic Capacitor, Superconductor Coil | Relic Technology 200
+- Shipyard Core Mk. 2 <- Shipyard, Superalloy | Mat 200, Comp 200, EM 200
+- Solar Panels Mk. 2 <- Solar Panels Mk. 1, Electromagnetic Science | Mat 200, Comp 200, EM 200
+- Station 2×2 B <- Station 2×2 A, Elevator 1×1, Reinforced Plate | Mat 100, Comp 100, EM 100
+- Station 2×2 C <- Station 2×2 B | Mat 200, Comp 200, EM 200
+- Superalloy <- Ore Enrichment, Electromagnetic Science | Mat 150, Comp 150, EM 150
+## Tier 4
+- Advanced Assembler <- Quantum Science | Mat 200, Comp 200, EM 200, Qu 200
+- Advanced Circuits <- Advanced Assembler | Mat 200, Comp 200, EM 200, Qu 200
+- Astronomic Scanning <- Advanced Circuits | Mat 200, Comp 200, EM 200, Qu 200
+- Astronomic Science <- Supercomputer | Mat 500, Comp 500, EM 500, Qu 500
+- Backpack Mk. 2 <- Armoury, Quantum Science | Mat 200, Comp 200, EM 200, Qu 200
+- Biosample Collection <- Interstellar Warp Drive | Mat 200, Comp 200, EM 200, Qu 200
+- Growth Chamber <- Biosample Collection | Mat 300, Comp 300, EM 300, Qu 300
+- Interstellar Warp Drive <- Shipyard Core Mk. 2, Superalloy Frame, Advanced Circuits | Mat 200, Comp 200, EM 200, Qu 200
+- Iridium Refining <- Interstellar Warp Drive | Mat 200, Comp 200, EM 200, Qu 200
+- Ship Hangar <- Shipyard Core Mk. 2, Superalloy Frame | Mat 300, Comp 300, EM 300, Qu 300
+- Solar Panels Mk. 3 <- Solar Panels Mk. 2, Iridium Refining | Mat 300, Comp 300, EM 300, Qu 300
+- Superalloy Frame <- Advanced Assembler | Mat 200, Comp 200, EM 200, Qu 200
+- Supercomputer <- Astronomic Scanning, Iridium Refining | Mat 500, Comp 500, EM 500, Qu 500
+- Superconductor Coil <- Maglev Coupling, Coolant | Mat 200, Comp 200, EM 200
+- Xenobiologic Science <- Biolattice | Mat 300, Comp 300, EM 300, Qu 300
+## Tier 5
+- Backpack Mk. 3 <- Backpack Mk. 2, Biolattice, Xenobiologic Science, Superalloy Frame | Mat 300, Comp 300, EM 300, Qu 300, Xeno 300
+- Biolattice <- Growth Chamber | Mat 200, Comp 200, EM 200, Qu 200
+- Biomass Recycling <- Xenobiologic Science | Mat 100, Comp 100, EM 100, Qu 100, Xeno 100
+- Chitin Composite <- Xenobiologic Science | Mat 500, Comp 500, EM 500, Qu 500, Xeno 500
+- Chromatic Alloy <- Astronomic Science | Mat 300, Comp 300, EM 300, Qu 300, Astro 300
+- Large Thruster <- Medium Thruster, Chromatic Alloy | Mat 500, Comp 500, EM 500, Qu 500, Astro 500
+- Multisensor <- Chromatic Alloy | Mat 300, Comp 300, EM 300, Qu 300, Astro 300
+## Tier 6
+- Advanced Plate <- Multisensor, Chitin Composite, Chromatic Alloy | Mat 500, Comp 500, EM 500, Qu 500, Astro 500, Xeno 500
+- Exoskeleton Mk. 3 <- Exoskeleton Mk. 2, Chitin Composite, Chromatic Alloy | Mat 500, Comp 500, EM 500, Qu 500, Xeno 500, Astro 500
+- Exosuit <- Exoskeleton Mk. 3, Backpack Mk. 3, Advanced Plate | Mat 1000, Comp 1000, EM 1000, Qu 1000, Astro 1000, Xeno 1000
