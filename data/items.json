@@ -3440,7 +3440,10 @@
    "category": "Equipment",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A mechanical suit upgrade that increase your movement speed.",
+   "verified_source": "screenshots/2026-11-24_exoskeleton-mk2-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Exoskeleton Mk. 3",
