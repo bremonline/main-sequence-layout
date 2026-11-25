@@ -1373,7 +1373,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_enzyme-panel.png",
+   "verified_source": "screenshots/2026-11-24_alpha-protein-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "wiki_outputs": [
     {
@@ -1389,7 +1389,7 @@
      "count": "1"
     }
    ],
-   "note": "Single output on both the Enzyme and Biomass panels; wiki Biomass co-output NOT in game panels (kept in wiki_outputs). Source of Biomass unknown."
+   "note": "Gold protein = Alpha Protein (own panel). Single output; wiki Biomass co-output not in game (kept in wiki_outputs)."
   },
   {
    "name": "Beta Protein Biorecipes 1",
@@ -1478,8 +1478,8 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (inputs/time/machine; no Biomass output shown on panel)",
-   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_alpha-protein-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
