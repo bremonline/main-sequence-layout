@@ -1372,8 +1372,8 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "confirmed (inputs/time/machine; no Biomass output shown on panel)",
-   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_xenoeukarya-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "wiki_outputs": [
     {
@@ -1389,7 +1389,7 @@
      "count": "1"
     }
    ],
-   "note": "Gold protein = Alpha Protein by elimination (blue = Beta, confirmed). Wiki Biomass co-output not shown on panel; kept in wiki_outputs."
+   "note": "Gold protein = Alpha Protein (Xenoeukarya panel). Wiki Biomass co-output not shown on panel; kept in wiki_outputs."
   },
   {
    "name": "Beta Protein Biorecipes 1",
@@ -1659,7 +1659,9 @@
    "craft_time": "2 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_xenoeukarya-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Cobalt Plates Ore Refining",
