@@ -1535,7 +1535,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A basic power component.",
+   "verified_source": "screenshots/2026-11-24_capacitor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Chitin Composite",
@@ -2190,7 +2193,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A simple particle containment device.",
+   "verified_source": "screenshots/2026-11-24_containment-coil-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Coolant",
