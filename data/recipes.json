@@ -1367,6 +1367,20 @@
      "name": "Alpha Protein",
      "per_min": "15/min",
      "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed (inputs/time/machine; no Biomass output shown on panel)",
+   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "wiki_outputs": [
+    {
+     "item": "alpha-protein",
+     "name": "Alpha Protein",
+     "per_min": "15/min",
+     "count": "1"
     },
     {
      "item": "biomass",
@@ -1375,10 +1389,7 @@
      "count": "1"
     }
    ],
-   "craft_time": "4 s",
-   "source": "mainsequencewiki.com",
-   "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "note": "Wiki lists a Biomass co-output; panel shows only one output. Alpha/Beta icon assignment (gold vs blue protein; green vs pink xeno input) unresolved - kept wiki mapping."
   },
   {
    "name": "Beta Protein Biorecipes 1",
@@ -1409,6 +1420,20 @@
      "name": "Beta Protein",
      "per_min": "15/min",
      "count": "1"
+    }
+   ],
+   "craft_time": "4 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed (inputs/time/machine; no Biomass output shown on panel)",
+   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "wiki_outputs": [
+    {
+     "item": "beta-protein",
+     "name": "Beta Protein",
+     "per_min": "15/min",
+     "count": "1"
     },
     {
      "item": "biomass",
@@ -1417,10 +1442,7 @@
      "count": "1"
     }
    ],
-   "craft_time": "4 s",
-   "source": "mainsequencewiki.com",
-   "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "note": "Wiki lists a Biomass co-output; panel shows only one output. Alpha/Beta icon assignment (gold vs blue protein; green vs pink xeno input) unresolved - kept wiki mapping."
   },
   {
    "name": "Biolattice Biorecipes 1",
@@ -1456,7 +1478,9 @@
    "craft_time": "4 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed (inputs/time/machine; no Biomass output shown on panel)",
+   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Enzyme Biorecipes 1",
@@ -1481,6 +1505,20 @@
      "name": "Enzyme",
      "per_min": "30/min",
      "count": "1"
+    }
+   ],
+   "craft_time": "2 s",
+   "source": "mainsequencewiki.com",
+   "source_version": "demo build 26097974 (2026-11-02)",
+   "confidence": "confirmed (inputs/time/machine; no Biomass output shown on panel)",
+   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "wiki_outputs": [
+    {
+     "item": "enzyme",
+     "name": "Enzyme",
+     "per_min": "30/min",
+     "count": "1"
     },
     {
      "item": "biomass",
@@ -1489,10 +1527,7 @@
      "count": "1"
     }
    ],
-   "craft_time": "2 s",
-   "source": "mainsequencewiki.com",
-   "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "note": "Wiki lists a Biomass co-output; panel shows only one output. Alpha/Beta icon assignment (gold vs blue protein; green vs pink xeno input) unresolved - kept wiki mapping."
   },
   {
    "name": "Nutrients Biorecipes 1",
@@ -1529,7 +1564,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_graphite-panel.png",
+   "verified_source": "screenshots/2026-11-24_nutrients-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
