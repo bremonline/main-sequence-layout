@@ -1291,7 +1291,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "confirmed",
-   "verified_source": "screenshots/2026-11-24_deuterium-fuel-panel.png",
+   "verified_source": "screenshots/2026-11-24_warp-fuel-panel.png",
    "verified_game_version": "EA 2026-11-24"
   },
   {
@@ -2020,7 +2020,7 @@
    "protomatter_panel_confirms": "screenshots/2026-11-24_protomatter-panel.png"
   },
   {
-   "name": "Strange Matter Crystal (Deep Space Observatory)",
+   "name": "Warp Fuel Strange Matter",
    "machine": "deep-space-observatory",
    "machine_note": "machine name from screenshot; not found in wiki machine list (check slug)",
    "inputs": [
@@ -2033,18 +2033,18 @@
    ],
    "outputs": [
     {
-     "item": "unknown",
-     "name": "unknown (dark grey capsule with pink band icon)",
-     "per_min": "15/min",
+     "item": "warp-fuel",
+     "name": "Warp Fuel",
      "count": "2"
     }
    ],
    "craft_time": "8 s",
    "source": "in-game screenshot",
    "source_version": "EA 2026-11-24",
-   "confidence": "confirmed (NEW, not in wiki); output item unnamed",
-   "verified_source": "screenshots/2026-11-24_strange-matter-crystal-panel.png",
-   "verified_game_version": "EA 2026-11-24"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_warp-fuel-panel.png",
+   "verified_game_version": "EA 2026-11-24",
+   "note": "Output identified as Warp Fuel (x2); earlier recorded as unnamed"
   },
   {
    "name": "Magnetic Coils Cobalt Crafting",
