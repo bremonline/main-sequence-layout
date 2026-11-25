@@ -2720,7 +2720,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A complex computer frame that is missing data to process.",
+   "verified_source": "screenshots/2026-11-24_empty-simulation-matrix-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Encoded Simulation Matrix",
