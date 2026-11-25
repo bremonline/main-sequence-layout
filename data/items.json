@@ -4437,7 +4437,9 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "unverified",
+   "desc_ingame": "A dense and durable construction material.",
+   "verified_source": "screenshots/2026-11-24_iridium-plates-panel.png"
   },
   {
    "name": "Lightweight Frames",

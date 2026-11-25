@@ -1032,7 +1032,9 @@
    "craft_time": "6 s",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "verified_source": "screenshots/2026-11-24_iridium-plates-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Coolant Other Refining",
@@ -1774,7 +1776,7 @@
     }
    ],
    "wiki_craft_time": "3 s",
-   "verified_source": "screenshots/2026-11-24_iridium-ore-panel.png",
+   "verified_source": "screenshots/2026-11-24_iridium-plates-panel.png",
    "verified_game_version": "EA 2026-11-24",
    "note": "Wiki (demo): 2 Iridium Ore + 1 Titanium Ore -> 1 plate. EA panel shows 1 Iridium Ore -> 1 plate, 3 s. Output icon assumed Iridium Plates."
   },
