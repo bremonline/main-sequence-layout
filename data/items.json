@@ -5573,7 +5573,10 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "A complex sensor capable of measuring a wide range of phenomena.",
+   "verified_source": "screenshots/2026-11-24_multisensor-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Nickel Ore",
