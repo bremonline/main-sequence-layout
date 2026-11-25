@@ -6,10 +6,7 @@
    "name": "Underground Belt",
    "slug": "underground-belt",
    "category": "Logistics",
-   "footprint_tiles": [
-    1,
-    1
-   ],
+   "footprint_tiles": [1, 1],
    "paired_endpoints": true,
    "max_intervening_tiles": 6,
    "capacity_per_min": 60,
@@ -58,19 +55,11 @@
    "source": "user statement",
    "source_version": "EA (2026-11-25)",
    "confidence": "confirmed (NEW)",
-   "footprint_tiles": [
-    3,
-    3
-   ],
+   "footprint_tiles": [3, 3],
    "footprint_source": "user statement 2026-11-25",
    "footprint_confidence": "confirmed by user",
    "port_layout": {
-    "cells": [
-     [
-      1,
-      2
-     ]
-    ],
+    "cells": [[1, 2]],
     "description": "Single centered south-side input at zero rotation",
     "input_vs_output": "input",
     "source": "user statement 2026-11-25",
@@ -1153,10 +1142,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "footprint_tiles_guess": [
-    3,
-    3
-   ],
+   "footprint_guess_tiles": [3, 3],
    "footprint_guess_note": "user guess 2026-11-24 (\"I think all are 3x3\"); user cannot build these yet"
   },
   {
@@ -1453,21 +1439,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "research_rate": {
-    "item": "Circuits (plain Basic Circuits, not Advanced)",
-    "input_per_cycle": 1,
-    "cycle_time_s": 10,
-    "items_per_min": 6,
-    "source": "user statement 2026-11-24",
-    "confidence": "confirmed by user"
-   },
-   "footprint_tiles": [
-    3,
-    3
-   ],
-   "footprint_source": "user statement 2026-11-24",
-   "footprint_confidence": "confirmed by user",
-   "port_note": "single port"
+   "research_rate": {"item": "Circuits (plain Basic Circuits, not Advanced)", "input_per_cycle": 1, "cycle_time_s": 10, "items_per_min": 6, "source": "user statement 2026-11-24", "confidence": "confirmed by user"}
   },
   {
    "name": "Container",
@@ -1695,10 +1667,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "footprint_tiles_guess": [
-    3,
-    3
-   ],
+   "footprint_guess_tiles": [3, 3],
    "footprint_guess_note": "user guess 2026-11-24 (\"I think all are 3x3\"); user cannot build these yet"
   },
   {
@@ -2418,19 +2387,11 @@
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
    "compact_label": "LC",
-   "footprint_tiles": [
-    4,
-    4
-   ],
+   "footprint_tiles": [4, 4],
    "footprint_source": "user statement 2026-11-25",
    "footprint_confidence": "confirmed by user",
    "port_layout": {
-    "positions_1indexed_along_each_side": [
-     1,
-     2,
-     3,
-     4
-    ],
+    "positions_1indexed_along_each_side": [1, 2, 3, 4],
     "sides": "all four",
     "description": "All tiles on all four sides (16 port faces)",
     "input_vs_output": "in and out",
@@ -2508,14 +2469,7 @@
     "note": "Panel reads \"1 PT | Hull Plate | 10 s\"; PT assumed = 1 Material Science point (matches wiki Hull Plate research value 1). Lab identity inferred from item (Hull Plate = Material Science).",
     "verified_source": "screenshots/2026-11-24_research-items-hull-plate.png",
     "confidence": "confirmed (reading of \"PT\" assumed)"
-   },
-   "footprint_tiles": [
-    3,
-    3
-   ],
-   "footprint_source": "user statement 2026-11-24",
-   "footprint_confidence": "confirmed by user",
-   "port_note": "single port"
+   }
   },
   {
    "name": "Miner Mk. 1",
@@ -2707,10 +2661,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "footprint_tiles_guess": [
-    3,
-    3
-   ],
+   "footprint_guess_tiles": [3, 3],
    "footprint_guess_note": "user guess 2026-11-24 (\"I think all are 3x3\"); user cannot build these yet"
   },
   {
@@ -3097,10 +3048,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "footprint_tiles_guess": [
-    3,
-    3
-   ],
+   "footprint_guess_tiles": [3, 3],
    "footprint_guess_note": "user guess 2026-11-24 (\"I think all are 3x3\"); user cannot build these yet"
   },
   {
@@ -3976,10 +3924,7 @@
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
    "confidence": "unverified",
-   "footprint_tiles_guess": [
-    3,
-    3
-   ],
+   "footprint_guess_tiles": [3, 3],
    "footprint_guess_note": "user guess 2026-11-24 (\"I think all are 3x3\"); user cannot build these yet"
   }
  ]
