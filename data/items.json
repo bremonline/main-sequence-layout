@@ -1077,7 +1077,11 @@
    "category": "Crafting Items",
    "source": "mainsequencewiki.com",
    "source_version": "demo build 26097974 (2026-11-02)",
-   "confidence": "unverified"
+   "confidence": "confirmed",
+   "desc_ingame": "An organic material used in biocomposite construction.",
+   "research_item": "1x Xenobiologic Science",
+   "verified_source": "screenshots/2026-11-24_biolattice-panel.png",
+   "verified_game_version": "EA 2026-11-24"
   },
   {
    "name": "Biomass",
