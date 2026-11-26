@@ -203,6 +203,11 @@ or rotated into invalid layouts.
 
 Save stores a layout in your browser. Export/import and the share link use JSON.
 Export asks for a filename and adds `.json` if needed; Cancel downloads nothing.
+Choose an entry under **Examples** beside Load to replace the current layout with
+an example from `examples/`. The list is discovered from the local directory
+listing or, on GitHub Pages and when that listing returns 403/404, the GitHub
+API. If discovery fails (for example, because the API is rate-limited), the
+status shows the error; focus the selector to retry.
 Version 3 includes belts and assigned recipes, and versions 1 and 2 still load.
 Older single-station layouts are converted when opened. Room-to-room wall rows
 touch rather than overlap; exact inter-room behavior remains provisional.

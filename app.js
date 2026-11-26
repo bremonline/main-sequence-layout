@@ -61,6 +61,7 @@ let selected = null;
 let preview = null;
 let drag = null;
 let previewRotation = 0;
+let layoutReplacementVersion = 0;
 
 function svgNode(tag, attributes, parent = symbols, text = null) {
   const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
@@ -1689,6 +1690,7 @@ function restore(state) {
       x: cell.x, y: cell.y, ...(cell.direction === undefined ? {} : { direction: cell.direction })
     })) });
   }
+  layoutReplacementVersion++;
   rooms = checkedRooms;
   placements = checkedPlacements;
   belts = checkedBelts;
@@ -1890,6 +1892,7 @@ function deleteSelected() {
 }
 document.getElementById("delete").addEventListener("click", deleteSelected);
 document.getElementById("clear").addEventListener("click", () => {
+  layoutReplacementVersion++;
   rooms = [];
   placements = [];
   belts = [];
@@ -1908,6 +1911,97 @@ document.getElementById("load").addEventListener("click", () => {
     restore(JSON.parse(localStorage.getItem("main-sequence-layout")));
     statusEl.textContent = "Local layout loaded";
   } catch (error) { statusEl.textContent = `Load failed: ${error.message}`; }
+});
+const exampleSelect = document.getElementById("example-select");
+const exampleDirectoryApi = "https://api.github.com/repos/bremonline/main-sequence-layout/contents/examples?ref=main";
+let exampleNames = new Set();
+let exampleListingFailed = false;
+let exampleListing = false;
+
+function isExampleName(name) {
+  return typeof name === "string" && /\.json$/i.test(name) && !/[\/\\]/.test(name);
+}
+
+async function discoverExamples() {
+  if (!location.hostname?.endsWith(".github.io")) {
+    const response = await fetch("examples/", { cache: "no-cache" });
+    if (response.ok) {
+      const directory = new DOMParser().parseFromString(await response.text(), "text/html");
+      return [...directory.querySelectorAll("a[href]")]
+        .map(link => link.getAttribute("href"))
+        .filter(href => href && !/[\/\\?#]/.test(href))
+        .map(href => decodeURIComponent(href))
+        .filter(isExampleName);
+    }
+    if (response.status !== 403 && response.status !== 404) {
+      throw new Error(`examples/: HTTP ${response.status}`);
+    }
+  }
+  const entries = await fetchJson(exampleDirectoryApi);
+  if (!Array.isArray(entries)) throw new Error("Invalid examples directory response from GitHub");
+  return entries.filter(entry => entry.type === "file" && isExampleName(entry.name)).map(entry => entry.name);
+}
+
+async function loadExamples() {
+  if (exampleListing) return;
+  exampleListing = true;
+  exampleSelect.disabled = true;
+  const retrying = exampleListingFailed;
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  try {
+    exampleNames = new Set((await discoverExamples()).sort((a, b) => a.localeCompare(b)));
+    placeholder.textContent = exampleNames.size ? "Select an example" : "No examples found";
+    const options = [...exampleNames].map(name => {
+      const option = document.createElement("option");
+      option.value = name;
+      option.textContent = name.replace(/\.json$/i, "");
+      return option;
+    });
+    exampleSelect.replaceChildren(placeholder, ...options);
+    exampleSelect.value = "";
+    exampleListingFailed = false;
+    if (retrying) statusEl.textContent = exampleNames.size ? "Examples available" : "No examples found";
+  } catch (error) {
+    exampleNames.clear();
+    exampleListingFailed = true;
+    placeholder.textContent = "Examples unavailable — click to retry";
+    exampleSelect.replaceChildren(placeholder);
+    exampleSelect.value = "";
+    statusEl.textContent = `Examples unavailable: ${error.message}`;
+  } finally {
+    exampleListing = false;
+    exampleSelect.disabled = !exampleListingFailed && !exampleNames.size;
+  }
+}
+
+exampleSelect.addEventListener("focus", () => exampleListingFailed ? loadExamples() : undefined);
+exampleSelect.addEventListener("change", async event => {
+  const name = event.target.value;
+  event.target.value = "";
+  if (!name) return;
+  if (!exampleNames.has(name)) {
+    statusEl.textContent = "Example load failed: invalid example selection";
+    return;
+  }
+  const originalLayout = JSON.stringify(serialize());
+  const originalReplacementVersion = layoutReplacementVersion;
+  event.target.disabled = true;
+  statusEl.textContent = `Loading example: ${name}`;
+  try {
+    const layout = await fetchJson(`examples/${encodeURIComponent(name)}`);
+    if (layoutReplacementVersion !== originalReplacementVersion || JSON.stringify(serialize()) !== originalLayout) {
+      statusEl.textContent = "Example load cancelled: the layout was changed or reloaded while loading";
+      return;
+    }
+    restore(layout);
+    fitLayout();
+    statusEl.textContent = `Example loaded: ${name}`;
+  } catch (error) {
+    statusEl.textContent = `Example load failed: ${error.message}`;
+  } finally {
+    event.target.disabled = false;
+  }
 });
 const exportDialog = document.getElementById("export-dialog");
 const exportFilename = document.getElementById("export-filename");
@@ -1973,6 +2067,7 @@ loadData().then(async () => {
     fitLayout();
     statusEl.textContent = "Starter layout loaded: Dock above Station 1x1 above Control Center";
   }
+  await loadExamples();
 }).catch(error => {
   statusEl.textContent = `Data failed to load: ${error.message}`;
 });

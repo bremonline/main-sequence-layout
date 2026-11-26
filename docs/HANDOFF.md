@@ -29,6 +29,9 @@ Goal: a static, GitHub Pages layout builder for the game Main Sequence (Early Ac
 4. Save/load JSON, URL-hash share link.
    Export prompts for a filename (default `main-sequence-layout.json`), adds `.json`
    when missing, and cancels without downloading if dismissed.
+   The Examples selector discovers JSON layouts in `examples/` from a local
+   directory listing or the GitHub API on Pages; selecting one validates, loads
+   and fits it. Listing errors appear in status and focusing the selector retries.
    Delete/Backspace deletes the selected object via the same action as the button,
    retaining room connectivity and active-edit safeguards. Editable fields and
    modified key combinations are excluded.
@@ -133,3 +136,5 @@ Goal: a static, GitHub Pages layout builder for the game Main Sequence (Early Ac
 
 ## Workflow
 The player sends in-game screenshots to a separate chat agent (Hermes) that updates data/*.json and pushes. Pull before working; never block on missing data: treat null as "unknown" and show it in the UI.
+`index.html` versions the JavaScript and stylesheet URLs with query strings; bump
+the corresponding token when changing either asset so browsers fetch the update.

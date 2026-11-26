@@ -23,6 +23,9 @@ canvas { display:block; cursor:crosshair; touch-action:none; }
 #recipe-control label { display:block; font-size:12px; color:var(--muted); margin-bottom:5px; }
 #recipe-select { width:100%; min-width:0; }
 .actions { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.examples-control { grid-column:1/-1; }
+.examples-control label { display:block; font-size:12px; color:var(--muted); margin:4px 0 5px; }
+.examples-control select { width:100%; min-width:0; }
 #export-dialog { width:min(360px, calc(100% - 32px)); padding:20px; color:var(--text); background:var(--panel); border:1px solid var(--line); border-radius:8px; }
 #export-dialog::backdrop { background:#0009; }
 #export-dialog label { display:block; margin-bottom:6px; }

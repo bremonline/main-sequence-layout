@@ -1,5 +1,5 @@
 const assert = require("node:assert/strict");
-const { readFileSync } = require("node:fs");
+const { readFileSync, readdirSync } = require("node:fs");
 const { join } = require("node:path");
 const { test } = require("node:test");
 const vm = require("node:vm");
@@ -16,7 +16,7 @@ async function app(hash = "") {
       addEventListener(name, callback) { this.listeners[name] = callback; },
       setAttribute(name, value) { this.attributes[name] = value; },
       append(...children) { this.children.push(...children); },
-      replaceChildren() { this.children = []; },
+      replaceChildren(...children) { this.children = children; },
       getContext() {
         return new Proxy({}, {
           get(target, key) {
@@ -49,10 +49,14 @@ async function app(hash = "") {
       setItem: (key, value) => saved.set(key, value),
       getItem: key => saved.get(key) ?? null
     },
-    fetch: async path => ({
-      ok: true,
-      json: async () => JSON.parse(readFileSync(join(root, path), "utf8"))
-    })
+    fetch: async path => {
+      if (path === "examples/") return { ok: false, status: 404 };
+      if (path === "https://api.github.com/repos/bremonline/main-sequence-layout/contents/examples?ref=main") {
+        return { ok: true, json: async () => readdirSync(join(root, "examples"), { withFileTypes: true })
+          .map(file => ({ name: file.name, type: file.isFile() ? "file" : "dir" })) };
+      }
+      return { ok: true, json: async () => JSON.parse(readFileSync(join(root, decodeURIComponent(path)), "utf8")) };
+    }
   });
   vm.runInContext(readFileSync(join(root, "app.js"), "utf8"), context);
   await new Promise(resolve => setImmediate(resolve));
@@ -144,6 +148,119 @@ test("export asks for a filename, adds the JSON extension, and respects cancella
     run('document.getElementById("export-filename").listeners.input()');
     assert.equal(run('document.getElementById("export-filename").validationMessage'), "");
   }
+});
+
+test("the examples dropdown loads each selected layout and allows loading it again", async () => {
+  const { run } = await app();
+  const options = JSON.parse(run('JSON.stringify(document.getElementById("example-select").children.map(option=>option.value))'));
+  for (const name of ["Computational60.json", "HullResearch60.json"]) {
+    assert.ok(options.includes(name), name);
+    await run(`document.getElementById("example-select").value=${JSON.stringify(name)};
+      document.getElementById("example-select").listeners.change({target:document.getElementById("example-select")})`);
+    const expected = JSON.parse(readFileSync(join(__dirname, "..", "examples", name), "utf8"));
+    assert.deepEqual(JSON.parse(run("JSON.stringify(serialize())")), expected);
+    assert.match(run("statusEl.textContent"), /example loaded/i);
+    assert.equal(run('document.getElementById("example-select").value'), "");
+  }
+  run('document.getElementById("clear").listeners.click()');
+  await run(`document.getElementById("example-select").value="HullResearch60.json";
+    document.getElementById("example-select").listeners.change({target:document.getElementById("example-select")})`);
+  assert.deepEqual(JSON.parse(run("JSON.stringify(serialize())")),
+    JSON.parse(readFileSync(join(__dirname, "..", "examples", "HullResearch60.json"), "utf8")));
+});
+
+test("example discovery lists local directory entries and GitHub Pages files without hardcoded names", async () => {
+  const { run } = await app();
+  run(`globalThis.originalFetch=fetch;
+  globalThis.DOMParser=class {
+    parseFromString(text) {
+      return {querySelectorAll:()=>JSON.parse(text).map(href=>({getAttribute:()=>href}))};
+    }
+  };
+  globalThis.fetch=async path=>{
+    if(path!=="examples/") throw new Error("Unexpected listing request");
+    return {ok:true,text:async()=>JSON.stringify([
+      "Zeta.json","Alpha%20Layout.json","Zeta.json","subdir/skip.json",
+      "%2E%2E%2Fsecret.json","notes.txt"
+    ])};
+  }`);
+  await run("loadExamples()");
+  assert.deepEqual(JSON.parse(run('JSON.stringify(document.getElementById("example-select").children.map(o=>o.value))')),
+    ["", "Alpha Layout.json", "Zeta.json"]);
+
+  run(`globalThis.requestedPath="";
+    globalThis.fetch=async path=>{
+      requestedPath=path;
+      return originalFetch("examples/HullResearch60.json");
+    }`);
+  await run(`document.getElementById("example-select").value="Alpha Layout.json";
+    document.getElementById("example-select").listeners.change({target:document.getElementById("example-select")})`);
+  assert.equal(run("requestedPath"), "examples/Alpha%20Layout.json");
+  assert.deepEqual(JSON.parse(run("JSON.stringify(serialize())")),
+    JSON.parse(readFileSync(join(__dirname, "..", "examples", "HullResearch60.json"), "utf8")));
+
+  run(`location.hostname="bremonline.github.io";
+    globalThis.fetch=async path=>{
+      if(!path.startsWith("https://api.github.com/repos/bremonline/main-sequence-layout/contents/examples")) {
+        throw new Error("Unexpected GitHub Pages listing request");
+      }
+      return {ok:true,json:async()=>[
+        {name:"New Example.json",type:"file"},{name:"folder.json",type:"dir"},
+        {name:"../outside.json",type:"file"},{name:"notes.txt",type:"file"}
+      ]};
+    }`);
+  await run("loadExamples()");
+  assert.deepEqual(JSON.parse(run('JSON.stringify(document.getElementById("example-select").children.map(o=>o.value))')),
+    ["", "New Example.json"]);
+});
+
+test("example errors are reported without replacing the current layout", async () => {
+  const { run } = await app();
+  const original = run("JSON.stringify(serialize())");
+  run('globalThis.originalFetch=fetch;globalThis.fetch=async()=>({ok:false,status:503})');
+  await run(`document.getElementById("example-select").value="Computational60.json";
+    document.getElementById("example-select").listeners.change({target:document.getElementById("example-select")})`);
+  assert.equal(run("JSON.stringify(serialize())"), original);
+  assert.match(run("statusEl.textContent"), /example.*failed.*503/i);
+  assert.equal(run('document.getElementById("example-select").disabled'), false);
+
+  run('globalThis.fetch=async()=>({ok:true,json:async()=>({version:3,rooms:[],placements:[{}],belts:[]})})');
+  await run(`document.getElementById("example-select").value="Computational60.json";
+    document.getElementById("example-select").listeners.change({target:document.getElementById("example-select")})`);
+  assert.equal(run("JSON.stringify(serialize())"), original);
+  assert.match(run("statusEl.textContent"), /example.*failed/i);
+
+  run('globalThis.fetch=async()=>({ok:false,status:403})');
+  await run("loadExamples()");
+  assert.match(run("statusEl.textContent"), /examples.*403/i);
+  assert.match(run('document.getElementById("example-select").children[0].textContent'), /unavailable/i);
+  run("globalThis.fetch=originalFetch");
+  await run('document.getElementById("example-select").listeners.focus()');
+  assert.ok(run('document.getElementById("example-select").children.some(o=>o.value==="Computational60.json")'));
+});
+
+test("an example response does not overwrite a layout edited or reloaded while it was loading", async () => {
+  const { run } = await app();
+  run(`globalThis.originalFetch=fetch;
+    globalThis.fetch=()=>new Promise(resolve=>globalThis.finishExampleFetch=resolve)`);
+  const loading = run(`document.getElementById("example-select").value="Computational60.json";
+    document.getElementById("example-select").listeners.change({target:document.getElementById("example-select")})`);
+  assert.equal(run('document.getElementById("example-select").disabled'), true);
+  run('document.getElementById("clear").listeners.click()');
+  run('finishExampleFetch(originalFetch("examples/Computational60.json"))');
+  await loading;
+  assert.equal(run("rooms.length"), 0);
+  assert.match(run("statusEl.textContent"), /cancelled.*layout.*changed or reloaded/i);
+  assert.equal(run('document.getElementById("example-select").disabled'), false);
+
+  run('document.getElementById("save").listeners.click()');
+  const replaced = run(`document.getElementById("example-select").value="Computational60.json";
+    document.getElementById("example-select").listeners.change({target:document.getElementById("example-select")})`);
+  run('document.getElementById("load").listeners.click()');
+  run('finishExampleFetch(originalFetch("examples/Computational60.json"))');
+  await replaced;
+  assert.equal(run("rooms.length"), 0);
+  assert.match(run("statusEl.textContent"), /cancelled.*layout.*changed or reloaded/i);
 });
 
 test("belt machine ports connect on their role-specific sides and render role triangles", async () => {
