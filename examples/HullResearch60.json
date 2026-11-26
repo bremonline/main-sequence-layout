@@ -1,0 +1,886 @@
+{
+  "version": 3,
+  "rooms": [
+    {
+      "size": "2x1",
+      "x": 32,
+      "y": 32,
+      "rotation": 0,
+      "id": 21
+    }
+  ],
+  "placements": [
+    {
+      "slug": "assembler",
+      "x": 43,
+      "y": 34,
+      "rotation": 0,
+      "id": 22,
+      "disabledPorts": [
+        "0,1,west",
+        "0,3,west",
+        "1,0,north",
+        "3,4,south",
+        "4,1,east",
+        "4,3,east"
+      ],
+      "recipe": "Hull Plate Titanium Crafting"
+    },
+    {
+      "slug": "assembler",
+      "x": 43,
+      "y": 41,
+      "rotation": 0,
+      "id": 23,
+      "disabledPorts": [
+        "0,1,west",
+        "0,3,west",
+        "1,4,south",
+        "3,0,north"
+      ],
+      "recipe": "Hull Plate Titanium Crafting"
+    },
+    {
+      "slug": "assembler",
+      "x": 48,
+      "y": 41,
+      "rotation": 0,
+      "id": 24,
+      "disabledPorts": [
+        "1,4,south",
+        "3,0,north",
+        "4,1,east",
+        "4,3,east"
+      ],
+      "recipe": "Hull Plate Titanium Crafting"
+    },
+    {
+      "slug": "refinery",
+      "x": 34,
+      "y": 43,
+      "rotation": 0,
+      "id": 25,
+      "disabledPorts": [
+        "0,1,west",
+        "2,1,east"
+      ],
+      "recipe": "Titanium Plates Ore Refining"
+    },
+    {
+      "slug": "refinery",
+      "x": 37,
+      "y": 43,
+      "rotation": 0,
+      "id": 26,
+      "disabledPorts": [
+        "0,1,west",
+        "2,1,east"
+      ],
+      "recipe": "Titanium Plates Ore Refining"
+    },
+    {
+      "slug": "refinery",
+      "x": 40,
+      "y": 43,
+      "rotation": 0,
+      "id": 27,
+      "disabledPorts": [
+        "0,1,west",
+        "2,1,east"
+      ],
+      "recipe": "Titanium Plates Ore Refining"
+    },
+    {
+      "slug": "refinery",
+      "x": 34,
+      "y": 34,
+      "rotation": 0,
+      "id": 28,
+      "disabledPorts": [
+        "0,1,west",
+        "2,1,east"
+      ],
+      "recipe": "Titanium Plates Ore Refining"
+    },
+    {
+      "slug": "refinery",
+      "x": 37,
+      "y": 34,
+      "rotation": 0,
+      "id": 29,
+      "recipe": "Titanium Plates Ore Refining",
+      "disabledPorts": [
+        "0,1,west",
+        "2,1,east"
+      ]
+    },
+    {
+      "slug": "refinery",
+      "x": 40,
+      "y": 34,
+      "rotation": 0,
+      "id": 30,
+      "recipe": "Titanium Plates Ore Refining",
+      "disabledPorts": [
+        "0,1,west",
+        "2,1,east"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 35,
+      "y": 46,
+      "rotation": 3,
+      "id": 31,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 38,
+      "y": 46,
+      "rotation": 3,
+      "id": 32,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 35,
+      "y": 33,
+      "rotation": 3,
+      "id": 33,
+      "disabledPorts": [
+        "0,0,east"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 38,
+      "y": 33,
+      "rotation": 3,
+      "id": 34,
+      "disabledPorts": [
+        "0,0,east"
+      ]
+    },
+    {
+      "slug": "research",
+      "x": 53,
+      "y": 43,
+      "rotation": 0,
+      "id": 45
+    },
+    {
+      "slug": "research",
+      "x": 56,
+      "y": 43,
+      "rotation": 0,
+      "id": 46
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 44,
+      "y": 40,
+      "rotation": 3,
+      "id": 51,
+      "disabledPorts": [
+        "0,0,east"
+      ]
+    },
+    {
+      "slug": "research",
+      "x": 59,
+      "y": 43,
+      "rotation": 0,
+      "id": 53
+    },
+    {
+      "slug": "research",
+      "x": 54,
+      "y": 36,
+      "rotation": 1,
+      "id": 54
+    },
+    {
+      "slug": "research",
+      "x": 53,
+      "y": 40,
+      "rotation": 2,
+      "id": 55
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 54,
+      "y": 46,
+      "rotation": 3,
+      "id": 61,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 57,
+      "y": 46,
+      "rotation": 3,
+      "id": 62,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 60,
+      "y": 46,
+      "rotation": 3,
+      "id": 63,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "assembler",
+      "x": 48,
+      "y": 34,
+      "rotation": 0,
+      "id": 67,
+      "disabledPorts": [
+        "0,1,west",
+        "0,3,west",
+        "1,0,north",
+        "3,4,south",
+        "4,1,east",
+        "4,3,east"
+      ],
+      "recipe": "Hull Plate Titanium Crafting"
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 44,
+      "y": 39,
+      "rotation": 3,
+      "id": 69,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "research",
+      "x": 54,
+      "y": 33,
+      "rotation": 1,
+      "id": 72
+    },
+    {
+      "slug": "research",
+      "x": 57,
+      "y": 33,
+      "rotation": 0,
+      "id": 73
+    },
+    {
+      "slug": "research",
+      "x": 60,
+      "y": 33,
+      "rotation": 0,
+      "id": 74
+    },
+    {
+      "slug": "research",
+      "x": 56,
+      "y": 40,
+      "rotation": 2,
+      "id": 76
+    },
+    {
+      "slug": "research",
+      "x": 59,
+      "y": 40,
+      "rotation": 2,
+      "id": 77
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 53,
+      "y": 34,
+      "rotation": 0,
+      "id": 82,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 53,
+      "y": 37,
+      "rotation": 0,
+      "id": 83,
+      "disabledPorts": [
+        "0,0,west"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 54,
+      "y": 39,
+      "rotation": 3,
+      "id": 86,
+      "disabledPorts": [
+        "0,0,east"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 57,
+      "y": 39,
+      "rotation": 3,
+      "id": 87,
+      "disabledPorts": [
+        "0,0,east"
+      ]
+    },
+    {
+      "slug": "splitter-mk-1",
+      "x": 61,
+      "y": 36,
+      "rotation": 1,
+      "id": 89,
+      "disabledPorts": [
+        "0,0,east"
+      ]
+    },
+    {
+      "slug": "container",
+      "x": 32,
+      "y": 39,
+      "rotation": 0,
+      "id": 90,
+      "disabledPorts": [
+        "0,0,north",
+        "0,1,south",
+        "1,0,east",
+        "1,1,east"
+      ]
+    }
+  ],
+  "belts": [
+    {
+      "id": 35,
+      "cells": [
+        {
+          "x": 33,
+          "y": 42
+        },
+        {
+          "x": 33,
+          "y": 43
+        },
+        {
+          "x": 33,
+          "y": 44
+        },
+        {
+          "x": 33,
+          "y": 45
+        },
+        {
+          "x": 33,
+          "y": 46
+        },
+        {
+          "x": 34,
+          "y": 46
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "cells": [
+        {
+          "x": 36,
+          "y": 46
+        },
+        {
+          "x": 37,
+          "y": 46
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "cells": [
+        {
+          "x": 39,
+          "y": 46
+        },
+        {
+          "x": 40,
+          "y": 46
+        },
+        {
+          "x": 41,
+          "y": 46
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "cells": [
+        {
+          "x": 36,
+          "y": 33
+        },
+        {
+          "x": 37,
+          "y": 33
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "cells": [
+        {
+          "x": 39,
+          "y": 33
+        },
+        {
+          "x": 40,
+          "y": 33
+        },
+        {
+          "x": 41,
+          "y": 33
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "cells": [
+        {
+          "x": 35,
+          "y": 42
+        },
+        {
+          "x": 36,
+          "y": 42
+        },
+        {
+          "x": 37,
+          "y": 42
+        },
+        {
+          "x": 38,
+          "y": 42
+        },
+        {
+          "x": 39,
+          "y": 42
+        },
+        {
+          "x": 40,
+          "y": 42
+        },
+        {
+          "x": 41,
+          "y": 42
+        },
+        {
+          "x": 42,
+          "y": 42
+        },
+        {
+          "x": 42,
+          "y": 41
+        },
+        {
+          "x": 42,
+          "y": 40
+        },
+        {
+          "x": 43,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "cells": [
+        {
+          "x": 45,
+          "y": 40
+        },
+        {
+          "x": 46,
+          "y": 40
+        },
+        {
+          "x": 47,
+          "y": 40
+        },
+        {
+          "x": 48,
+          "y": 40
+        },
+        {
+          "x": 49,
+          "y": 40
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "cells": [
+        {
+          "x": 46,
+          "y": 46
+        },
+        {
+          "x": 47,
+          "y": 46
+        },
+        {
+          "x": 48,
+          "y": 46
+        },
+        {
+          "x": 49,
+          "y": 46
+        },
+        {
+          "x": 50,
+          "y": 46
+        },
+        {
+          "x": 51,
+          "y": 46
+        },
+        {
+          "x": 52,
+          "y": 46
+        },
+        {
+          "x": 53,
+          "y": 46
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "cells": [
+        {
+          "x": 55,
+          "y": 46
+        },
+        {
+          "x": 56,
+          "y": 46
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "cells": [
+        {
+          "x": 58,
+          "y": 46
+        },
+        {
+          "x": 59,
+          "y": 46
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "cells": [
+        {
+          "x": 61,
+          "y": 46
+        },
+        {
+          "x": 62,
+          "y": 46
+        },
+        {
+          "x": 62,
+          "y": 45
+        },
+        {
+          "x": 62,
+          "y": 44
+        },
+        {
+          "x": 62,
+          "y": 43
+        },
+        {
+          "x": 62,
+          "y": 42
+        },
+        {
+          "x": 62,
+          "y": 41
+        },
+        {
+          "x": 62,
+          "y": 40
+        },
+        {
+          "x": 62,
+          "y": 39
+        },
+        {
+          "x": 62,
+          "y": 38
+        },
+        {
+          "x": 62,
+          "y": 37
+        },
+        {
+          "x": 62,
+          "y": 36,
+          "direction": 2
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "cells": [
+        {
+          "x": 60,
+          "y": 36
+        },
+        {
+          "x": 59,
+          "y": 36
+        },
+        {
+          "x": 58,
+          "y": 36
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "cells": [
+        {
+          "x": 35,
+          "y": 37
+        },
+        {
+          "x": 36,
+          "y": 37
+        },
+        {
+          "x": 37,
+          "y": 37
+        },
+        {
+          "x": 38,
+          "y": 37
+        },
+        {
+          "x": 39,
+          "y": 37
+        },
+        {
+          "x": 40,
+          "y": 37
+        },
+        {
+          "x": 41,
+          "y": 37
+        },
+        {
+          "x": 42,
+          "y": 37
+        },
+        {
+          "x": 42,
+          "y": 38
+        },
+        {
+          "x": 42,
+          "y": 39
+        },
+        {
+          "x": 43,
+          "y": 39
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "cells": [
+        {
+          "x": 45,
+          "y": 39
+        },
+        {
+          "x": 46,
+          "y": 39
+        },
+        {
+          "x": 47,
+          "y": 39
+        },
+        {
+          "x": 48,
+          "y": 39
+        },
+        {
+          "x": 49,
+          "y": 39
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "cells": [
+        {
+          "x": 46,
+          "y": 33
+        },
+        {
+          "x": 47,
+          "y": 33
+        },
+        {
+          "x": 48,
+          "y": 33
+        },
+        {
+          "x": 49,
+          "y": 33
+        },
+        {
+          "x": 50,
+          "y": 33
+        },
+        {
+          "x": 51,
+          "y": 33
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "cells": [
+        {
+          "x": 52,
+          "y": 33
+        },
+        {
+          "x": 53,
+          "y": 33,
+          "direction": 1
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "cells": [
+        {
+          "x": 53,
+          "y": 35
+        },
+        {
+          "x": 53,
+          "y": 36
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "cells": [
+        {
+          "x": 53,
+          "y": 38
+        },
+        {
+          "x": 53,
+          "y": 39,
+          "direction": 0
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "cells": [
+        {
+          "x": 55,
+          "y": 39
+        },
+        {
+          "x": 56,
+          "y": 39
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "cells": [
+        {
+          "x": 58,
+          "y": 39,
+          "direction": 1
+        },
+        {
+          "x": 59,
+          "y": 39
+        },
+        {
+          "x": 60,
+          "y": 39
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "cells": [
+        {
+          "x": 33,
+          "y": 38
+        },
+        {
+          "x": 33,
+          "y": 37
+        },
+        {
+          "x": 33,
+          "y": 36
+        },
+        {
+          "x": 33,
+          "y": 35
+        },
+        {
+          "x": 33,
+          "y": 34
+        },
+        {
+          "x": 33,
+          "y": 33
+        },
+        {
+          "x": 34,
+          "y": 33
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "cells": [
+        {
+          "x": 33,
+          "y": 41,
+          "direction": 1
+        }
+      ]
+    }
+  ]
+}
